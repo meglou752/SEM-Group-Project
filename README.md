@@ -6,3 +6,5 @@
 - Created a Discord Server for communication
 - Integrated Github with Discord for documentation
 - Set up Issues templates and milestones for the backlog/progress tracking
+- Completed first task in backlog
+- Implemented Basic Java Functionality
