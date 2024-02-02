@@ -23,7 +23,6 @@
 hs_err_pid*
 You will also need the Maven specific values from here or below:
 
-target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
