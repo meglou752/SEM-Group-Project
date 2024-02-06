@@ -1,3 +1,14 @@
+# SEM-PROJECT-GROUP1
+
+## Badges
+#### Master Branch
+* ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/meglou752/SEM-Group-Project/main.yml?branch=master)
+#### Developer Branch
+* ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/meglou752/SEM-Group-Project/main.yml?branch=developer)
+#### License & Releases
+* [![LICENSE](https://img.shields.io/github/license/meglou752/SEM-Group-Project.svg?style=flat-square)](https://github.com/meglou752/SEM-Group-Project/blob/master/LICENSE)
+* [![Releases](https://img.shields.io/github/release/meglou752/SEM-Group-Project/all.svg?style=flat-square)](https://github.com/meglou752/SEM-Group-Project/releases)
+
 ## Progress
 
 #### Week1
