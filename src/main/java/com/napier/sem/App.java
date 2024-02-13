@@ -1,8 +1,8 @@
 package com.napier.sem;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class App
 {
@@ -13,6 +13,10 @@ public class App
 
         // Connect to database
         a.connect();
+
+        Country[] countries = a.getCountryDescending();
+
+        a.displayCountries(countries);
 
         // Disconnect from database
         a.disconnect();
@@ -80,6 +84,50 @@ public class App
             catch (Exception e)
             {
                 System.out.println("Error closing connection to database");
+            }
+        }
+    }
+
+    public Country[] getCountryDescending() {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT country.code, country.name, country.continent, country.region, country.population, country.capital\n" +
+                            "FROM country\n" +
+                            "ORDER BY country.population DESC;";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Create a list to hold employees
+            List<Country> countryList = new ArrayList<>();
+            // Iterate through the result set and add employees to the list
+            while (rset.next()) {
+                Country country = new Country();
+                country.code = rset.getString("code");
+                country.name = rset.getString("name");
+                country.continent = rset.getString("continent");
+                country.region = rset.getString("region");
+                country.population = rset.getInt("population");
+                country.capital = rset.getInt("capital");
+                countryList.add(country);
+            }
+            // Convert list to array
+            return countryList.toArray(new Country[0]);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+
+    public void displayCountries(Country[] countries) {
+        if (countries != null && countries.length > 0) {
+            for (Country country : countries) {
+                System.out.println(
+                        "Country code: " + country.code + " Country name: " + country.name + " Continent: " + country.continent + " Region: " +
+                                country.region + " Population: " + country.population + " Capital: " + country.capital + "\n");
             }
         }
     }
