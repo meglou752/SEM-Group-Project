@@ -4,7 +4,7 @@
 
 ### Goal in Context
 
-As a *User* I want *to produce a report on all the countries in a region organised by largest population to smallest* so that *I can support population reporting for the organisation.*
+As a *User* I want *to produce a report on the 'N' populated countries in a specified continent* so that *I can support population reporting for the organisation.*
 
 ### Scope
 
@@ -32,14 +32,15 @@ User.
 
 ### Trigger
 
-A request for data on population of all countries in region in descending order.
+A request for data on population of 'N' populated countries in a specified continent.
 
 ## MAIN SUCCESS SCENARIO
 
 
-1. User selects the region required
-2. System retrieves data for all countries in selected region sorted in descending order based on population
-3. User uses data for intended report
+1. User inputs the value of N 
+2. User selects continent 
+3. System retrieves data for all countries in database in the selected continent and selects the top N based on population 
+4. User uses data for intended report
 
 ## EXTENSIONS
 

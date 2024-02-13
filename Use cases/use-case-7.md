@@ -4,7 +4,7 @@
 
 ### Goal in Context
 
-As a *User* I want *to produce a report on all the countries in a region organised by largest population to smallest* so that *I can support population reporting for the organisation.*
+As a *User* I want *to produce a report on all the cities in the world with population in descending order* so that *I can support population reporting for the organisation.*
 
 ### Scope
 
@@ -32,14 +32,14 @@ User.
 
 ### Trigger
 
-A request for data on population of all countries in region in descending order.
+A request for data on population of all cities in the world ordered in descending order.
 
 ## MAIN SUCCESS SCENARIO
 
 
-1. User selects the region required
-2. System retrieves data for all countries in selected region sorted in descending order based on population
-3. User uses data for intended report
+1. User requests population of all cities in the world
+2. System retrieves data for all cities in database in the world and orders in descending based on population 
+4. User uses data for intended report
 
 ## EXTENSIONS
 
