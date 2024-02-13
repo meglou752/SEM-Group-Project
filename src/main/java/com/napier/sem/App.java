@@ -1,29 +1,26 @@
 package com.napier.sem;
-
 import java.sql.*;
 
 public class App {
+    private Connection con = null;
+
     public static void main(String[] args) {
         // Create new Application
         App a = new App();
+        // Create new Country
+        Country c = new Country();
 
         // Connect to database
         a.connect();
-
         // Get ResultSet of countries
-        ResultSet resultSet = a.getCountryDescending();
+        ResultSet resultSet = c.getCountryDescending(a.con);
 
         // Display countries
-        a.displayCountries(resultSet);
+        c.displayCountries(resultSet);
 
         // Disconnect from database
         a.disconnect();
     }
-
-    /**
-     * Connection to MySQL database.
-     */
-    private Connection con = null;
 
     /**
      * Connect to the MySQL database.
@@ -71,50 +68,4 @@ public class App {
         }
     }
 
-    public ResultSet getCountryDescending() {
-        try {
-            // Create an SQL statement
-            Statement stmt = con.createStatement();
-            // Create string for SQL statement
-            String strSelect =
-                    "SELECT country.code, country.name, country.continent, country.region, country.population, country.capital\n" +
-                            "FROM country\n" +
-                            "ORDER BY country.population DESC;";
-
-            // Execute SQL statement and return ResultSet
-            return stmt.executeQuery(strSelect);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            System.out.println("Failed to get country details");
-            return null;
-        }
-    }
-
-    //display function which takes resultset as a parameter, allowing more flexibility later
-    public void displayCountries(ResultSet resultSet) {
-        try {
-            // Iterate through the ResultSet and print country details
-            while (resultSet.next()) {
-                String code = resultSet.getString("code");
-                String name = resultSet.getString("name");
-                String continent = resultSet.getString("continent");
-                String region = resultSet.getString("region");
-                int population = resultSet.getInt("population");
-                int capital = resultSet.getInt("capital");
-
-                System.out.println("Country code: " + code + " Country name: " + name + " Continent: " + continent +
-                        " Region: " + region + " Population: " + population + " Capital: " + capital + "\n");
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            System.out.println("Failed to display country details");
-        } finally {
-            // Close the ResultSet to free resources
-            try {
-                resultSet.close();
-            } catch (SQLException e) {
-                System.out.println("Error closing ResultSet");
-            }
-        }
-    }
 }
