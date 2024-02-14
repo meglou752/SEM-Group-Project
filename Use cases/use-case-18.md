@@ -1,4 +1,4 @@
-# USE CASE: 20 Produce Report of All Capital Cities in a Continent
+# USE CASE: 18 Produce Report of All Capital Cities in a Continent
 
 ## CHARACTERISTIC INFORMATION
 

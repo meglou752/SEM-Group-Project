@@ -1,4 +1,4 @@
-# USE CASE: 32 Produce Report of Populations Within and Outwith Cities Per Country
+# USE CASE: 25 Produce Report of Populations Within and Outwith Cities Per Country
 
 ## CHARACTERISTIC INFORMATION
 

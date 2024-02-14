@@ -1,4 +1,4 @@
-# USE CASE: 32 Retrieve Current Population of a Region
+# USE CASE: 28 Retrieve Current Population of a Region
 
 ## CHARACTERISTIC INFORMATION
 

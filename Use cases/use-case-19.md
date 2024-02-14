@@ -1,4 +1,4 @@
-# USE CASE: 20 Produce Report of All Capital Cities in a Region
+# USE CASE: 19 Produce Report of All Capital Cities in a Region
 
 ## CHARACTERISTIC INFORMATION
 

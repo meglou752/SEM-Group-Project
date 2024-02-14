@@ -1,4 +1,4 @@
-# USE CASE: 32 Retrieve Current Population of the world
+# USE CASE: 26 Retrieve Current Population of the world
 
 ## CHARACTERISTIC INFORMATION
 

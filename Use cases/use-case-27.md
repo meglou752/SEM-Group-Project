@@ -1,4 +1,4 @@
-# USE CASE: 32 Retrieve Current Population of a Continent
+# USE CASE: 27 Retrieve Current Population of a Continent
 
 ## CHARACTERISTIC INFORMATION
 

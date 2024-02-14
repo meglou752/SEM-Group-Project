@@ -1,4 +1,4 @@
-# USE CASE: 32 Produce Report of Highest Populated Capital Cities
+# USE CASE: 21 Produce Report of Highest Populated Capital Cities
 
 ## CHARACTERISTIC INFORMATION
 

@@ -1,4 +1,4 @@
-# USE CASE: 32 Retrieve Current Population of a City
+# USE CASE: 31 Retrieve Current Population of a City
 
 ## CHARACTERISTIC INFORMATION
 

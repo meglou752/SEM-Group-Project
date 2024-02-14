@@ -1,4 +1,4 @@
-# USE CASE: 32 Retrieve Current Population of a District
+# USE CASE: 30 Retrieve Current Population of a District
 
 ## CHARACTERISTIC INFORMATION
 

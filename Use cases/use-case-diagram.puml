@@ -1,0 +1,30 @@
+@startuml
+
+actor User as "User"
+rectangle Database
+rectangle Organisation {
+
+    usecase "Get Population Data" as UC1
+    usecase "Get Country Data" as UC2
+    usecase "Get Continent Data" as UC3
+    usecase "Get City Data" as UC4
+    usecase "Get Capital City Data" as UC5
+    usecase "Produce Report" as UCa
+    User -- UC1
+    User -- UC2
+    User -- UC3
+    User -- UC4
+    User -- UC5
+    UC1 ..> UCa : include
+    UC2 ..> UCa : include
+    UC3 ..> UCa : include
+    UC4 ..> UCa : include
+    UC5 ..> UCa : include
+    UC1 --> Database
+    UC2 --> Database
+    UC3 --> Database
+    UC4 --> Database
+    UC5 --> Database
+
+}
+@enduml

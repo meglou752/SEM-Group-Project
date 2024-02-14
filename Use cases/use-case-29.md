@@ -1,4 +1,4 @@
-# USE CASE: 32 Retrieve Current Population of a Country
+# USE CASE: 29 Retrieve Current Population of a Country
 
 ## CHARACTERISTIC INFORMATION
 
