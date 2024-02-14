@@ -6,7 +6,7 @@
 
     <groupId>com.napier.sem</groupId>
     <artifactId>Coursework</artifactId>
-    <version>Code-Review-1</version>
+    <version>Code-Review-1.1</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
