@@ -1,4 +1,4 @@
-# USE CASE: 4 Produce a Report on the Salary of Employees of a Given Role
+# USE CASE: 12 Produce a report on all the top 'N' populated cities in the world
 
 ## CHARACTERISTIC INFORMATION
 
