@@ -1,4 +1,4 @@
-# USE CASE: 4 Produce a Report on the Salary of Employees of a Given Role
+# USE CASE: 9 Produce a report on all the cities in a region with population in descending order
 
 ## CHARACTERISTIC INFORMATION
 

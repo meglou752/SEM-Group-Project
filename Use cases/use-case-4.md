@@ -1,10 +1,10 @@
-# USE CASE: 4 Produce a Report on the Salary of Employees of a Given Role
+# USE CASE: 4 Produce a report on the top 'N' populated countries in the world
 
 ## CHARACTERISTIC INFORMATION
 
 ### Goal in Context
 
-As a *User* I want *to produce a report on the 'N' populated countries in the world* so that *I can support population reporting for the organisation.*
+As a *User* I want *to produce a report on the top 'N' populated countries in the world* so that *I can support population reporting for the organisation.*
 
 ### Scope
 
