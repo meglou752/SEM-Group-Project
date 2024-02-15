@@ -19,3 +19,23 @@
 - Set up Issues templates and milestones for the backlog/progress tracking
 - Completed first task in backlog
 - Implemented Basic Java Functionality
+#### Week2
+- Implemented Pom File
+- Implemented workflow with Maven
+- Implemented Dockerfile
+- Implemented Badges
+#### Week3
+- Created release branch
+- Created develop branch
+- Updated Maven for JAR files
+#### Week4
+- Added use cases to github
+- Implemented Use case 1
+#### Week5
+- Implemented MySQl support
+- Implemented Database to Project
+- Implemented Database Dockerfile
+- Implemented Docker Compose file
+- First Release Created
+- Code-Review 1 Tag created
+- **Code Review 1 Complete**
