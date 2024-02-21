@@ -18,7 +18,7 @@ jobs:
       - name: Build Docker Images
         run: |
           docker build -t sem-group-project-app .
-          docker build -t sem-group-project-db /path/to/your/database/dockerfile
+          docker build -t sem-group-project-db ./db/Dockerfile
       - name: Run Containers
         run: |
           docker run --name sem-group-project-db-1 -d sem-group-project-db
