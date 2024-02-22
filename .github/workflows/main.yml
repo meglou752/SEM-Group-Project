@@ -26,3 +26,4 @@ jobs:
       - name: View Logs
         run: |
           docker logs sem-group-project-app-1
+          docker logs sem-group-project-db-1
