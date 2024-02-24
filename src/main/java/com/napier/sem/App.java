@@ -13,11 +13,10 @@ public class App {
         // Connect to database
         a.connect();
         // Get ResultSet of countries
-        ResultSet resultSet = c.getCountryDescending(a.con);
+        ResultSet resultSet = c.getContinentDescending(a.con, "Asia");
 
         // Display countries
         c.displayCountries(resultSet);
-
         // Disconnect from database
         a.disconnect();
     }
