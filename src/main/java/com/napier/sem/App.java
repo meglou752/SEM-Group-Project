@@ -9,14 +9,15 @@ public class App {
         App a = new App();
         // Create new Country
         Country c = new Country();
+        City d = new City();
 
         // Connect to database
         a.connect();
-        // Get ResultSet of countries
-        ResultSet resultSet = c.getCountryDescending(a.con);
+        // Get ResultSet of cities
+        ResultSet resultSet = d.getCountryCityDescending(a.con, "France");
 
         // Display countries
-        c.displayCountries(resultSet);
+        d.displayCities(resultSet);
 
         // Disconnect from database
         a.disconnect();
