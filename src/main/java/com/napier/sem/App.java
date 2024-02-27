@@ -13,7 +13,7 @@ public class App {
         // Connect to database
         a.connect();
         // Get ResultSet of cities
-        ResultSet resultSet = e.getContinentCapitalsDescending(a.con, "Asia");
+        ResultSet resultSet = e.getNRegionCapitalsDescending(a.con, "Western Europe", 6);
 
         // Display cities
         e.displayCapitals(resultSet);

@@ -11,7 +11,7 @@ public class Capital {
     public String name;
     public int population;
 
-    public ResultSet getContinentCapitalsDescending(Connection con, String continent) {
+    public ResultSet getNRegionCapitalsDescending(Connection con, String region, int N) {
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
@@ -20,9 +20,9 @@ public class Capital {
                     "SELECT city.name AS capital, country.name, city.population \n" +
                             "FROM country\n" +
                             "INNER JOIN city ON city.countryCode = country.code\n" +
-                            "WHERE country.continent = '" + continent + "' " +
-                            "AND country.capital = city.ID " +
-                            "ORDER BY city.population DESC ";
+                            "WHERE country.region = '" + region + "' " +
+                            "ORDER BY city.population DESC " +
+                            "LIMIT " + N;
 
 
             // Execute SQL statement and return ResultSet
