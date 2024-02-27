@@ -8,16 +8,15 @@ public class App {
         // Create new Application
         App a = new App();
         // Create new Country
-        Country c = new Country();
-        City d = new City();
+        Capital e = new Capital();
 
         // Connect to database
         a.connect();
         // Get ResultSet of cities
-        ResultSet resultSet = d.getTopRegionCityDescending(a.con, "Western Europe", 6);
+        ResultSet resultSet = e.getContinentCapitalsDescending(a.con, "Asia");
 
         // Display cities
-        d.displayCities(resultSet);
+        e.displayCapitals(resultSet);
 
         // Disconnect from database
         a.disconnect();
