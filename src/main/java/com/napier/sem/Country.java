@@ -13,6 +13,15 @@ public class Country {
     public int population;
     public Integer capital;
 
+    /**
+     * Retrieves the top 'N' countries, on the current
+     * connection to the database, and organizes them by size descending.
+     *
+     * @param con the database connection
+     * @param N the number of top countries to retrieve
+     * @return a ResultSet containing the top 'N' countries
+     */
+
     public ResultSet topNPopulatedCountries(Connection con, int N) {
         try {
             // Create an SQL statement
@@ -31,6 +40,12 @@ public class Country {
             return null;
         }
     }
+
+    /**
+     * Retrieves all countries organised by size descending on the current connection to the database.
+     * @param con the database connection
+     * @return a resultSet containing all countries organised by size descending
+     */
     public ResultSet getCountryDescending(Connection con) {
         try {
             // Create an SQL statement
@@ -49,7 +64,10 @@ public class Country {
         }
     }
 
-    //display function which takes resultset as a parameter, allowing more flexibility later
+    /**
+     * Displays the contents of ResultSet for country functions
+     * @param resultSet containing country details from other method calls
+     */
     public void displayCountries(ResultSet resultSet) {
         try {
             // Iterate through the ResultSet and print country details

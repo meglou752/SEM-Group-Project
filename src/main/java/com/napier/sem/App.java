@@ -3,7 +3,14 @@ import java.sql.*;
 
 public class App {
     private Connection con = null;
-
+    /**
+     * The entry point of the application.
+     * <p>
+     * This method initializes the application, connects to the database, retrieves
+     * the top N populated countries, displays them, and then disconnects from the database.
+     * </p>
+     * @param args The command line arguments (not used).
+     */
     public static void main(String[] args) {
         // Create new Application
         App a = new App();
