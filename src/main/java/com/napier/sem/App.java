@@ -8,15 +8,15 @@ public class App {
         // Create new Application
         App a = new App();
         // Create new Country
-        Capital e = new Capital();
+        Population f = new Population();
 
         // Connect to database
         a.connect();
         // Get ResultSet of cities
-        ResultSet resultSet = e.getNRegionCapitalsDescending(a.con, "Western Europe", 6);
+        ResultSet resultSet = f.getWorldPopulation(a.con);
 
         // Display cities
-        e.displayCapitals(resultSet);
+        f.displayPopulation(resultSet);
 
         // Disconnect from database
         a.disconnect();
