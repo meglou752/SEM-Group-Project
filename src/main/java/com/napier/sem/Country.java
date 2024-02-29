@@ -13,6 +13,24 @@ public class Country {
     public int population;
     public Integer capital;
 
+    public ResultSet topNPopulatedCountries(Connection con, int N) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT country.code, country.name, country.continent, country.region, country.population, country.capital\n" +
+                            "FROM country\n" +
+                            "ORDER BY country.population DESC" +
+                            "LIMIT " + N + ";";
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
     public ResultSet getCountryDescending(Connection con) {
         try {
             // Create an SQL statement

@@ -13,7 +13,7 @@ public class App {
         // Connect to database
         a.connect();
         // Get ResultSet of countries
-        ResultSet resultSet = c.getCountryDescending(a.con);
+        ResultSet resultSet = c.topNPopulatedCountries(a.con, 5);
 
         // Display countries
         c.displayCountries(resultSet);
