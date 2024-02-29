@@ -17,6 +17,7 @@ public class App {
         // Create new Country
         Country c = new Country();
         City d = new City();
+        Capital e = new Capital();
 
         // Connect to database
         a.connect();
@@ -25,11 +26,14 @@ public class App {
         //ResultSet resultSet = c.topNPopulatedCountries(a.con, 5);
         //ResultSet resultSet = d.getCitiesInContinentDesc(a.con, "Asia");
         //ResultSet resultSet = d.topNPopulatedCities(a.con, 5);
-        ResultSet resultSet = d.topNPopulatedCitiesDistrict(a.con, "Noord-Brabant", 3);
+        //ResultSet resultSet = d.topNPopulatedCitiesDistrict(a.con, "Noord-Brabant", 3);
+        ResultSet resultSet = e.topNPopulatedCapitals(a.con, 5);
 
-        // Display countries
+        // Display
         //c.displayCountries(resultSet);
-        d.displayCities(resultSet);
+        //d.displayCities(resultSet);
+        e.displayCapitals(resultSet);
+
         // Disconnect from database
         a.disconnect();
     }
