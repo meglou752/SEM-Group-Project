@@ -13,6 +13,7 @@ public class Country {
     public int population;
     public Integer capital;
 
+
     /**
      * Retrieves the top 'N' countries, on the current
      * connection to the database, and organizes them by size descending.
