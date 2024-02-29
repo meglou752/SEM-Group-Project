@@ -28,7 +28,7 @@ public class City {
                     "SELECT city.name, city.countryCode, city.district, city.population\n" +
                             "FROM country\n" +
                             "INNER JOIN city ON city.countryCode = country.code\n" +
-                            "WHERE continent.name = '" + continentName + "'\n" +
+                            "WHERE country.continent = '" + continentName + "'\n" +
                             "ORDER BY city.population DESC;";
 
             // Execute SQL statement and return ResultSet
