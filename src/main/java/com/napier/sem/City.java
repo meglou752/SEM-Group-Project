@@ -17,7 +17,7 @@ public class City {
      * @param con the database connection
      * @param districtName the name of the district to gather cities from
      * @param N the number of highest populated cities to retrieve
-     * @return
+     * @return the resultset containing the top 'N' populated cities in a district
      */
     public ResultSet topNPopulatedCitiesDistrict(Connection con, String districtName, int N)
     {
