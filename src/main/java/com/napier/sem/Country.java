@@ -21,7 +21,7 @@ public class Country {
             String strSelect =
                     "SELECT country.code, country.name, country.continent, country.region, country.population, country.capital\n" +
                             "FROM country\n" +
-                            "ORDER BY country.population DESC" +
+                            "ORDER BY country.population DESC\n" +
                             "LIMIT " + N + ";";
 
             // Execute SQL statement and return ResultSet
