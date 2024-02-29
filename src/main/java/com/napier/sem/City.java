@@ -15,6 +15,33 @@ public class City {
     /**
      *
      * @param con the database connection
+     * @param N the number of highest populated cities to retrieve
+     * @return the resultset containing the top 'N' cities
+     */
+    public ResultSet topNPopulatedCities(Connection con, int N)
+    {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.name, city.countryCode, city.district, city.population\n" +
+                            "FROM country\n" +
+                            "INNER JOIN city ON city.countryCode = country.code\n" +
+                            "ORDER BY city.population DESC\n" +
+                            "LIMIT " + N + ";";
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+
+    /**
+     *
+     * @param con the database connection
      * @param continentName the continent to get cities from
      * @return the resultset containing countries of said continent
      */

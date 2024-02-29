@@ -23,7 +23,8 @@ public class App {
 
         // Get ResultSet of countries
         //ResultSet resultSet = c.topNPopulatedCountries(a.con, 5);
-        ResultSet resultSet = d.getCitiesInContinentDesc(a.con, "Asia");
+        //ResultSet resultSet = d.getCitiesInContinentDesc(a.con, "Asia");
+        ResultSet resultSet = d.topNPopulatedCities(a.con, 5);
 
         // Display countries
         //c.displayCountries(resultSet);
