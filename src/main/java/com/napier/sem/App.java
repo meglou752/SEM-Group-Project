@@ -8,26 +8,29 @@ public class App {
         // Create new Application
         App a = new App();
         // Create new Country
+
         Country c = new Country();
         City d = new City();
+
         Capital e = new Capital();
 
         // Connect to database
         a.connect();
+
         // Get ResultSet of cities
-        ResultSet resultSet = e.getContinentCapitalsDescending(a.con, "Asia");
+        ResultSet resultSet = e.getNRegionCapitalsDescending(a.con, "Western Europe", 6);
 
         // Get ResultSet of countries
-        //ResultSet resultSet = c.topNPopulatedCountries(a.con, 5);
-        //ResultSet resultSet = d.getCitiesInContinentDesc(a.con, "Asia");
-        //ResultSet resultSet = d.topNPopulatedCities(a.con, 5);
-        //ResultSet resultSet = d.topNPopulatedCitiesDistrict(a.con, "Noord-Brabant", 3);
-        //ResultSet resultSet = e.topNPopulatedCapitals(a.con, 5);
-        //ResultSet resultSet = c.getContinentDescending(a.con, "Asia");
-        //ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", 5);
-        //ResultSet resultSet = d.getCountryCityDescending(a.con, "France");
-        //ResultSet resultSet = d.getTopRegionCityDescending(a.con, "Western Europe", 6);
-
+        // ResultSet resultSet = c.topNPopulatedCountries(a.con, 5);
+        // ResultSet resultSet = d.getCitiesInContinentDesc(a.con, "Asia");
+        // ResultSet resultSet = d.topNPopulatedCities(a.con, 5);
+        // ResultSet resultSet = d.topNPopulatedCitiesDistrict(a.con, "Noord-Brabant", 3);
+        // ResultSet resultSet = e.topNPopulatedCapitals(a.con, 5);
+        // ResultSet resultSet = c.getContinentDescending(a.con, "Asia");
+        // ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", 5);
+        // ResultSet resultSet = d.getCountryCityDescending(a.con, "France");
+        // ResultSet resultSet = d.getTopRegionCityDescending(a.con, "Western Europe", 6);
+        // ResultSet resultSet = e.getNRegionCapitalsDescending(a.con, "Western Europe", 6);
         // Disconnect from database
         a.disconnect();
     }
