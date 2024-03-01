@@ -3,35 +3,19 @@ import java.sql.*;
 
 public class App {
     private Connection con = null;
-    /**
-     * The entry point of the application.
-     * <p>
-     * This method initializes the application, connects to the database, retrieves
-     * the top N populated countries, displays them, and then disconnects from the database.
-     * </p>
-     * @param args The command line arguments (not used).
-     */
+
     public static void main(String[] args) {
         // Create new Application
         App a = new App();
         // Create new Country
-        Country c = new Country();
-        City d = new City();
         Capital e = new Capital();
 
         // Connect to database
         a.connect();
+        // Get ResultSet of cities
+        ResultSet resultSet = e.getNRegionCapitalsDescending(a.con, "Western Europe", 6);
 
-        // Get ResultSet of countries
-        //ResultSet resultSet = c.topNPopulatedCountries(a.con, 5);
-        //ResultSet resultSet = d.getCitiesInContinentDesc(a.con, "Asia");
-        //ResultSet resultSet = d.topNPopulatedCities(a.con, 5);
-        //ResultSet resultSet = d.topNPopulatedCitiesDistrict(a.con, "Noord-Brabant", 3);
-        ResultSet resultSet = e.topNPopulatedCapitals(a.con, 5);
-
-        // Display
-        //c.displayCountries(resultSet);
-        //d.displayCities(resultSet);
+        // Display cities
         e.displayCapitals(resultSet);
 
         // Disconnect from database
