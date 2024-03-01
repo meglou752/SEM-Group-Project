@@ -3,14 +3,7 @@ import java.sql.*;
 
 public class App {
     private Connection con = null;
-    /**
-     * The entry point of the application.
-     * <p>
-     * This method initializes the application, connects to the database, retrieves
-     * the top N populated countries, displays them, and then disconnects from the database.
-     * </p>
-     * @param args The command line arguments (not used).
-     */
+
     public static void main(String[] args) {
         // Create new Application
         App a = new App();
@@ -27,12 +20,8 @@ public class App {
         //ResultSet resultSet = d.getCitiesInContinentDesc(a.con, "Asia");
         //ResultSet resultSet = d.topNPopulatedCities(a.con, 5);
         //ResultSet resultSet = d.topNPopulatedCitiesDistrict(a.con, "Noord-Brabant", 3);
-        ResultSet resultSet = e.topNPopulatedCapitals(a.con, 5);
-
-        // Display
-        //c.displayCountries(resultSet);
-        //d.displayCities(resultSet);
-        e.displayCapitals(resultSet);
+        //ResultSet resultSet = e.topNPopulatedCapitals(a.con, 5);
+        //ResultSet resultSet = c.getContinentDescending(a.con, "Asia");
 
         // Disconnect from database
         a.disconnect();

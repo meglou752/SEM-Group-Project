@@ -65,6 +65,25 @@ public class Country {
         }
     }
 
+    public ResultSet getContinentDescending(Connection con, String continent_name) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT country.code, country.name, country.continent, country.region, country.population, country.capital " +
+                            "FROM country " +
+                            "WHERE country.continent = '" + continent_name + "' " + // Enclose in single quotes
+                            "ORDER BY country.population DESC";
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+
     /**
      * Displays the contents of ResultSet for country functions
      * @param resultSet containing country details from other method calls
