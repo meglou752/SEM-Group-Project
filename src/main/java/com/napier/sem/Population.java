@@ -22,7 +22,9 @@ public class Population {
                             "'" + District + "' as name, \n" +
                             "    SUM(country.population) AS population, \n" +
                             "    SUM(city.population) AS UrbanPop, \n" +
-                            "    SUM(country.population - city.population) AS RuralPop \n" +
+                            "    ROUND(SUM(city.population) / SUM(country.population) * 100, 1) AS UrbanPopPercentage, \n" +
+                            "    SUM(country.population - city.population) AS RuralPop, \n" +
+                            "    ROUND(SUM((country.population - city.population)) / SUM(country.population) * 100, 1) AS RuralPopPercentage \n" +
                             "FROM country\n" +
                             "INNER JOIN city ON city.countryCode = country.code\n" +
                             "WHERE city.District = '" + District + "'\n" +
@@ -48,9 +50,11 @@ public class Population {
                     String name = resultSet.getString("name");
                     long population = resultSet.getLong("population");
                     long urbanPopulation = resultSet.getLong("UrbanPop");
+                    double urbanPopPercentage = resultSet.getDouble("UrbanPopPercentage");
                     long ruralPopulation = resultSet.getLong("RuralPop");
+                    double ruralPopPercentage = resultSet.getDouble("RuralPopPercentage");
 
-                    System.out.println("Name: " + name + " total population: " + population + " Urban Population: " + urbanPopulation + " Rural Population: " + ruralPopulation + "\n");
+                    System.out.println("Name: " + name + " total population: " + population + " Urban Population: " + urbanPopulation + " Urban Percentage: " + urbanPopPercentage + "% Rural Population: " + ruralPopulation + " Rural Percentage: " + ruralPopPercentage + "%\n");
                 }
             } else {
                 System.out.println("ResultSet is null");
