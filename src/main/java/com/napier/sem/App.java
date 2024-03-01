@@ -22,6 +22,8 @@ public class App {
         //ResultSet resultSet = d.topNPopulatedCitiesDistrict(a.con, "Noord-Brabant", 3);
         //ResultSet resultSet = e.topNPopulatedCapitals(a.con, 5);
         //ResultSet resultSet = c.getContinentDescending(a.con, "Asia");
+        //ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", 5);
+
 
         // Disconnect from database
         a.disconnect();
