@@ -13,14 +13,13 @@ public class App {
         City d = new City();
 
         Capital e = new Capital();
+        Population f = new Population();
 
         // Connect to database
         a.connect();
 
-        // Get ResultSet of cities
-        ResultSet resultSet = e.getNRegionCapitalsDescending(a.con, "Western Europe", 6);
 
-        // Get ResultSet of countries
+        //ResultSet resultSet = f.getWorldPopulation(a.con);
         // ResultSet resultSet = c.topNPopulatedCountries(a.con, 5);
         // ResultSet resultSet = d.getCitiesInContinentDesc(a.con, "Asia");
         // ResultSet resultSet = d.topNPopulatedCities(a.con, 5);
