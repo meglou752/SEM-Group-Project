@@ -23,7 +23,8 @@ public class App {
         //ResultSet resultSet = e.topNPopulatedCapitals(a.con, 5);
         //ResultSet resultSet = c.getContinentDescending(a.con, "Asia");
         //ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", 5);
-       // ResultSet resultSet = d.getCountryCityDescending(a.con, "France");
+        //ResultSet resultSet = d.getCountryCityDescending(a.con, "France");
+        //ResultSet resultSet = d.getTopRegionCityDescending(a.con, "Western Europe", 6);
 
         // Disconnect from database
         a.disconnect();
