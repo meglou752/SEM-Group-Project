@@ -14,6 +14,8 @@ public class App {
 
         // Connect to database
         a.connect();
+        // Get ResultSet of cities
+        ResultSet resultSet = e.getContinentCapitalsDescending(a.con, "Asia");
 
         // Get ResultSet of countries
         //ResultSet resultSet = c.topNPopulatedCountries(a.con, 5);

@@ -69,6 +69,28 @@ public class Capital {
         }
     }
 
+    public ResultSet getContinentCapitalsDescending(Connection con, String continent) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.name AS capital, country.name, city.population \n" +
+                            "FROM country\n" +
+                            "INNER JOIN city ON city.countryCode = country.code\n" +
+                            "WHERE country.continent = '" + continent + "' " +
+                            "AND country.capital = city.ID " +
+                            "ORDER BY city.population DESC ";
+
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get capital details");
+            return null;
+        }
+    }
+
     //display function which takes resultset as a parameter, allowing more flexibility later
     public void displayCapitals(ResultSet resultSet) {
         try {
