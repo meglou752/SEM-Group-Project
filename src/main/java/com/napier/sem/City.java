@@ -115,28 +115,7 @@ public class City {
             return null;
         }
     }
-    public ResultSet getCountryCityDescending(Connection con, String countryName) {
-    public ResultSet getTopRegionCityDescending(Connection con, String region, int N) {
-        try {
-            // Create an SQL statement
-            Statement stmt = con.createStatement();
-            // Create string for SQL statement
-            String strSelect =
-                    "SELECT city.name, city.countryCode, city.district, city.population\n" +
-                            "FROM country\n" +
-                            "INNER JOIN city ON city.countryCode = country.code\n" +
-                            "WHERE country.region = '" + region + "' " +
-                            "ORDER BY city.population DESC " +
-                            "LIMIT " + N;
-
-
-            // Execute SQL statement and return ResultSet
-            return stmt.executeQuery(strSelect);
-        } catch (Exception e) {
-            System.out.println("Failed to get country details");
-            return null;
-        }
-    }
+  //  public ResultSet getCountryCityDescending(Connection con, String countryName) {
 
     //display function which takes resultset as a parameter, allowing more flexibility later
     public void displayCities(ResultSet resultSet) {
