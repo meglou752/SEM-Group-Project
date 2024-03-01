@@ -13,7 +13,7 @@ public class App {
         // Connect to database
         a.connect();
         // Get ResultSet of cities
-        ResultSet resultSet = f.getWorldPopulation(a.con);
+        ResultSet resultSet = f.getDistrictPopulation(a.con,  "Constantine");
 
         // Display cities
         f.displayPopulation(resultSet);
