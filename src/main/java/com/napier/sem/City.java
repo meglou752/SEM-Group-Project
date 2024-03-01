@@ -116,6 +116,7 @@ public class City {
         }
     }
     public ResultSet getCountryCityDescending(Connection con, String countryName) {
+    public ResultSet getTopRegionCityDescending(Connection con, String region, int N) {
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
@@ -124,8 +125,10 @@ public class City {
                     "SELECT city.name, city.countryCode, city.district, city.population\n" +
                             "FROM country\n" +
                             "INNER JOIN city ON city.countryCode = country.code\n" +
-                            "WHERE country.name = '" + countryName + "'\n" +
-                            "ORDER BY city.population DESC;";
+                            "WHERE country.region = '" + region + "' " +
+                            "ORDER BY city.population DESC " +
+                            "LIMIT " + N;
+
 
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
