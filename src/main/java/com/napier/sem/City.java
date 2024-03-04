@@ -67,6 +67,13 @@ public class City {
         }
     }
 
+    /**
+     * Find a specified number of Regions with the highest Population
+     * @param con the database connection
+     * @param region the region to search through
+     * @param N the number of database entries to retrieve
+     * @return ResultSet
+     */
     public ResultSet getTopRegionCityDescending(Connection con, String region, int N) {
         try {
             // Create an SQL statement
@@ -115,9 +122,37 @@ public class City {
             return null;
         }
     }
-  //  public ResultSet getCountryCityDescending(Connection con, String countryName) {
 
-    //display function which takes resultset as a parameter, allowing more flexibility later
+    /**
+     * Search for Cities in a Country
+     * @param con the database connection
+     * @param countryName the country too search through
+     * @return ResultSet
+     */
+    public ResultSet getCountryCityDescending(Connection con, String countryName) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.name, city.countryCode, city.district, city.population\n" +
+                            "FROM country\n" +
+                            "INNER JOIN city ON city.countryCode = country.code\n" +
+                            "WHERE country.name = '" + countryName + "'\n" +
+                            "ORDER BY city.population DESC;";
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+
+    /**
+     * Displays the contents of ResultSet for city functions
+     * @param resultSet containing city details from other method calls
+     */
     public void displayCities(ResultSet resultSet) {
         try {
             // Iterate through the ResultSet and print country details

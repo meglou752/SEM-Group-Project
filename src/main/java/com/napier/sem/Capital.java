@@ -11,7 +11,7 @@ public class Capital {
     public String name;
     public int population;
 
-<<<<<<<<< Temporary merge branch 1
+
     /**
      *
      * @param con the connection to the database
@@ -21,9 +21,6 @@ public class Capital {
     public ResultSet topNPopulatedCapitals(Connection con, int N)
     {
 
-=========
-    public ResultSet getNRegionCapitalsDescending(Connection con, String region, int N) {
->>>>>>>>> Temporary merge branch 2
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
@@ -32,7 +29,36 @@ public class Capital {
                     "SELECT city.name AS capital, country.name, city.population \n" +
                             "FROM country\n" +
                             "INNER JOIN city ON city.countryCode = country.code\n" +
-<<<<<<<<< Temporary merge branch 1
+                            "WHERE country.capital = city.ID " +
+                            "ORDER BY city.population DESC " +
+                            "LIMIT " + N + ";";
+
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get capital details");
+            return null;
+        }
+    }
+
+    /**
+     * Search for specified number of Capitals in a Region sorted by the highest Population
+     * @param con the database connection
+     * @param region the region of which the function searches through
+     * @param N the limit of records to return
+     * @return ResultSet
+     */
+    public ResultSet getNRegionCapitalsDescending(Connection con, String region, int N) {
+
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.name AS capital, country.name, city.population \n" +
+                            "FROM country\n" +
+                            "INNER JOIN city ON city.countryCode = country.code\n" +
                             "WHERE country.capital = city.ID " +
                             "ORDER BY city.population DESC " +
                             "LIMIT " + N + ";";
@@ -64,12 +90,6 @@ public class Capital {
                             "WHERE country.continent = '" + continent + "' " +
                             "AND country.capital = city.ID " +
                             "ORDER BY city.population DESC ";
-=========
-                            "WHERE country.region = '" + region + "' " +
-                            "ORDER BY city.population DESC " +
-                            "LIMIT " + N;
->>>>>>>>> Temporary merge branch 2
-
 
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
@@ -79,29 +99,10 @@ public class Capital {
         }
     }
 
-        public ResultSet getNRegionCapitalsDescending(Connection con, String region, int N) {
-        try {
-            // Create an SQL statement
-            Statement stmt = con.createStatement();
-            // Create string for SQL statement
-            String strSelect =
-                    "SELECT city.name AS capital, country.name, city.population \n" +
-                            "FROM country\n" +
-                            "INNER JOIN city ON city.countryCode = country.code\n" +
-                            "WHERE country.region = '" + region + "' " +
-                            "ORDER BY city.population DESC " +
-                            "LIMIT " + N;
-
-
-            // Execute SQL statement and return ResultSet
-            return stmt.executeQuery(strSelect);
-        } catch (Exception e) {
-            System.out.println("Failed to get capital details");
-            return null;
-        }
-    }
-
-    //display function which takes resultset as a parameter, allowing more flexibility later
+    /**
+     * Display the contents of ResultSet for capital functions
+     * @param resultSet containing capital details from other method calls
+     */
     public void displayCapitals(ResultSet resultSet) {
         try {
             // Iterate through the ResultSet and print capital details

@@ -12,6 +12,12 @@ public class Population {
     public long urbanPopulation;
     public long ruralPopulation;
 
+    /**
+     * Get the Population of Specified District
+     * @param con the database connection
+     * @param District the District to search for
+     * @return ResultSet
+     */
     public ResultSet getDistrictPopulation(Connection con, String District) {
         try {
             // Create an SQL statement
@@ -39,9 +45,41 @@ public class Population {
         }
     }
 
-    //display function which takes resultset as a parameter, allowing more flexibility later
-    //display function which takes resultset as a parameter, allowing more flexibility later
-    public void displayPopulation(ResultSet resultSet) {
+    /**
+     * Get Population of the World
+     * @param con the database connection
+     * @return ResultSet
+     */
+    public ResultSet getWorldPopulation(Connection con) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT \n" +
+                            "    'Earth' as name, \n" +
+                            "    SUM(country.population) AS population, \n" +
+                            "    SUM(city.population) AS UrbanPop, \n" +
+                            "    ROUND(SUM(city.population) / SUM(country.population) * 100, 1) AS UrbanPopPercentage, \n" +
+                            "    SUM(country.population - city.population) AS RuralPop, \n" +
+                            "    ROUND(SUM((country.population - city.population)) / SUM(country.population) * 100, 1) AS RuralPopPercentage \n" +
+                            "FROM country\n" +
+                            "INNER JOIN city ON city.countryCode = country.code;";
+
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get capital details");
+            return null;
+        }
+    }
+
+    /**
+     * Display the contents of ResultSet for the Population
+     * @param resultSet containing population details from other method calls
+     */
+    public void displayPopulations(ResultSet resultSet) {
         try {
             // Check if the ResultSet is null
             if (resultSet != null) {

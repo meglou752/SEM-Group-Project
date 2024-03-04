@@ -13,6 +13,13 @@ public class Country {
     public int population;
     public Integer capital;
 
+    /**
+     * Find specified number of Regions in a Country sorted by the highest Population
+     * @param con the database connection
+     * @param region the region to search for
+     * @param N the limit of database entries to retrieve
+     * @return ResultSet
+     */
     public ResultSet getTopRegionDescending(Connection con, String region, int N) {
         try {
             // Create an SQL statement
@@ -86,6 +93,12 @@ public class Country {
         }
     }
 
+    /**
+     * Find Countries in Continent Sorted by the highest population
+     * @param con the database connection
+     * @param continent_name the continent to search through
+     * @return ResultSet
+     */
     public ResultSet getContinentDescending(Connection con, String continent_name) {
         try {
             // Create an SQL statement
