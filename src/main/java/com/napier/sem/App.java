@@ -41,7 +41,7 @@ public class App {
 
          //ResultSet resultSet = f.getWorldPopulation(a.con);
         // ResultSet resultSet = f.getDistrictPopulation(a.con,  "Constantine");
-        ResultSet resultSet = f.getRegionPopulations(a.con, "Carribean");
+        ResultSet resultSet = f.getRegionPopulations(a.con, "Western Europe");
 
         //c.displayCountries(resultSet);
         //d.displayCities(resultSet);
