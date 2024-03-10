@@ -84,27 +84,29 @@ public class Population {
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
-
             // Create string for SQL statement
             String strSelect =
                     "SELECT \n" +
-                            "'" + Region + "' AS name, \n" +
-                            "SUM(country.Population) AS population, \n" +
-                            "SUM(city.Population) AS UrbanPop, \n" +
-                            "ROUND(SUM(city.population) / SUM(country.population) * 100, 1) AS UrbanPopPercentage, \n" +
-                            "SUM(country.population - city.population) AS RuralPop \n" +
-                            "FROM country \n" +
-                            "LEFT JOIN city ON country.Code = city.CountryCode \n" +
-                            "WHERE country.region = '" + Region + "' " +
-                            "GROUP BY name;";
+                            "'" + Region + "' as name, \n" +
+                            "    SUM(country.population) AS population, \n" +
+                            "    SUM(city.population) AS UrbanPop, \n" +
+                            "    ROUND(SUM(city.population) / SUM(country.population) * 100, 1) AS UrbanPopPercentage, \n" +
+                            "    SUM(country.population - city.population) AS RuralPop, \n" +
+                            "    ROUND(SUM((country.population - city.population)) / SUM(country.population) * 100, 1) AS RuralPopPercentage \n" +
+                            "FROM country\n" +
+                            "INNER JOIN city ON city.countryCode = country.code\n" +
+                            "WHERE country.region = '" + Region + "'\n" +
+                            "GROUP BY name";
+
 
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
-            System.out.println("Failed to get region populations");
+            System.out.println("Failed to get capital details");
             return null;
         }
     }
+
 
 
     /**
