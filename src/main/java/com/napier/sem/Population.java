@@ -92,7 +92,7 @@ public class Population {
                             "SUM(country.Population) AS population, \n" +
                             "SUM(city.Population) AS UrbanPop, \n" +
                             "ROUND(SUM(city.population) / SUM(country.population) * 100, 1) AS UrbanPopPercentage, \n" +
-                            "SUM(country.population - city.population) AS RuralPop, \n" +
+                            "SUM(country.population - city.population) AS RuralPop \n" +
                             "FROM country \n" +
                             "LEFT JOIN city ON country.Code = city.CountryCode \n" +
                             "WHERE country.Region = '" + Region + "' \n" +
