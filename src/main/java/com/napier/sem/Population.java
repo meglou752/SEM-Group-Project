@@ -95,7 +95,7 @@ public class Population {
                             "SUM(country.population - city.population) AS RuralPop \n" +
                             "FROM country \n" +
                             "LEFT JOIN city ON country.Code = city.CountryCode \n" +
-                            "WHERE country.Region = '" + Region + "' \n" +
+                            "WHERE country.region = '" + Region + "' " +
                             "GROUP BY name;";
 
             // Execute SQL statement and return ResultSet
