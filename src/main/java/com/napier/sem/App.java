@@ -39,9 +39,9 @@ public class App {
         // ResultSet resultSet = e.getNRegionCapitalsDescending(a.con, "Western Europe", 6);
         // ResultSet resultSet = e.getContinentCapitalsDescending(a.con, "Asia");
 
-         ResultSet resultSet = f.getWorldPopulation(a.con);
+         //ResultSet resultSet = f.getWorldPopulation(a.con);
         // ResultSet resultSet = f.getDistrictPopulation(a.con,  "Constantine");
-
+        ResultSet resultSet = f.getRegionPopulations(a.con, "Carribean");
 
         //c.displayCountries(resultSet);
         //d.displayCities(resultSet);

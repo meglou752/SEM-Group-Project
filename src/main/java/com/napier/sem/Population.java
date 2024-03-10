@@ -76,6 +76,37 @@ public class Population {
     }
 
     /**
+     * Get population of a region
+     * @param con the database connection
+     * @param Region the region to produce population report on
+     */
+    public ResultSet getRegionPopulations(Connection con, String Region) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT \n" +
+                            "'" + Region + "' AS name, \n" +
+                            "SUM(country.Population) AS TotalPopulation, \n" +
+                            "SUM(city.Population) AS UrbanPopulation, \n" +
+                            "SUM(country.Population - city.Population) AS RuralPopulation \n" +
+                            "FROM country \n" +
+                            "LEFT JOIN city ON country.Code = city.CountryCode \n" +
+                            "WHERE country.Region = '" + Region + "' \n" +
+                            "GROUP BY name;";
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (SQLException e) {
+            System.out.println("Failed to get region populations: " + e.getMessage());
+            return null;
+        }
+    }
+
+
+    /**
      * Display the contents of ResultSet for the Population
      * @param resultSet containing population details from other method calls
      */
