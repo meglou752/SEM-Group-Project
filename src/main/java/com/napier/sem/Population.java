@@ -89,9 +89,10 @@ public class Population {
             String strSelect =
                     "SELECT \n" +
                             "'" + Region + "' AS name, \n" +
-                            "SUM(country.Population) AS TotalPopulation, \n" +
-                            "SUM(city.Population) AS UrbanPopulation, \n" +
-                            "SUM(country.Population - city.Population) AS RuralPopulation \n" +
+                            "SUM(country.Population) AS population, \n" +
+                            "SUM(city.Population) AS UrbanPop, \n" +
+                            "ROUND(SUM(city.population) / SUM(country.population) * 100, 1) AS UrbanPopPercentage, \n" +
+                            "SUM(country.population - city.population) AS RuralPop, \n" +
                             "FROM country \n" +
                             "LEFT JOIN city ON country.Code = city.CountryCode \n" +
                             "WHERE country.Region = '" + Region + "' \n" +
@@ -99,8 +100,8 @@ public class Population {
 
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
-        } catch (SQLException e) {
-            System.out.println("Failed to get region populations: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Failed to get region populations");
             return null;
         }
     }
