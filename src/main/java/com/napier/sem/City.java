@@ -41,6 +41,13 @@ public class City {
         }
     }
 
+    /**
+     *
+     * @param con the database connection
+     * @param continentName the name of the continent to gather cities from
+     * @param N the number of highest populated cities to retrieve
+     * @return the resultset containing the top 'N' populated cities in a continent
+     */
     public ResultSet topNPopulatedCitiesContinent(Connection con, String continentName, int N)
     {
         try {
