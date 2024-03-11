@@ -40,7 +40,7 @@ public class Population {
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
-            System.out.println("Failed to get capital details");
+            System.out.println("Failed to get population details");
             return null;
         }
     }
@@ -70,7 +70,7 @@ public class Population {
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
-            System.out.println("Failed to get capital details");
+            System.out.println("Failed to get population details");
             return null;
         }
     }
@@ -102,7 +102,7 @@ public class Population {
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
-            System.out.println("Failed to get capital details");
+            System.out.println("Failed to get population details");
             return null;
         }
     }
