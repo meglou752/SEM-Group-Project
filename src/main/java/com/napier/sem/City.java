@@ -40,6 +40,28 @@ public class City {
             return null;
         }
     }
+
+    public ResultSet topNPopulatedCitiesContinent(Connection con, String continentName, int N)
+    {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.name, city.countryCode, city.district, city.population\n" +
+                            "FROM country\n" +
+                            "INNER JOIN city ON city.countryCode = country.code\n" +
+                            "WHERE country.continent = " + "'" + continentName + "'\n" +
+                            "ORDER BY city.population DESC\n" +
+                            "LIMIT " + N + ";";
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
     /**
      *
      * @param con the database connection
