@@ -27,13 +27,14 @@ public class App {
         // ResultSet resultSet = c.topNPopulatedCountries(a.con, 5);
         // ResultSet resultSet = c.getCountryDescending(a.con);
         // ResultSet resultSet = c.getContinentDescending(a.con, "Asia");
+        ResultSet resultSet = c.topNPopulatedCountriesContinent(a.con, "Asia", 4);
 
         // ResultSet resultSet = d.topNPopulatedCitiesDistrict(a.con, "Noord-Brabant", 3);
         // ResultSet resultSet = d.topNPopulatedCities(a.con, 5);
         // ResultSet resultSet = d.getTopRegionCityDescending(a.con, "Western Europe", 6);
         // ResultSet resultSet = d.getCitiesInContinentDesc(a.con, "Asia");
         // ResultSet resultSet = d.getCountryCityDescending(a.con, "France");
-        ResultSet resultSet = d.topNPopulatedCitiesContinent(a.con, "Europe", 5);
+        //ResultSet resultSet = d.topNPopulatedCitiesContinent(a.con, "Europe", 5);
 
         // ResultSet resultSet = e.topNPopulatedCapitals(a.con, 5);
         // ResultSet resultSet = e.getNRegionCapitalsDescending(a.con, "Western Europe", 6);
@@ -47,8 +48,8 @@ public class App {
        // ResultSet resultSet = f.getCountryPopulation(a.con, "Germany");
 
 
-        //c.displayCountries(resultSet);
-        d.displayCities(resultSet);
+        c.displayCountries(resultSet);
+        //d.displayCities(resultSet);
         //e.displayCapitals(resultSet);
         //f.displayPopulations(resultSet);
 
