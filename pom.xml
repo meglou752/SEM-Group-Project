@@ -18,9 +18,12 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.3.0</version>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version> <!-- Use the latest version -->
                 <configuration>
+                    <includes>
+                        <include>**/CountryTest.java</include>
+                    </includes>
                     <archive>
                         <manifest>
                             <mainClass>com.napier.sem.App</mainClass>
@@ -35,21 +38,10 @@
                         <id>make-assembly</id>
                         <phase>package</phase>
                         <goals>
-                            <goal>single</goal>
+                            <goal>test</goal> <!-- Use 'test' goal instead -->
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <!-- Configure Surefire Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.2.5</version> <!-- Use the latest version -->
-                <configuration>
-                    <includes>
-                        <include>**/CountryTest.java</include>
-                    </includes>
-                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -62,12 +54,10 @@
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.1.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
 
 </project>
-
-
