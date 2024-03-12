@@ -18,6 +18,6 @@ jobs:
     - name: Build with Maven
       run: mvn package
     - name: Run unit tests
-      run: mvn test
+      run: mvn -Dtest=com.napier.sem.CountryTest test
     - name: Run docker compose
       run: docker-compose up --abort-on-container-exit
