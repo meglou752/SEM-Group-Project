@@ -145,6 +145,28 @@ public class Country {
         }
     }
 
+    public ResultSet countryRegionDescending(Connection con, String region)
+    {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT country.code, country.name, country.continent, country.region, country.population, country.capital \n" +
+                            "FROM country \n" +
+                            "WHERE country.region = '" + region + "' " + // Enclose in single quotes
+                            "ORDER BY country.population DESC ";
+
+System.out.print("hello world");
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+
+
     /**
      * Displays the contents of ResultSet for country functions
      * @param resultSet containing country details from other method calls

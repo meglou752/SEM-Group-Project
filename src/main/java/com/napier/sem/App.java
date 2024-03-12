@@ -23,10 +23,12 @@ public class App {
 
         // Connect to database
         a.connect();
-        // ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", 5);
+        //ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", 5);
         // ResultSet resultSet = c.topNPopulatedCountries(a.con, 5);
         // ResultSet resultSet = c.getCountryDescending(a.con);
         // ResultSet resultSet = c.getContinentDescending(a.con, "Asia");
+        //ResultSet resultSet = c.topNPopulatedCountriesContinent(a.con, "Asia", 4);
+        ResultSet resultSet = c.countryRegionDescending(a.con, "Southern and Central Asia");
         // ResultSet resultSet = c.topNPopulatedCountriesContinent(a.con, "Asia", 4);
 
         // ResultSet resultSet = d.topNPopulatedCitiesDistrict(a.con, "Noord-Brabant", 3);
