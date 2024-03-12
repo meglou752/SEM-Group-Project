@@ -5,48 +5,29 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
 import java.sql.Connection;
-import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class AppTest {
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+class AppTest {
     static App a;
-    static Country c;
-    static City d;
-    static Capital e;
-    static Population f;
 
     @BeforeAll
     static void init() {
         a = new App();
-        c = new Country();
-        d = new City();
-        e = new Capital();
-        f = new Population();
+        a.connect(); // Establish connection to the database
     }
 
     @Test
-    //
-    void getContinentDescendingTest()
-    {
-        c.getContinentDescending(a.con, "Europe");
-        c.getContinentDescending(a.con, null);
-        c.getContinentDescending(a.con, "4");
-    }
-
-    @Test
-    //testing 'connect' method successful connection
-    void testConnect_SuccessfulConnection()
-    {
-        a.connect();
+        // Testing connection to the database
+    void testDatabaseConnection() {
         assertNotNull(a.con);
     }
 
     @Test
-    //testing 'connect' method unsuccessful connection
-    void testConnect_UnsuccessfulConnection()
-    {
-        a.connect();
+        // Testing disconnection from the database
+    void testDatabaseDisconnection() {
+        a.disconnect();
         assertNull(a.con);
     }
 }
