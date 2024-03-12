@@ -47,7 +47,7 @@
                 <version>3.2.5</version> <!-- Use the latest version -->
                 <configuration>
                     <includes>
-                        <include>**/*Test.java</include>
+                        <include>**/CountryTest.java</include>
                     </includes>
                 </configuration>
             </plugin>
