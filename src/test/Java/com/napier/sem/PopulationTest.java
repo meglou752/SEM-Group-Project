@@ -20,4 +20,12 @@ class PopulationTest {
         a = new App();
         p = new Population();
     }
+
+    void testGetRegionPopulations_NormalData()
+    {
+        p.name = "Western Europe";
+        p.population = 100000;
+        p.urbanPopulation = 30000;
+        p.ruralPopulation = 70000;
+    }
 }
