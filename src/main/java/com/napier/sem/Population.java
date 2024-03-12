@@ -171,6 +171,38 @@ public class Population {
     }
 
     /**
+     * Get population of all countries rural and urban
+     * @param con the database connection
+     */
+
+    ResultSet getCityPopulationAll(Connection con) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT \n" +
+                            " country.name AS name, \n" +
+                            "    SUM(country.population) AS population, \n" +
+                            "    SUM(city.population) AS UrbanPop, \n" +
+                            "    ROUND(SUM(city.population) / SUM(country.population) * 100, 1) AS UrbanPopPercentage, \n" +
+                            "    SUM(country.population - city.population) AS RuralPop, \n" +
+                            "    ROUND(SUM((country.population - city.population)) / SUM(country.population) * 100, 1) AS RuralPopPercentage \n" +
+                            "FROM country\n" +
+                            "INNER JOIN city ON city.countryCode = country.code\n" +
+                            "GROUP BY name";
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get capital details");
+            return null;
+        }
+    }
+
+
+
+    /**
      * Display the contents of ResultSet for the Population
      * @param resultSet containing population details from other method calls
      */
