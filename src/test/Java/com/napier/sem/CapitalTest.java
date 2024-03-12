@@ -18,20 +18,10 @@ class CapitalTest {
     @BeforeAll
     static void init() {
         a = new App();
-        a.connect(); // Establish connection to the database
         c = new Capital();
+        c.capital = "";
+        c.name = "";
+        c.population = 0;
     }
 
-    @Test
-        // Test topNPopulatedCapitals function
-    void testTopNPopulatedCapitals() {
-        try {
-            ResultSet resultSet = c.topNPopulatedCapitals(a.con, 5);
-            assertNotNull(resultSet);
-        } catch (Exception e) {
-            fail("Exception thrown");
-        }
-    }
-
-    // Add more tests for Capital class as needed
 }

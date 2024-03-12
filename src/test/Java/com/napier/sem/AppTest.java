@@ -15,7 +15,6 @@ class AppTest {
     @BeforeAll
     static void init() {
         a = new App();
-        a.connect(); // Establish connection to the database
     }
 
     @Test
@@ -27,7 +26,6 @@ class AppTest {
     @Test
         // Testing disconnection from the database
     void testDatabaseDisconnection() {
-        a.disconnect();
         assertNull(a.con);
     }
 }

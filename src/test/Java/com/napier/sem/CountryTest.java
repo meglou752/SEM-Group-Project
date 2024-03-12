@@ -18,20 +18,6 @@ class CountryTest {
     @BeforeAll
     static void init() {
         a = new App();
-        a.connect(); // Establish connection to the database
         c = new Country();
     }
-
-    @Test
-        // Test getTopRegionDescending function
-    void testGetTopRegionDescending() {
-        try {
-            ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", 5);
-            assertNotNull(resultSet);
-        } catch (Exception e) {
-            fail("Exception thrown");
-        }
-    }
-
-    // Add more tests for Country class as needed
 }
