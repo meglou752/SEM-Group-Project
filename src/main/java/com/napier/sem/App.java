@@ -2,7 +2,7 @@ package com.napier.sem;
 import java.sql.*;
 
 public class App {
-    private Connection con = null;
+    public static Connection con = null;
     /**
      * The entry point of the application.
      * <p>
@@ -97,5 +97,10 @@ public class App {
             }
         }
     }
+
+    /**
+     * Get the connection to the MySQL database.
+     * @return The connection object.
+     */
 
 }
