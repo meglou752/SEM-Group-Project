@@ -22,10 +22,6 @@ public class Country {
      */
     public ResultSet getTopRegionDescending(Connection con, String region, int N) {
         try {
-            if (con == null) {
-                System.out.println("Connection is null.");
-                return null;
-            }
             if (region == null) {
                 System.out.println("region name is null.");
                 return null;
@@ -34,6 +30,10 @@ public class Country {
             {
                 System.out.println("N Cannot be negative");
                 N = 1;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
             }
             // Create an SQL statement
             Statement stmt = con.createStatement();
@@ -66,14 +66,14 @@ public class Country {
 
     public ResultSet topNPopulatedCountries(Connection con, int N) {
         try {
-            if (con == null) {
-                System.out.println("Connection is null.");
-                return null;
-            }
             if (N < 0)
             {
                 System.out.println("N Cannot be negative");
                 N = 1;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
             }
 
             // Create an SQL statement
@@ -128,12 +128,12 @@ public class Country {
      */
     public ResultSet getContinentDescending(Connection con, String continent_name) {
         try {
-            if (con == null) {
-                System.out.println("Connection is null.");
-                return null;
-            }
             if (continent_name == null) {
                 System.out.println("Continent name is null.");
+                return null;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
                 return null;
             }
             // Create an SQL statement
@@ -162,10 +162,6 @@ public class Country {
     public ResultSet topNPopulatedCountriesContinent(Connection con, String continentName, int N)
     {
         try {
-            if (con == null) {
-                System.out.println("Connection is null.");
-                return null;
-            }
             if (continentName == null) {
                 System.out.println("Continent name is null.");
                 return null;
@@ -174,6 +170,10 @@ public class Country {
             {
                 System.out.println("N Cannot be negative");
                 N = 1;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
             }
             // Create an SQL statement
             Statement stmt = con.createStatement();
@@ -195,12 +195,12 @@ public class Country {
 
     public ResultSet countryRegionDescending(Connection con, String region) {
         try {
-            if (con == null) {
-                System.out.println("Connection is null.");
-                return null;
-            }
             if (region == null) {
                 System.out.println("Region is null.");
+                return null;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
                 return null;
             }
 
