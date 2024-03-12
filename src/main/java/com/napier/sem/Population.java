@@ -141,7 +141,7 @@ public class Population {
     /**
      * Get population of a city
      * @param con the database connection
-     * @param city the city to produce population report on
+     * @param City the city to produce population report on
      */
 
     ResultSet getCityPopulation(Connection con, String City) {
