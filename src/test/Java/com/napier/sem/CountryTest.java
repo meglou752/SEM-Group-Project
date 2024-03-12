@@ -16,14 +16,14 @@ class CountryTest {
     static Country c;
 
     @BeforeAll
-    static void init() {
+    public static void init() {
         a = new App();
         c = new Country();
     }
 
     @Test
         // Test getTopRegionDescending function
-    void getTopRegionDescending_NotNullTest() {
+    public void getTopRegionDescending_NotNullTest() {
         try {
             c.code = "EU1";
             c.name = "Estonia";
@@ -37,7 +37,7 @@ class CountryTest {
         }
     }
    @Test
-    void getTopRegionDescending_NullTest() {
+    public void getTopRegionDescending_NullTest() {
         try {
             ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", 5);
         } catch (Exception e) {
@@ -45,7 +45,7 @@ class CountryTest {
         }
     }
     @Test
-    void getTopRegionDescending_NegativeNTest() {
+    public void getTopRegionDescending_NegativeNTest() {
         try {
             ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", -1);
         } catch (Exception e) {
@@ -53,7 +53,7 @@ class CountryTest {
         }
     }
     @Test
-    void getTopRegionDescending_NullConTest() {
+    public void getTopRegionDescending_NullConTest() {
         try {
             ResultSet resultSet = c.getTopRegionDescending(null, "Southern and Central Asia", 5);
         } catch (Exception e) {
@@ -61,7 +61,7 @@ class CountryTest {
         }
     }
     @Test
-    void getTopNPopulatedCountries_NotNullTest() {
+    public void getTopNPopulatedCountries_NotNullTest() {
         try {
             ResultSet resultSet = c.topNPopulatedCountries(a.con, 5);
         } catch (Exception e) {
@@ -69,7 +69,7 @@ class CountryTest {
         }
     }
     @Test
-    void getTopNPopulatedCountries_NegativeNTest() {
+    public void getTopNPopulatedCountries_NegativeNTest() {
         try {
             ResultSet resultSet = c.topNPopulatedCountries(a.con, -5);
         } catch (Exception e) {
@@ -77,7 +77,7 @@ class CountryTest {
         }
     }
     @Test
-    void getTopNPopulatedCountries_NullConTest() {
+    public void getTopNPopulatedCountries_NullConTest() {
         try {
             ResultSet resultSet = c.topNPopulatedCountries(null, 5);
         } catch (Exception e) {
@@ -85,7 +85,7 @@ class CountryTest {
         }
     }
     @Test
-    void getCountryDescending_NotNullTest() {
+    public void getCountryDescending_NotNullTest() {
         try {
             ResultSet resultSet = c.getCountryDescending(a.con);
         } catch (Exception e) {
@@ -93,7 +93,7 @@ class CountryTest {
         }
     }
     @Test
-    void getCountryDescending_NullConTest() {
+    public void getCountryDescending_NullConTest() {
         try {
             ResultSet resultSet = c.getCountryDescending(null);
         } catch (Exception e) {
@@ -101,7 +101,7 @@ class CountryTest {
         }
     }
     @Test
-    void getContinentDescending_NotNullTest() {
+    public void getContinentDescending_NotNullTest() {
         try {
             ResultSet resultSet = c.getContinentDescending(a.con, "Europe");
         } catch (Exception e) {
@@ -109,7 +109,7 @@ class CountryTest {
         }
     }
     @Test
-    void getContinentDescending_NullConTest() {
+    public void getContinentDescending_NullConTest() {
         try {
             ResultSet resultSet = c.getContinentDescending(null, "Europe");
         } catch (Exception e) {
@@ -117,7 +117,7 @@ class CountryTest {
         }
     }
     @Test
-    void getContinentDescending_NullContinentTest() {
+    public void getContinentDescending_NullContinentTest() {
         try {
             ResultSet resultSet = c.getContinentDescending(a.con, null);
         } catch (Exception e) {
@@ -126,7 +126,7 @@ class CountryTest {
     }
 
     @Test
-    void topNPopulatedCountriesContinent_NotNullTest() {
+    public void topNPopulatedCountriesContinent_NotNullTest() {
         try {
             ResultSet resultSet = c.topNPopulatedCountriesContinent(a.con, "Europe", 5);
         } catch (Exception e) {
@@ -135,7 +135,7 @@ class CountryTest {
     }
 
     @Test
-    void topNPopulatedCountriesContinent_NullContinentTest() {
+    public void topNPopulatedCountriesContinent_NullContinentTest() {
         try {
             ResultSet resultSet = c.topNPopulatedCountriesContinent(a.con, null, 5);
         } catch (Exception e) {
@@ -144,7 +144,7 @@ class CountryTest {
     }
 
     @Test
-    void topNPopulatedCountriesContinent_NullConTest() {
+    public void topNPopulatedCountriesContinent_NullConTest() {
         try {
             ResultSet resultSet = c.topNPopulatedCountriesContinent(null, "Europe", 5);
         } catch (Exception e) {
@@ -153,7 +153,7 @@ class CountryTest {
     }
 
     @Test
-    void countryRegionDescending_NotNullTest() {
+    public void countryRegionDescending_NotNullTest() {
         try {
             ResultSet resultSet = c.countryRegionDescending(a.con, "Southern and Central Asia");
         } catch (Exception e) {
@@ -162,7 +162,7 @@ class CountryTest {
     }
 
     @Test
-    void countryRegionDescending_NullRegionTest() {
+    public void countryRegionDescending_NullRegionTest() {
         try {
             ResultSet resultSet = c.countryRegionDescending(a.con, null);
         } catch (Exception e) {
@@ -171,7 +171,7 @@ class CountryTest {
     }
 
     @Test
-    void countryRegionDescending_NullConTest() {
+    public void countryRegionDescending_NullConTest() {
         try {
             ResultSet resultSet = c.countryRegionDescending(null, "Southern and Central Asia");
         } catch (Exception e) {
@@ -179,7 +179,7 @@ class CountryTest {
         }
     }
     @Test
-    void DisplayCountries_NullTest()
+    public void DisplayCountries_NullTest()
     {
         try {
             c.displayCountries(null);
