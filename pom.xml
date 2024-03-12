@@ -22,7 +22,7 @@
                 <version>3.2.5</version> <!-- Use the latest version -->
                 <configuration>
                     <includes>
-                        <include>**/CountryTest.java</include>
+                        <include>**/*Test.java</include>
                     </includes>
                     <archive>
                         <manifest>
