@@ -40,8 +40,8 @@ public class App {
         // ResultSet resultSet = e.topNPopulatedCapitals(a.con, 5);
         // ResultSet resultSet = e.getNRegionCapitalsDescending(a.con, "Western Europe", 6);
         //ResultSet resultSet = e.getContinentCapitalsDescending(a.con, "Asia");
-        //ResultSet resultSet = e.topNPopulatedCapitalsByContinent(a.con, "Europe", 5);
-          ResultSet resultSet = e.getCapitalsPopulationDesc(a.con);
+        ResultSet resultSet = e.topNPopulatedCapitalsByContinent(a.con, "Europe", 5);
+         // ResultSet resultSet = e.getCapitalsPopulationDesc(a.con);
 
         //ResultSet resultSet = f.getWorldPopulation(a.con);
         // ResultSet resultSet = f.getDistrictPopulation(a.con,  "Constantine");

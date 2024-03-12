@@ -116,6 +116,7 @@ public class Capital {
                     "FROM country\n" +
                     "INNER JOIN city ON city.countryCode = country.code\n" +
                     "WHERE country.continent = '" + continent + "'\n" +
+                    "AND country.capital = city.ID " +
                     "ORDER BY city.population\n" +
                     "DESC LIMIT " + N + ";";
 
