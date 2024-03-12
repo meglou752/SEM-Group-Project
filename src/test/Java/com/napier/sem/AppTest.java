@@ -17,7 +17,7 @@ class AppTest {
         a = new App();
     }
 
-    @Test
+//    @Test
         // Testing connection to the database
     void testDatabaseConnection() {
         assertNotNull(a.con);

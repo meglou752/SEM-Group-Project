@@ -22,6 +22,19 @@ public class Country {
      */
     public ResultSet getTopRegionDescending(Connection con, String region, int N) {
         try {
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
+            if (region == null) {
+                System.out.println("region name is null.");
+                return null;
+            }
+            if (N < 0)
+            {
+                System.out.println("N Cannot be negative");
+                N = 1;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -53,6 +66,16 @@ public class Country {
 
     public ResultSet topNPopulatedCountries(Connection con, int N) {
         try {
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
+            if (N < 0)
+            {
+                System.out.println("N Cannot be negative");
+                N = 1;
+            }
+
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -77,6 +100,10 @@ public class Country {
      */
     public ResultSet getCountryDescending(Connection con) {
         try {
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -101,6 +128,14 @@ public class Country {
      */
     public ResultSet getContinentDescending(Connection con, String continent_name) {
         try {
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
+            if (continent_name == null) {
+                System.out.println("Continent name is null.");
+                return null;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -127,6 +162,19 @@ public class Country {
     public ResultSet topNPopulatedCountriesContinent(Connection con, String continentName, int N)
     {
         try {
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
+            if (continentName == null) {
+                System.out.println("Continent name is null.");
+                return null;
+            }
+            if (N < 0)
+            {
+                System.out.println("N Cannot be negative");
+                N = 1;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -145,9 +193,17 @@ public class Country {
         }
     }
 
-    public ResultSet countryRegionDescending(Connection con, String region)
-    {
+    public ResultSet countryRegionDescending(Connection con, String region) {
         try {
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
+            if (region == null) {
+                System.out.println("Region is null.");
+                return null;
+            }
+
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -160,11 +216,10 @@ public class Country {
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
-            System.out.println("Failed to get country details");
+            System.out.println("Failed to get country details: " + e.getMessage());
             return null;
         }
     }
-
 
     /**
      * Displays the contents of ResultSet for country functions
@@ -172,7 +227,10 @@ public class Country {
      */
     public void displayCountries(ResultSet resultSet) {
         try {
-            // Iterate through the ResultSet and print country details
+            if (resultSet == null) {
+                System.out.println("ResultSet is null.");
+                return;
+            }
             while (resultSet.next()) {
                 String code = resultSet.getString("code");
                 String name = resultSet.getString("name");
@@ -184,14 +242,15 @@ public class Country {
                 System.out.println("Country code: " + code + " Country name: " + name + " Continent: " + continent +
                         " Region: " + region + " Population: " + population + " Capital: " + capital + "\n");
             }
-        } catch (Exception e) {
-            System.out.println("Failed to display country details");
+        } catch (SQLException e) {
+            System.out.println("Failed to display country details: " + e.getMessage());
         } finally {
-            // Close the ResultSet to free resources
-            try {
-                resultSet.close();
-            } catch (SQLException e) {
-                System.out.println("Error closing ResultSet");
+            if (resultSet != null) {
+                try {
+                    resultSet.close();
+                } catch (SQLException e) {
+                    System.out.println("Error closing ResultSet: " + e.getMessage());
+                }
             }
         }
     }

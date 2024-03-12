@@ -1,31 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.napier.sem.AppTest" time="323.718" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.napier.sem.AppTest" time="0.042" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="18"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.class.path" value="C:\Users\Jack Millar\OneDrive - Edinburgh Napier University\Year2-B\Software Engineering Methods\Code\SEM-Group-Project\target\test-classes;C:\Users\Jack Millar\OneDrive - Edinburgh Napier University\Year2-B\Software Engineering Methods\Code\SEM-Group-Project\target\classes;C:\Users\Jack Millar\.m2\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar;C:\Users\Jack Millar\.m2\repository\com\google\protobuf\protobuf-java\3.6.1\protobuf-java-3.6.1.jar;C:\Users\Jack Millar\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.1.0\junit-jupiter-api-5.1.0.jar;C:\Users\Jack Millar\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Jack Millar\.m2\repository\org\opentest4j\opentest4j\1.0.0\opentest4j-1.0.0.jar;C:\Users\Jack Millar\.m2\repository\org\junit\platform\junit-platform-commons\1.1.0\junit-platform-commons-1.1.0.jar;"/>
-=======
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.napier.sem.AppTest" time="0.038" tests="1" errors="0" skipped="0" failures="0">
-  <properties>
-    <property name="java.specification.version" value="17"/>
-    <property name="sun.cpu.isalist" value="amd64"/>
-    <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="D:\2nd Year\Software Engineering Methods. (SEM)\SEM-Group-Project\target\test-classes;D:\2nd Year\Software Engineering Methods. (SEM)\SEM-Group-Project\target\classes;C:\Users\amade\.m2\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar;C:\Users\amade\.m2\repository\com\google\protobuf\protobuf-java\3.6.1\protobuf-java-3.6.1.jar;C:\Users\amade\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.1.0\junit-jupiter-api-5.1.0.jar;C:\Users\amade\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\amade\.m2\repository\org\opentest4j\opentest4j\1.0.0\opentest4j-1.0.0.jar;C:\Users\amade\.m2\repository\org\junit\platform\junit-platform-commons\1.1.0\junit-platform-commons-1.1.0.jar;"/>
->>>>>>> develop
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="user.timezone" value="Europe/London"/>
-<<<<<<< HEAD
     <property name="os.name" value="Windows 10"/>
     <property name="java.vm.specification.version" value="18"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-18.0.2.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\Jack Millar\AppData\Local\Temp\surefire5640597618128783756\surefirebooter-20240312112313367_3.jar C:\Users\Jack Millar\AppData\Local\Temp\surefire5640597618128783756 2024-03-12T11-23-12_944-jvmRun1 surefire-20240312112313367_1tmp surefire_0-20240312112313367_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Jack Millar\AppData\Local\Temp\surefire16722889879898550130\surefirebooter-20240312192455591_3.jar C:\Users\Jack Millar\AppData\Local\Temp\surefire16722889879898550130 2024-03-12T19-24-55_067-jvmRun1 surefire-20240312192455591_1tmp surefire_0-20240312192455591_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Jack Millar\OneDrive - Edinburgh Napier University\Year2-B\Software Engineering Methods\Code\SEM-Group-Project\target\test-classes;C:\Users\Jack Millar\OneDrive - Edinburgh Napier University\Year2-B\Software Engineering Methods\Code\SEM-Group-Project\target\classes;C:\Users\Jack Millar\.m2\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar;C:\Users\Jack Millar\.m2\repository\com\google\protobuf\protobuf-java\3.6.1\protobuf-java-3.6.1.jar;C:\Users\Jack Millar\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.1.0\junit-jupiter-api-5.1.0.jar;C:\Users\Jack Millar\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Jack Millar\.m2\repository\org\opentest4j\opentest4j\1.0.0\opentest4j-1.0.0.jar;C:\Users\Jack Millar\.m2\repository\org\junit\platform\junit-platform-commons\1.1.0\junit-platform-commons-1.1.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -40,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Jack Millar\AppData\Local\Temp\surefire5640597618128783756\surefirebooter-20240312112313367_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Jack Millar\AppData\Local\Temp\surefire16722889879898550130\surefirebooter-20240312192455591_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="18.0.2.1+1-1"/>
@@ -56,49 +46,10 @@
     <property name="idea.version" value="2023.3.2"/>
     <property name="java.version" value="18.0.2.1"/>
     <property name="user.dir" value="C:\Users\Jack Millar\OneDrive - Edinburgh Napier University\Year2-B\Software Engineering Methods\Code\SEM-Group-Project"/>
-=======
-    <property name="os.name" value="Windows 11"/>
-    <property name="java.vm.specification.version" value="17"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="user.country" value="GB"/>
-    <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\amade\AppData\Local\Temp\surefire1976158695249083553\surefirebooter-20240312131541247_3.jar C:\Users\amade\AppData\Local\Temp\surefire1976158695249083553 2024-03-12T13-15-40_916-jvmRun1 surefire-20240312131541247_1tmp surefire_0-20240312131541247_2tmp"/>
-    <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="D:\2nd Year\Software Engineering Methods. (SEM)\SEM-Group-Project\target\test-classes;D:\2nd Year\Software Engineering Methods. (SEM)\SEM-Group-Project\target\classes;C:\Users\amade\.m2\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar;C:\Users\amade\.m2\repository\com\google\protobuf\protobuf-java\3.6.1\protobuf-java-3.6.1.jar;C:\Users\amade\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.1.0\junit-jupiter-api-5.1.0.jar;C:\Users\amade\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\amade\.m2\repository\org\opentest4j\opentest4j\1.0.0\opentest4j-1.0.0.jar;C:\Users\amade\.m2\repository\org\junit\platform\junit-platform-commons\1.1.0\junit-platform-commons-1.1.0.jar;"/>
-    <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="C:\Users\amade"/>
-    <property name="user.language" value="en"/>
-    <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2024-01-16"/>
-    <property name="java.home" value="D:\Program Files\Java\jdk-17"/>
-    <property name="file.separator" value="\"/>
-    <property name="basedir" value="D:\2nd Year\Software Engineering Methods. (SEM)\SEM-Group-Project"/>
-    <property name="java.vm.compressedOopsMode" value="Zero based"/>
-    <property name="line.separator" value="&#10;"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\amade\AppData\Local\Temp\surefire1976158695249083553\surefirebooter-20240312131541247_3.jar"/>
-    <property name="user.script" value=""/>
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="17.0.10+11-LTS-240"/>
-    <property name="user.name" value="amade"/>
-    <property name="path.separator" value=";"/>
-    <property name="os.version" value="10.0"/>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="file.encoding" value="Cp1252"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="localRepository" value="C:\Users\amade\.m2\repository"/>
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="C:\Users\amade\AppData\Local\Temp\"/>
-    <property name="idea.version" value="2023.3.2"/>
-    <property name="java.version" value="17.0.10"/>
-    <property name="user.dir" value="D:\2nd Year\Software Engineering Methods. (SEM)\SEM-Group-Project"/>
->>>>>>> develop
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-<<<<<<< HEAD
     <property name="java.library.path" value="C:\Program Files\Java\jdk-18.0.2.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\msys64\mingw64\bin;C:\MinGW\bin;C:\Ruby32-x64\bin;C:\Users\Jack Millar\AppData\Local\Microsoft\WindowsApps;C:\Users\Jack Millar\AppData\Local\Programs\Microsoft VS Code\bin;C:\ghcup\bin;C:\Users\Jack Millar\.dotnet\tools;C:\msys64\ucrt64\bin;C:\MinGW\bin;;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="java.vendor" value="Oracle Corporation"/>
@@ -106,69 +57,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="62.0"/>
   </properties>
-  <testcase name="getContinentDescendingTest" classname="com.napier.sem.AppTest" time="323.63">
-    <system-out><![CDATA[Connecting to database...
-Failed to connect to database attempt 0
-Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-Connecting to database...
-Failed to connect to database attempt 1
-Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-Connecting to database...
-Failed to connect to database attempt 2
-Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-Connecting to database...
-Failed to connect to database attempt 3
-Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-Connecting to database...
-Failed to connect to database attempt 4
-Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-Connecting to database...
-Failed to connect to database attempt 5
-Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-Connecting to database...
-Failed to connect to database attempt 6
-Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-Connecting to database...
-Failed to connect to database attempt 7
-Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-Connecting to database...
-Failed to connect to database attempt 8
-Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-Connecting to database...
-Failed to connect to database attempt 9
-Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-Failed to get country details
-=======
-    <property name="java.library.path" value="D:\Program Files\Java\jdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\System32\HWAudioDriverLibs;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\amade\AppData\Local\Programs\Python\Launcher\;C:\Users\amade\AppData\Local\Microsoft\WindowsApps;C:\ghcup\bin;C:\Users\amade\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\amade\.dotnet\tools;C:\ProgramData\Oracle\Java\javapath;."/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="17.0.10+11-LTS-240"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="61.0"/>
-  </properties>
-  <testcase name="getContinentDescendingTest" classname="com.napier.sem.AppTest" time="0.021">
-    <system-out><![CDATA[Failed to get country details
->>>>>>> develop
-]]></system-out>
-  </testcase>
+  <testcase name="testDatabaseDisconnection" classname="com.napier.sem.AppTest" time="0.022"/>
 </testsuite>

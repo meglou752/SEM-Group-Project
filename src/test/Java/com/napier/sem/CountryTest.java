@@ -19,6 +19,7 @@ class CountryTest {
     static void init() {
         a = new App();
         c = new Country();
+
     }
 
     @Test
@@ -28,7 +29,7 @@ class CountryTest {
             ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", 5);
             assertNotNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
    @Test
@@ -37,7 +38,7 @@ class CountryTest {
             ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", 5);
             assertNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
     @Test
@@ -46,7 +47,7 @@ class CountryTest {
             ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", -1);
             assertNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
     @Test
@@ -55,7 +56,7 @@ class CountryTest {
             ResultSet resultSet = c.getTopRegionDescending(null, "Southern and Central Asia", 5);
             assertNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
     @Test
@@ -64,7 +65,7 @@ class CountryTest {
             ResultSet resultSet = c.topNPopulatedCountries(a.con, 5);
             assertNotNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
     @Test
@@ -73,7 +74,7 @@ class CountryTest {
             ResultSet resultSet = c.topNPopulatedCountries(a.con, -5);
             assertNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
     @Test
@@ -82,7 +83,7 @@ class CountryTest {
             ResultSet resultSet = c.topNPopulatedCountries(null, 5);
             assertNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
     @Test
@@ -91,7 +92,7 @@ class CountryTest {
             ResultSet resultSet = c.getCountryDescending(a.con);
             assertNotNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
     @Test
@@ -100,7 +101,7 @@ class CountryTest {
             ResultSet resultSet = c.getCountryDescending(null);
             assertNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
     @Test
@@ -109,7 +110,7 @@ class CountryTest {
             ResultSet resultSet = c.getContinentDescending(a.con, "Europe");
             assertNotNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
     @Test
@@ -118,7 +119,7 @@ class CountryTest {
             ResultSet resultSet = c.getContinentDescending(null, "Europe");
             assertNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
     @Test
@@ -127,7 +128,7 @@ class CountryTest {
             ResultSet resultSet = c.getContinentDescending(a.con, null);
             assertNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
 
@@ -137,7 +138,7 @@ class CountryTest {
             ResultSet resultSet = c.topNPopulatedCountriesContinent(a.con, "Europe", 5);
             assertNotNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
 
@@ -147,7 +148,7 @@ class CountryTest {
             ResultSet resultSet = c.topNPopulatedCountriesContinent(a.con, null, 5);
             assertNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
 
@@ -157,7 +158,7 @@ class CountryTest {
             ResultSet resultSet = c.topNPopulatedCountriesContinent(null, "Europe", 5);
             assertNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
 
@@ -167,7 +168,7 @@ class CountryTest {
             ResultSet resultSet = c.countryRegionDescending(a.con, "Southern and Central Asia");
             assertNotNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
 
@@ -177,7 +178,7 @@ class CountryTest {
             ResultSet resultSet = c.countryRegionDescending(a.con, null);
             assertNotNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
 
@@ -187,7 +188,7 @@ class CountryTest {
             ResultSet resultSet = c.countryRegionDescending(null, "Southern and Central Asia");
             assertNotNull(resultSet);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
     @Test
@@ -196,7 +197,7 @@ class CountryTest {
         try {
             c.displayCountries(null);
         } catch (Exception e) {
-            fail("Exception thrown");
+            fail("Exception thrown: " + e.getMessage());
         }
     }
     // Add more tests for Country class as needed
