@@ -34,7 +34,9 @@ class AppTest {
         c.getContinentDescending(a.con, null);
         c.getContinentDescending(a.con, "4");
         // Testing connection to the database
-    void testDatabaseConnection() {
+    }
+    void testDatabaseConnection()
+    {
         assertNotNull(a.con);
     }
 
@@ -47,6 +49,7 @@ class AppTest {
         c.getTopRegionDescending(null, "Southern and Central Asia", 9);
     }
 
+    @Test
     void getNRegionCapitalsDescendingTest()
     {
         d.getTopRegionCityDescending(a.con, "Western Europe", 6);
@@ -54,7 +57,6 @@ class AppTest {
 
 
     @Test
-        // Testing disconnection from the database
     void testDatabaseDisconnection() {
         a.disconnect();
         assertNull(a.con);
