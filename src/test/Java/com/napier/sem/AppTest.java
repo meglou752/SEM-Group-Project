@@ -26,9 +26,27 @@ public class AppTest {
     }
 
     @Test
-    void getContinentDescendingTest() {
+    //
+    void getContinentDescendingTest()
+    {
         c.getContinentDescending(a.con, "Europe");
         c.getContinentDescending(a.con, null);
         c.getContinentDescending(a.con, "4");
+    }
+
+    @Test
+    //testing 'connect' method successful connection
+    void testConnect_SuccessfulConnection()
+    {
+        a.connect();
+        assertNotNull(a.con);
+    }
+
+    @Test
+    //testing 'connect' method unsuccessful connection
+    void testConnect_UnsuccessfulConnection()
+    {
+        a.connect();
+        assertNull(a.con);
     }
 }
