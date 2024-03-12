@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.napier.sem.CountryTest" time="0.098" tests="19" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.napier.sem.CountryTest" time="0.154" tests="19" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="18"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-18.0.2.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\Jack Millar\AppData\Local\Temp\surefire7554776244960061190\surefirebooter-20240312203543497_3.jar C:\Users\Jack Millar\AppData\Local\Temp\surefire7554776244960061190 2024-03-12T20-35-42_616-jvmRun1 surefire-20240312203543497_1tmp surefire_0-20240312203543497_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Jack Millar\AppData\Local\Temp\surefire12581303278922255367\surefirebooter-20240312205432822_3.jar C:\Users\Jack Millar\AppData\Local\Temp\surefire12581303278922255367 2024-03-12T20-54-31_414-jvmRun1 surefire-20240312205432822_1tmp surefire_0-20240312205432822_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Jack Millar\OneDrive - Edinburgh Napier University\Year2-B\Software Engineering Methods\Code\SEM-Group-Project\target\test-classes;C:\Users\Jack Millar\OneDrive - Edinburgh Napier University\Year2-B\Software Engineering Methods\Code\SEM-Group-Project\target\classes;C:\Users\Jack Millar\.m2\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar;C:\Users\Jack Millar\.m2\repository\com\google\protobuf\protobuf-java\3.6.1\protobuf-java-3.6.1.jar;C:\Users\Jack Millar\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.1.0\junit-jupiter-api-5.1.0.jar;C:\Users\Jack Millar\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\Jack Millar\.m2\repository\org\opentest4j\opentest4j\1.0.0\opentest4j-1.0.0.jar;C:\Users\Jack Millar\.m2\repository\org\junit\platform\junit-platform-commons\1.1.0\junit-platform-commons-1.1.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Jack Millar\AppData\Local\Temp\surefire7554776244960061190\surefirebooter-20240312203543497_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Jack Millar\AppData\Local\Temp\surefire12581303278922255367\surefirebooter-20240312205432822_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="18.0.2.1+1-1"/>
@@ -57,81 +57,81 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="62.0"/>
   </properties>
-  <testcase name="topNPopulatedCountriesContinent_NullConTest" classname="com.napier.sem.CountryTest" time="0.004">
+  <testcase name="topNPopulatedCountriesContinent_NullConTest" classname="com.napier.sem.CountryTest" time="0.003">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="topNPopulatedCountriesContinent_NotNullTest" classname="com.napier.sem.CountryTest" time="0.003">
+  <testcase name="topNPopulatedCountriesContinent_NotNullTest" classname="com.napier.sem.CountryTest" time="0.002">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="countryRegionDescending_NullRegionTest" classname="com.napier.sem.CountryTest" time="0.003">
+  <testcase name="countryRegionDescending_NullRegionTest" classname="com.napier.sem.CountryTest" time="0.009">
     <system-out><![CDATA[Region is null.
 ]]></system-out>
   </testcase>
-  <testcase name="topNPopulatedCountriesContinent_NullContinentTest" classname="com.napier.sem.CountryTest" time="0.002">
+  <testcase name="topNPopulatedCountriesContinent_NullContinentTest" classname="com.napier.sem.CountryTest" time="0.006">
     <system-out><![CDATA[Continent name is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getTopNPopulatedCountries_NegativeNTest" classname="com.napier.sem.CountryTest" time="0.002">
+  <testcase name="getTopNPopulatedCountries_NegativeNTest" classname="com.napier.sem.CountryTest" time="0.004">
     <system-out><![CDATA[N Cannot be negative
 Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getTopNPopulatedCountries_NullConTest" classname="com.napier.sem.CountryTest" time="0.003">
+  <testcase name="getTopNPopulatedCountries_NullConTest" classname="com.napier.sem.CountryTest" time="0.014">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getTopNPopulatedCountries_NotNullTest" classname="com.napier.sem.CountryTest" time="0.002">
+  <testcase name="getTopNPopulatedCountries_NotNullTest" classname="com.napier.sem.CountryTest" time="0.005">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="countryRegionDescending_NullConTest" classname="com.napier.sem.CountryTest" time="0.006">
+  <testcase name="countryRegionDescending_NullConTest" classname="com.napier.sem.CountryTest" time="0.004">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="countryRegionDescending_NotNullTest" classname="com.napier.sem.CountryTest" time="0.002">
+  <testcase name="countryRegionDescending_NotNullTest" classname="com.napier.sem.CountryTest" time="0.003">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="DisplayCountries_NullTest" classname="com.napier.sem.CountryTest" time="0.002">
+  <testcase name="DisplayCountries_NullTest" classname="com.napier.sem.CountryTest" time="0.005">
     <system-out><![CDATA[ResultSet is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getCountryDescending_NullConTest" classname="com.napier.sem.CountryTest" time="0.002">
+  <testcase name="getCountryDescending_NullConTest" classname="com.napier.sem.CountryTest" time="0.007">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getTopRegionDescending_NegativeNTest" classname="com.napier.sem.CountryTest" time="0.005">
+  <testcase name="getTopRegionDescending_NegativeNTest" classname="com.napier.sem.CountryTest" time="0.001">
     <system-out><![CDATA[N Cannot be negative
 Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getCountryDescending_NotNullTest" classname="com.napier.sem.CountryTest" time="0.002">
+  <testcase name="getCountryDescending_NotNullTest" classname="com.napier.sem.CountryTest" time="0.003">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getTopRegionDescending_NullTest" classname="com.napier.sem.CountryTest" time="0.002">
+  <testcase name="getTopRegionDescending_NullTest" classname="com.napier.sem.CountryTest" time="0.003">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getContinentDescending_NullConTest" classname="com.napier.sem.CountryTest" time="0.003">
+  <testcase name="getContinentDescending_NullConTest" classname="com.napier.sem.CountryTest" time="0.002">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getContinentDescending_NotNullTest" classname="com.napier.sem.CountryTest" time="0.002">
+  <testcase name="getContinentDescending_NotNullTest" classname="com.napier.sem.CountryTest" time="0.003">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getTopRegionDescending_NullConTest" classname="com.napier.sem.CountryTest" time="0.002">
+  <testcase name="getTopRegionDescending_NullConTest" classname="com.napier.sem.CountryTest" time="0.005">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getTopRegionDescending_NotNullTest" classname="com.napier.sem.CountryTest" time="0.002">
+  <testcase name="getTopRegionDescending_NotNullTest" classname="com.napier.sem.CountryTest" time="0.004">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getContinentDescending_NullContinentTest" classname="com.napier.sem.CountryTest" time="0.002">
+  <testcase name="getContinentDescending_NullContinentTest" classname="com.napier.sem.CountryTest" time="0.005">
     <system-out><![CDATA[Continent name is null.
 ]]></system-out>
   </testcase>
