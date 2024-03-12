@@ -27,8 +27,8 @@ public class AppTest {
 
     @Test
     void getContinentDescendingTest() {
-        // Assuming App provides a method to get the connection
-         // Replace this with the appropriate method in your App class
         c.getContinentDescending(a.con, "Europe");
+        c.getContinentDescending(a.con, null);
+        c.getContinentDescending(a.con, "4");
     }
 }
