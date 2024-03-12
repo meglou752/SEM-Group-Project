@@ -18,7 +18,6 @@ class CountryTest {
     @BeforeAll
     static void init() {
         a = new App();
-        a.connect(); // Establish connection to the database
         c = new Country();
     }
 

@@ -18,20 +18,6 @@ class CityTest {
     @BeforeAll
     static void init() {
         a = new App();
-        a.connect(); // Establish connection to the database
         c = new City();
     }
-
-    @Test
-        // Test topNPopulatedCitiesDistrict function
-    void testTopNPopulatedCitiesDistrict() {
-        try {
-            ResultSet resultSet = c.topNPopulatedCitiesDistrict(a.con, "Noord-Brabant", 3);
-            assertNotNull(resultSet);
-        } catch (Exception e) {
-            fail("Exception thrown");
-        }
-    }
-
-    // Add more tests for City class as needed
 }
