@@ -130,6 +130,66 @@ class CountryTest {
             fail("Exception thrown");
         }
     }
+
+    @Test
+    void topNPopulatedCountriesContinent_NotNullTest() {
+        try {
+            ResultSet resultSet = c.topNPopulatedCountriesContinent(a.con, "Europe", 5);
+            assertNotNull(resultSet);
+        } catch (Exception e) {
+            fail("Exception thrown");
+        }
+    }
+
+    @Test
+    void topNPopulatedCountriesContinent_NullContinentTest() {
+        try {
+            ResultSet resultSet = c.topNPopulatedCountriesContinent(a.con, null, 5);
+            assertNull(resultSet);
+        } catch (Exception e) {
+            fail("Exception thrown");
+        }
+    }
+
+    @Test
+    void topNPopulatedCountriesContinent_NullConTest() {
+        try {
+            ResultSet resultSet = c.topNPopulatedCountriesContinent(null, "Europe", 5);
+            assertNull(resultSet);
+        } catch (Exception e) {
+            fail("Exception thrown");
+        }
+    }
+
+    @Test
+    void countryRegionDescending_NotNullTest() {
+        try {
+            ResultSet resultSet = c.countryRegionDescending(a.con, "Southern and Central Asia");
+            assertNotNull(resultSet);
+        } catch (Exception e) {
+            fail("Exception thrown");
+        }
+    }
+
+    @Test
+    void countryRegionDescending_NullRegionTest() {
+        try {
+            ResultSet resultSet = c.countryRegionDescending(a.con, null);
+            assertNotNull(resultSet);
+        } catch (Exception e) {
+            fail("Exception thrown");
+        }
+    }
+
+    @Test
+    void countryRegionDescending_NullConTest() {
+        try {
+            ResultSet resultSet = c.countryRegionDescending(null, "Southern and Central Asia");
+            assertNotNull(resultSet);
+        } catch (Exception e) {
+            fail("Exception thrown");
+        }
+    }
     @Test
     void DisplayCountries_NullTest()
     {
