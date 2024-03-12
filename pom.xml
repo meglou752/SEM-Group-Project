@@ -46,7 +46,11 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version> <!-- Use the latest version -->
                 <configuration>
-                    <!-- Add any configuration needed for Surefire -->
+                    <!-- Set the test class to be executed -->
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                    <!-- Set other configuration options as needed -->
                 </configuration>
             </plugin>
         </plugins>
