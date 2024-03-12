@@ -38,6 +38,7 @@ public class App {
         // ResultSet resultSet = d.getCountryCityDescending(a.con, "France");
         //ResultSet resultSet = d.topNPopulatedCitiesContinent(a.con, "Europe", 5);
        // ResultSet resultSet = d.getRegionCityDescending(a.con, "Western Europe");
+        ResultSet resultSet = d.getCityDescending(a.con);
 
         // ResultSet resultSet = e.topNPopulatedCapitals(a.con, 5);
         // ResultSet resultSet = e.getNRegionCapitalsDescending(a.con, "Western Europe", 6);
@@ -50,13 +51,13 @@ public class App {
         // ResultSet resultSet = f.getDistrictPopulation(a.con,  "Constantine");
         //ResultSet resultSet = f.getRegionPopulations(a.con, "Western Europe");
        // ResultSet resultSet = f.getCountryPopulation(a.con, "Germany");
-        ResultSet resultSet = f.getCityPopulation(a.con, "Edinburgh");
+        //ResultSet resultSet = f.getCityPopulation(a.con, "Edinburgh");
 
 
         //c.displayCountries(resultSet);
-        //d.displayCities(resultSet);
+        d.displayCities(resultSet);
         //e.displayCapitals(resultSet);
-        f.displayPopulations(resultSet);
+        //f.displayPopulations(resultSet);
 
 
 

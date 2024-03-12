@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="D:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\amade\AppData\Local\Temp\surefire1932025027591610164\surefirebooter-20240312122802800_3.jar C:\Users\amade\AppData\Local\Temp\surefire1932025027591610164 2024-03-12T12-27-54_338-jvmRun1 surefire-20240312122802800_1tmp surefire_0-20240312122802800_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\amade\AppData\Local\Temp\surefire1976158695249083553\surefirebooter-20240312131541247_3.jar C:\Users\amade\AppData\Local\Temp\surefire1976158695249083553 2024-03-12T13-15-40_916-jvmRun1 surefire-20240312131541247_1tmp surefire_0-20240312131541247_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\2nd Year\Software Engineering Methods. (SEM)\SEM-Group-Project\target\test-classes;D:\2nd Year\Software Engineering Methods. (SEM)\SEM-Group-Project\target\classes;C:\Users\amade\.m2\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar;C:\Users\amade\.m2\repository\com\google\protobuf\protobuf-java\3.6.1\protobuf-java-3.6.1.jar;C:\Users\amade\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.1.0\junit-jupiter-api-5.1.0.jar;C:\Users\amade\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\amade\.m2\repository\org\opentest4j\opentest4j\1.0.0\opentest4j-1.0.0.jar;C:\Users\amade\.m2\repository\org\junit\platform\junit-platform-commons\1.1.0\junit-platform-commons-1.1.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\amade\AppData\Local\Temp\surefire1932025027591610164\surefirebooter-20240312122802800_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\amade\AppData\Local\Temp\surefire1976158695249083553\surefirebooter-20240312131541247_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.10+11-LTS-240"/>
@@ -57,7 +57,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="getContinentDescendingTest" classname="com.napier.sem.AppTest" time="0.019">
+  <testcase name="getContinentDescendingTest" classname="com.napier.sem.AppTest" time="0.021">
     <system-out><![CDATA[Failed to get country details
 ]]></system-out>
   </testcase>

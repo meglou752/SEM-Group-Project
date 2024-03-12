@@ -204,6 +204,32 @@ public class City {
         }
     }
 
+    /**
+     * Search for Cities in a world
+     * @param con the database connection
+     * @return ResultSet
+     */
+
+    public ResultSet getCityDescending(Connection con) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.name, city.countryCode, city.district, city.population\n" +
+                            "FROM country\n" +
+                            "INNER JOIN city ON city.countryCode = country.code\n" +
+                            "ORDER BY city.population DESC;";
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+
+
 
     /**
      * Displays the contents of ResultSet for city functions
