@@ -43,7 +43,7 @@ public class App {
         // ResultSet resultSet = e.getNRegionCapitalsDescending(a.con, "Western Europe", 6);
         //ResultSet resultSet = e.getContinentCapitalsDescending(a.con, "Asia");
         //ResultSet resultSet = e.topNPopulatedCapitalsByContinent(a.con, "Europe", 5);
-          ResultSet resultSet = e.getCapitalsPopulationDesc(a.con);
+        //ResultSet resultSet = e.getCapitalsPopulationDesc(a.con);
 
         //ResultSet resultSet = f.getWorldPopulation(a.con);
         // ResultSet resultSet = f.getDistrictPopulation(a.con,  "Constantine");
@@ -51,9 +51,9 @@ public class App {
        // ResultSet resultSet = f.getCountryPopulation(a.con, "Germany");
 
 
-        //c.displayCountries(resultSet);
+        c.displayCountries(resultSet);
         //d.displayCities(resultSet);
-        e.displayCapitals(resultSet);
+        //e.displayCapitals(resultSet);
         //f.displayPopulations(resultSet);
 
 
