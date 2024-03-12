@@ -157,7 +157,6 @@ public class Country {
                             "WHERE country.region = '" + region + "' " + // Enclose in single quotes
                             "ORDER BY country.population DESC ";
 
-System.out.print("hello world");
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
