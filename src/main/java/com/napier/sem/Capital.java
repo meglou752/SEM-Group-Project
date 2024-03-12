@@ -100,6 +100,59 @@ public class Capital {
     }
 
     /**
+     *
+     * @param con connection to the database
+     * @param continent continent to get capital cities from
+     * @param N the limit of records to return
+     * @return the resultset of the N largest capital cities in said continent
+     */
+
+    public ResultSet topNPopulatedCapitalsByContinent(Connection con, String continent, Integer N) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect = "SELECT country.name AS name, city.name as capital, city.population\n" +
+                    "FROM country\n" +
+                    "INNER JOIN city ON city.countryCode = country.code\n" +
+                    "WHERE country.continent = '" + continent + "'\n" +
+                    "AND country.capital = city.ID " +
+                    "ORDER BY city.population\n" +
+                    "DESC LIMIT " + N + ";";
+
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get capital details");
+            return null;
+        }
+    }
+
+    public ResultSet getCapitalsPopulationDesc(Connection con) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect = "SELECT country.name AS name, city.name as capital, city.population\n" +
+                    "FROM country\n" +
+                    "INNER JOIN city ON city.countryCode = country.code\n" +
+                    "WHERE country.capital = city.ID " +
+                    "ORDER BY city.population DESC;";
+
+
+
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get capital details");
+            return null;
+        }
+    }
+
+
+    /**
      * Display the contents of ResultSet for capital functions
      * @param resultSet containing capital details from other method calls
      */
