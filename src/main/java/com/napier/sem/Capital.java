@@ -128,6 +128,28 @@ public class Capital {
         }
     }
 
+    public ResultSet getCapitalsPopulationDesc(Connection con) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect = "SELECT country.name AS name, city.name as capital, city.population\n" +
+                    "FROM country\n" +
+                    "INNER JOIN city ON city.countryCode = country.code\n" +
+                    "WHERE country.capital = city.ID " +
+                    "ORDER BY city.population DESC;";
+
+
+
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get capital details");
+            return null;
+        }
+    }
+
 
     /**
      * Display the contents of ResultSet for capital functions
