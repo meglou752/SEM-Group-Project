@@ -9,7 +9,8 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class AppTest {
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+class AppTest {
     static App a;
     static Country c;
     static City d;
@@ -23,13 +24,18 @@ public class AppTest {
         d = new City();
         e = new Capital();
         f = new Population();
+        a.connect();
     }
+
     @Test
     void getContinentDescendingTest()
     {
         c.getContinentDescending(a.con, "Europe");
         c.getContinentDescending(a.con, null);
         c.getContinentDescending(a.con, "4");
+        // Testing connection to the database
+    void testDatabaseConnection() {
+        assertNotNull(a.con);
     }
 
     @Test
@@ -46,4 +52,11 @@ public class AppTest {
         d.getTopRegionCityDescending(a.con, "Western Europe", 6);
     }
 
+
+    @Test
+        // Testing disconnection from the database
+    void testDatabaseDisconnection() {
+        a.disconnect();
+        assertNull(a.con);
+    }
 }
