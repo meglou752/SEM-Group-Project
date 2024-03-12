@@ -107,7 +107,68 @@ public class Population {
         }
     }
 
+    /**
+     * Get population of a country
+     * @param con the database connection
+     * @param Country the country to produce population report on
+     */
+    ResultSet getCountryPopulation(Connection con, String Country) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT \n" +
+                            "'" + Country + "' as name, \n" +
+                            "    SUM(country.population) AS population, \n" +
+                            "    SUM(city.population) AS UrbanPop, \n" +
+                            "    ROUND(SUM(city.population) / SUM(country.population) * 100, 1) AS UrbanPopPercentage, \n" +
+                            "    SUM(country.population - city.population) AS RuralPop, \n" +
+                            "    ROUND(SUM((country.population - city.population)) / SUM(country.population) * 100, 1) AS RuralPopPercentage \n" +
+                            "FROM country\n" +
+                            "INNER JOIN city ON city.countryCode = country.code\n" +
+                            "WHERE country.name = '" + Country + "'\n" +
+                            "GROUP BY name";
 
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get capital details");
+            return null;
+        }
+    }
+
+    /**
+     * Get population of a city
+     * @param con the database connection
+     * @param city the city to produce population report on
+     */
+
+    ResultSet getCityPopulation(Connection con, String City) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT \n" +
+                            "'" + City + "' as name, \n" +
+                            "    SUM(country.population) AS population, \n" +
+                            "    SUM(city.population) AS UrbanPop, \n" +
+                            "    ROUND(SUM(city.population) / SUM(country.population) * 100, 1) AS UrbanPopPercentage, \n" +
+                            "    SUM(country.population - city.population) AS RuralPop, \n" +
+                            "    ROUND(SUM((country.population - city.population)) / SUM(country.population) * 100, 1) AS RuralPopPercentage \n" +
+                            "FROM country\n" +
+                            "INNER JOIN city ON city.countryCode = country.code\n" +
+                            "WHERE city.name = '" + City + "'\n" +
+                            "GROUP BY name";
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get capital details");
+            return null;
+        }
+    }
 
     /**
      * Display the contents of ResultSet for the Population

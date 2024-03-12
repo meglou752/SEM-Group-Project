@@ -119,6 +119,54 @@ public class Country {
     }
 
     /**
+     *
+     * @param con the connection to the database
+     * @param continentName the continent of which the function searches through
+     * @param N the number of top populated countries to display
+     * @return the resultset containing the top N countries in the selected continent  */
+    public ResultSet topNPopulatedCountriesContinent(Connection con, String continentName, int N)
+    {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT country.code, country.name, country.continent, country.region, country.population, country.capital " +
+                            "FROM country " +
+                            "WHERE country.continent = '" + continentName + "' " + // Enclose in single quotes
+                            "ORDER BY country.population DESC " +
+                            "LIMIT " + N + ";";
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+
+    public ResultSet countryRegionDescending(Connection con, String region)
+    {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT country.code, country.name, country.continent, country.region, country.population, country.capital \n" +
+                            "FROM country \n" +
+                            "WHERE country.region = '" + region + "' " + // Enclose in single quotes
+                            "ORDER BY country.population DESC ";
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+
+
+    /**
      * Displays the contents of ResultSet for country functions
      * @param resultSet containing country details from other method calls
      */

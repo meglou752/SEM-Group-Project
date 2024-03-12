@@ -40,6 +40,35 @@ public class City {
             return null;
         }
     }
+
+    /**
+     *
+     * @param con the database connection
+     * @param continentName the name of the continent to gather cities from
+     * @param N the number of highest populated cities to retrieve
+     * @return the resultset containing the top 'N' populated cities in a continent
+     */
+    public ResultSet topNPopulatedCitiesContinent(Connection con, String continentName, int N)
+    {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.name, city.countryCode, city.district, city.population\n" +
+                            "FROM country\n" +
+                            "INNER JOIN city ON city.countryCode = country.code\n" +
+                            "WHERE country.continent = " + "'" + continentName + "'\n" +
+                            "ORDER BY city.population DESC\n" +
+                            "LIMIT " + N + ";";
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
     /**
      *
      * @param con the database connection
@@ -148,6 +177,59 @@ public class City {
             return null;
         }
     }
+
+    /**
+     * Search for Cities in a Region
+     * @param con the database connection
+     * @param region the country too search through
+     * @return ResultSet
+     */
+    public ResultSet getRegionCityDescending(Connection con, String region) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.name, city.countryCode, city.district, city.population\n" +
+                            "FROM country\n" +
+                            "INNER JOIN city ON city.countryCode = country.code\n" +
+                            "WHERE country.region = '" + region + "' " +
+                            "ORDER BY city.population DESC;";
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+
+    /**
+     * Search for Cities in a world
+     * @param con the database connection
+     * @return ResultSet
+     */
+
+    public ResultSet getCityDescending(Connection con) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.name, city.countryCode, city.district, city.population\n" +
+                            "FROM country\n" +
+                            "INNER JOIN city ON city.countryCode = country.code\n" +
+                            "ORDER BY city.population DESC;";
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get country details");
+            return null;
+        }
+    }
+
+
 
     /**
      * Displays the contents of ResultSet for city functions
