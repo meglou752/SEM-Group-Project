@@ -22,12 +22,6 @@ class CountryTest {
     // Test getTopRegionDescending function
     public void getTopRegionDescending_NotNullTest() {
         try {
-            c.code = "EU1";
-            c.name = "Estonia";
-            c.continent = "continent";
-            c.region = "Eastern Europe";
-            c.population = 1000;
-            c.capital = 1;
             ResultSet resultSet = c.getTopRegionDescending(a.con, "Eastern Europe", 1);
         } catch (Exception e) {
             fail("Exception thrown: " + e.getMessage());
