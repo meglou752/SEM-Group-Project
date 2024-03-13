@@ -20,13 +20,33 @@ class PopulationTest {
     }
 
     @Test
-    void testGetRegionPopulations_NormalData() {
+    void testGetRegionPopulations_NormalData()
+    {
         try {
-            p.name = "Constantine";
-            p.population = 100000;
-            p.urbanPopulation = 30000;
-            p.ruralPopulation = 70000;
-            ResultSet resultSet = p.getDistrictPopulation("Constantine");
+            ResultSet resultSet = p.getDistrictPopulation(a.con, "Constantine");
+            assertEquals(resultSet, resultSet);
+        } catch (Exception e) {
+            fail("Exception thrown: " + e.getMessage());
+        }
+    }
+
+    @Test
+    void testGetRegionPopulations_NullData()
+    {
+        try {
+            ResultSet resultSet = p.getDistrictPopulation(a.con, "NonexistentDistrict");
+            assertNull(resultSet, "ResultSet should be null for nonexistent district");
+        } catch (Exception e) {
+            fail("Exception thrown: " + e.getMessage());
+        }
+    }
+
+    @Test
+    void testGetRegionPopulations_InvalidData()
+    {
+        try {
+            ResultSet resultSet = p.getDistrictPopulation(a.con, "2");
+            assertNull(resultSet, "ResultSet should be null for invalid data");
         } catch (Exception e) {
             fail("Exception thrown: " + e.getMessage());
         }

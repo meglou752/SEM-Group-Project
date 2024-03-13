@@ -18,10 +18,20 @@ public class Population {
      * @param District the District to search for
      * @return ResultSet
      */
-    public ResultSet getDistrictPopulation(String District) {
+    public ResultSet getDistrictPopulation(Connection con, String District) {
         try {
+            if (District == null) {
+                System.out.println("District cannot be null.");
+                return null;
+            }
+            if (con == null)
+            {
+                System.out.println("Connection cannot be null");
+                return null;
+            }
+
             // Create an SQL statement
-            Statement stmt = a.con.createStatement();
+            Statement stmt = con.createStatement();
             // Create string for SQL statement
             String strSelect =
                     "SELECT \n" +
