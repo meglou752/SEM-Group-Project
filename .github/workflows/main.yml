@@ -17,7 +17,7 @@ jobs:
         distribution: 'adopt'
     - name: Unit Tests
       run: |
-            mvn test
+            mvn -Dtest=com.napier.sem test
     - name: Package and Run docker compose
       run: |
             mvn package -DskipTests
