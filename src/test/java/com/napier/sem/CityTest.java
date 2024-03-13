@@ -1,6 +1,9 @@
 package com.napier.sem;
 
 import org.junit.jupiter.api.*;
+
+import java.sql.ResultSet;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -11,4 +14,5 @@ class CityTest
     {
         assertEquals(5, 5);
     }
+
 }

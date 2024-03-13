@@ -22,6 +22,19 @@ public class City {
     public ResultSet topNPopulatedCitiesDistrict(Connection con, String districtName, int N)
     {
         try {
+            if (districtName == null) {
+                System.out.println("District name is null.");
+                return null;
+            }
+            if (N < 0)
+            {
+                System.out.println("N Cannot be negative");
+                N = 1;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -51,6 +64,19 @@ public class City {
     public ResultSet topNPopulatedCitiesContinent(Connection con, String continentName, int N)
     {
         try {
+            if (continentName == null) {
+                System.out.println("Continent name is null.");
+                return null;
+            }
+            if (N < 0)
+            {
+                System.out.println("N Cannot be negative");
+                N = 1;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -78,6 +104,15 @@ public class City {
     public ResultSet topNPopulatedCities(Connection con, int N)
     {
         try {
+            if (N < 0)
+            {
+                System.out.println("N Cannot be negative");
+                N = 1;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -105,6 +140,19 @@ public class City {
      */
     public ResultSet getTopRegionCityDescending(Connection con, String region, int N) {
         try {
+            if (region == null) {
+                System.out.println("region name is null.");
+                return null;
+            }
+            if (N < 0)
+            {
+                System.out.println("N Cannot be negative");
+                N = 1;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -134,6 +182,14 @@ public class City {
     public ResultSet getCitiesInContinentDesc(Connection con, String continentName)
     {
         try {
+            if (continentName == null) {
+                System.out.println("Continent name is null.");
+                return null;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -160,6 +216,14 @@ public class City {
      */
     public ResultSet getCountryCityDescending(Connection con, String countryName) {
         try {
+            if (countryName == null) {
+                System.out.println("region name is null.");
+                return null;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -186,6 +250,14 @@ public class City {
      */
     public ResultSet getRegionCityDescending(Connection con, String region) {
         try {
+            if (region == null) {
+                System.out.println("region name is null.");
+                return null;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -212,6 +284,10 @@ public class City {
 
     public ResultSet getCityDescending(Connection con) {
         try {
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -237,6 +313,14 @@ public class City {
      */
     public ResultSet getDistrictCityDescending(Connection con, String district) {
         try {
+            if (district == null) {
+                System.out.println("District name is null.");
+                return null;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -267,6 +351,19 @@ public class City {
 
     public ResultSet getTopCountryCityDescending(Connection con, String countryName, int N) {
       try {
+          if (countryName == null) {
+              System.out.println("region name is null.");
+              return null;
+          }
+          if (N < 0)
+          {
+              System.out.println("N Cannot be negative");
+              N = 1;
+          }
+          if (con == null) {
+              System.out.println("Connection is null.");
+              return null;
+          }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -295,6 +392,10 @@ public class City {
      */
     public void displayCities(ResultSet resultSet) {
         try {
+            if (resultSet == null) {
+                System.out.println("ResultSet is null.");
+                return;
+            }
             // Iterate through the ResultSet and print country details
             while (resultSet.next()) {
                 String name = resultSet.getString("name");

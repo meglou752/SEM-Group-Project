@@ -22,6 +22,15 @@ public class Capital {
     {
 
         try {
+            if (N < 0)
+            {
+                System.out.println("N Cannot be negative");
+                N = 1;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -52,6 +61,19 @@ public class Capital {
     public ResultSet getNRegionCapitalsDescending(Connection con, String region, int N) {
 
         try {
+            if (region == null) {
+                System.out.println("Region name is null.");
+                return null;
+            }
+            if (N < 0)
+            {
+                System.out.println("N Cannot be negative");
+                N = 1;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -80,6 +102,14 @@ public class Capital {
      */
     public ResultSet getContinentCapitalsDescending(Connection con, String continent) {
         try {
+            if (continent == null) {
+                System.out.println("Continent name is null.");
+                return null;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -107,8 +137,21 @@ public class Capital {
      * @return the resultset of the N largest capital cities in said continent
      */
 
-    public ResultSet topNPopulatedCapitalsByContinent(Connection con, String continent, Integer N) {
+    public ResultSet topNPopulatedCapitalsByContinent(Connection con, String continent, int N) {
         try {
+            if (continent == null) {
+                System.out.println("Continent name is null.");
+                return null;
+            }
+            if (N < 0)
+            {
+                System.out.println("N Cannot be negative");
+                N = 1;
+            }
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -131,6 +174,10 @@ public class Capital {
 
     public ResultSet getCapitalsPopulationDesc(Connection con) {
         try {
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -161,6 +208,14 @@ public class Capital {
 public ResultSet getRegionCapitalsDescending(Connection con, String region) {
 
     try {
+        if (region == null) {
+            System.out.println("Continent name is null.");
+            return null;
+        }
+        if (con == null) {
+            System.out.println("Connection is null.");
+            return null;
+        }
         // Create an SQL statement
         Statement stmt = con.createStatement();
         // Create string for SQL statement
