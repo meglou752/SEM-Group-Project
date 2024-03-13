@@ -197,14 +197,14 @@ class CapitalTest
     }
 
 
-//    @Test
-//    public void DisplayCaps_NullTest()
-//    {
-//        try {
-//            e.displayCapitals(null);
-//        } catch (Exception e) {
-//            fail("Exception thrown: " + e.getMessage());
-//        }
-//    }
+    @Test
+    public void DisplayCaps_NullTest()
+    {
+        try {
+            e.displayCapitals(null);
+        } catch (Exception e) {
+            fail("Exception thrown: " + e.getMessage());
+        }
+    }
 
 }

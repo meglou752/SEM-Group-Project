@@ -409,11 +409,12 @@ public class City {
         } catch (Exception e) {
             System.out.println("Failed to display city details");
         } finally {
-            // Close the ResultSet to free resources
-            try {
-                resultSet.close();
-            } catch (SQLException e) {
-                System.out.println("Error closing ResultSet");
+            if (resultSet != null) {
+                try {
+                    resultSet.close();
+                } catch (SQLException e) {
+                    System.out.println("Error closing ResultSet: " + e.getMessage());
+                }
             }
         }
     }
