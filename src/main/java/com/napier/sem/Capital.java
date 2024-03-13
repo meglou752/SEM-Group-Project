@@ -189,7 +189,6 @@ public class Capital {
 
 
 
-
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
@@ -236,15 +235,16 @@ public ResultSet getRegionCapitalsDescending(Connection con, String region) {
 }
 
 
-
-
-
     /**
      * Display the contents of ResultSet for capital functions
      * @param resultSet containing capital details from other method calls
      */
     public void displayCapitals(ResultSet resultSet) {
         try {
+            if (resultSet == null) {
+                System.out.println("ResultSet is null.");
+                return;
+            }
             // Iterate through the ResultSet and print capital details
             while (resultSet.next()) {
                 String capital = resultSet.getString("capital");
