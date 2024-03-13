@@ -1,1 +1,5 @@
-/Users/meganmcleod/IdeaProjects/SEM-Group-Project/src/test/java/MyTest.java
+/Users/meganmcleod/IdeaProjects/SEM-Group-Project/src/test/java/com/napier/sem/AppTest.java
+/Users/meganmcleod/IdeaProjects/SEM-Group-Project/src/test/java/com/napier/sem/PopulationTest.java
+/Users/meganmcleod/IdeaProjects/SEM-Group-Project/src/test/java/com/napier/sem/CityTest.java
+/Users/meganmcleod/IdeaProjects/SEM-Group-Project/src/test/java/com/napier/sem/CountryTest.java
+/Users/meganmcleod/IdeaProjects/SEM-Group-Project/src/test/java/com/napier/sem/CapitalTest.java
