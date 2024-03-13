@@ -108,7 +108,7 @@ public class Population {
     }
 
     /**
-     * Get population of a region
+     * Get population of all regions
      * @param con the database connection
      */
     public ResultSet getAllRegionPopulations(Connection con) {
