@@ -116,10 +116,4 @@ public class App {
             }
         }
     }
-
-    /**
-     * Get the connection to the MySQL database.
-     * @return The connection object.
-     */
-
 }
