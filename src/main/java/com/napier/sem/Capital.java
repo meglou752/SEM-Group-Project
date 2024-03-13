@@ -151,6 +151,38 @@ public class Capital {
         }
     }
 
+/**
+ *
+ * @param con connection to the database
+ * @param region region to get capital cities from
+ * @return the resultset of the N largest capital cities in said continent
+ */
+
+public ResultSet getRegionCapitalsDescending(Connection con, String region) {
+
+    try {
+        // Create an SQL statement
+        Statement stmt = con.createStatement();
+        // Create string for SQL statement
+        String strSelect =
+                "SELECT city.name AS capital, country.name, city.population \n" +
+                        "FROM country\n" +
+                        "INNER JOIN city ON city.countryCode = country.code\n" +
+                        "WHERE country.capital = city.ID " +
+                        "ORDER BY city.population DESC " ;
+
+
+        // Execute SQL statement and return ResultSet
+        return stmt.executeQuery(strSelect);
+    } catch (Exception e) {
+        System.out.println("Failed to get capital details");
+        return null;
+    }
+}
+
+
+
+
 
     /**
      * Display the contents of ResultSet for capital functions

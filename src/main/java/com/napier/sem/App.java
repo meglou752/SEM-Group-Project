@@ -40,13 +40,14 @@ public class App {
        // ResultSet resultSet = d.getRegionCityDescending(a.con, "Western Europe");
         //ResultSet resultSet = d.getCityDescending(a.con);
         //ResultSet resultSet = d.getDistrictCityDescending(a.con, "Buenos Aires");
-        ResultSet resultSet = d.getTopCountryCityDescending(a.con, "France", 5);
+        //ResultSet resultSet = d.getTopCountryCityDescending(a.con, "France", 5);
 
         // ResultSet resultSet = e.topNPopulatedCapitals(a.con, 5);
         // ResultSet resultSet = e.getNRegionCapitalsDescending(a.con, "Western Europe", 6);
         //ResultSet resultSet = e.getContinentCapitalsDescending(a.con, "Asia");
         //ResultSet resultSet = e.topNPopulatedCapitalsByContinent(a.con, "Europe", 5);
          // ResultSet resultSet = e.getCapitalsPopulationDesc(a.con);
+        ResultSet resultSet = e.getRegionCapitalsDescending(a.con, "Western Europe");
 
 
         //ResultSet resultSet = f.getWorldPopulation(a.con);
@@ -58,8 +59,8 @@ public class App {
 
 
         //c.displayCountries(resultSet);
-       d.displayCities(resultSet);
-        //e.displayCapitals(resultSet);
+        //d.displayCities(resultSet);
+        e.displayCapitals(resultSet);
         //f.displayPopulations(resultSet);
 
 
