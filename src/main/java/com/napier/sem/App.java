@@ -56,6 +56,7 @@ public class App {
        // ResultSet resultSet = f.getCountryPopulation(a.con, "Germany");
         //ResultSet resultSet = f.getCityPopulation(a.con, "Edinburgh");
         //ResultSet resultSet = f.getCityPopulationAll(a.con);
+        //ResultSet resultSet = f.getContinentCityPopulations(a.con);
         ResultSet resultSet = f.getContinentPopulations(a.con, "Asia");
 
 
