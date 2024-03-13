@@ -39,7 +39,8 @@ public class App {
         //ResultSet resultSet = d.topNPopulatedCitiesContinent(a.con, "Europe", 5);
        // ResultSet resultSet = d.getRegionCityDescending(a.con, "Western Europe");
         //ResultSet resultSet = d.getCityDescending(a.con);
-        ResultSet resultSet = d.getDistrictCityDescending(a.con, "Buenos Aires");
+        //ResultSet resultSet = d.getDistrictCityDescending(a.con, "Buenos Aires");
+        ResultSet resultSet = d.getTopCountryCityDescending(a.con, "France", 5);
 
         // ResultSet resultSet = e.topNPopulatedCapitals(a.con, 5);
         // ResultSet resultSet = e.getNRegionCapitalsDescending(a.con, "Western Europe", 6);

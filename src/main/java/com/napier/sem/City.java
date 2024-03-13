@@ -36,7 +36,7 @@ public class City {
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
-            System.out.println("Failed to get country details");
+            System.out.println("Failed to get city details");
             return null;
         }
     }
@@ -65,7 +65,7 @@ public class City {
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
-            System.out.println("Failed to get country details");
+            System.out.println("Failed to get city details");
             return null;
         }
     }
@@ -91,7 +91,7 @@ public class City {
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
-            System.out.println("Failed to get country details");
+            System.out.println("Failed to get city details");
             return null;
         }
     }
@@ -120,7 +120,7 @@ public class City {
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
-            System.out.println("Failed to get country details");
+            System.out.println("Failed to get city details");
             return null;
         }
     }
@@ -147,7 +147,7 @@ public class City {
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
-            System.out.println("Failed to get country details");
+            System.out.println("Failed to get city details");
             return null;
         }
     }
@@ -173,7 +173,7 @@ public class City {
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
-            System.out.println("Failed to get country details");
+            System.out.println("Failed to get city details");
             return null;
         }
     }
@@ -199,7 +199,7 @@ public class City {
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
-            System.out.println("Failed to get country details");
+            System.out.println("Failed to get city details");
             return null;
         }
     }
@@ -224,7 +224,7 @@ public class City {
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
-            System.out.println("Failed to get country details");
+            System.out.println("Failed to get city details");
             return null;
         }
     }
@@ -246,6 +246,38 @@ public class City {
                             "INNER JOIN city ON city.countryCode = country.code\n" +
                             "WHERE city.district = '" + district + "'\n" +
                             "ORDER BY city.population DESC;";
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get city details");
+            return null;
+        }
+    }
+
+
+
+    /**
+     * Find a specified number of cities within a country with the highest Population
+     * @param con the database connection
+     * @param countryName the country to search through
+     * @param N the number of database entries to retrieve
+     * @return ResultSet
+     */
+
+    public ResultSet getTopCountryCityDescending(Connection con, String countryName, int N) {
+      try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.name, city.countryCode, city.district, city.population\n" +
+                            "FROM country\n" +
+                            "INNER JOIN city ON city.countryCode = country.code\n" +
+                            "WHERE country.name = '" + countryName + "' " +
+                            "ORDER BY city.population DESC " +
+                            "LIMIT " + N;
+
 
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
