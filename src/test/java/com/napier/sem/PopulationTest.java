@@ -9,14 +9,18 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PopulationTest
 {
-    static App a;
-    static Population p;
+    static App a; //initialising app class
+    static Population p; //initialising population class
+
 
     @BeforeAll
     public static void init() {
+        //instantiating before test methods
         a = new App();
         p = new Population();
     }
+
+    //Test method to check getDistrictPopulation with null connection
     @Test
     void getDistrictPopulation_NullConTest()
     {
@@ -27,6 +31,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getDistrictPopulation with null district
     @Test
     void getDistrictPopulation_NullTest()
     {
@@ -37,6 +42,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getDistrictPopulation with normal data
     @Test
     void getDistrictPopulation_NotNullTest()
     {
@@ -47,6 +53,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getWorldPopulation with null connection
     @Test
     void getWorldPopulation_NullConTest()
     {
@@ -57,6 +64,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getWorldPopulation with connection
     @Test
     void getWorldPopulation_NotNullTest()
     {
@@ -67,6 +75,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getRegionPopulations with null connection
     @Test
     void getRegionPopulations_NullConTest()
     {
@@ -77,6 +86,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getRegionPopulations null region
     @Test
     void getRegionPopulations_NotNullTest()
     {
@@ -87,6 +97,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getRegionPopulations with normal data
     @Test
     void getRegionPopulations_normalDataTest()
     {
@@ -97,6 +108,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getAllRegionPopulations with null connection
     @Test
     void getAllRegionPopulations_NullConTest()
     {
@@ -107,6 +119,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getAllRegionPopulations with connection
     @Test
     void getAllRegionPopulations_NotNullTest()
     {
@@ -117,6 +130,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getCountryPopulation with null connection
     @Test
     void getCountryPopulation_NullConTest()
     {
@@ -127,6 +141,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getCountryPopulations with null country
     @Test
     void getCountryPopulation_NullTest()
     {
@@ -137,6 +152,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getCountryPopulation with normal data
     @Test
     void getCountryPopulation_NotNullTest()
     {
@@ -147,6 +163,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getCitPopulation with null connection
     @Test
     void getCityPopulation_NullConTest()
     {
@@ -157,6 +174,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getCityPopulation with null city
     @Test
     void getCityPopulation_NullTest()
     {
@@ -167,6 +185,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getCityPopulation with normal data
     @Test
     void getCityPopulation_NotNullTest()
     {
@@ -177,6 +196,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getCitPopulationAll with null connection
     @Test
     void getCityPopulationAll_NullConTest()
     {
@@ -187,6 +207,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getCitPopulationAll with connection
     @Test
     void getCityPopulationAll_NotNullTest()
     {
@@ -197,6 +218,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getContinentCityPopulations with null connection
     @Test
     void getContinentCityPopulations_NullConTest()
     {
@@ -207,6 +229,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getContinentCityPopulations with connection
     @Test
     void getContinentCityPopulations_NotNullTest()
     {
@@ -217,6 +240,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getContinentPopulations with null connection
     @Test
     void getContinentPopulations_NullConTest()
     {
@@ -227,6 +251,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getContinentPopulations with null continent
     @Test
     void getContinentPopulations_NullTest()
     {
@@ -237,6 +262,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check getContinentPopulations with normal data
     @Test
     void getContinentPopulations_NotNullTest()
     {
@@ -247,6 +273,7 @@ class PopulationTest
         }
     }
 
+    //Test method to check displayPopulations with null resultset
     @Test
     void displayPopulations_NullTest()
     {

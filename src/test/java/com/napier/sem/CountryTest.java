@@ -9,17 +9,18 @@ import java.sql.SQLException;
 import static org.junit.jupiter.api.Assertions.*;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class CountryTest {
-    static App a;
-    static Country c;
+    static App a; //initialising app class
+    static Country c; //initialising country class
 
     @BeforeAll
     public static void init() {
+        //instantiating before test methods
         a = new App();
         c = new Country();
     }
 
     @Test
-    // Test getTopRegionDescending function
+    // Test to check getTopRegionDescending with normal data
     public void getTopRegionDescending_NotNullTest() {
         try {
             ResultSet resultSet = c.getTopRegionDescending(a.con, "Eastern Europe", 1);
@@ -27,6 +28,8 @@ class CountryTest {
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    // Test to check getTopRegionDescending with null region
     @Test
     public void getTopRegionDescending_NullTest() {
         try {
@@ -35,6 +38,8 @@ class CountryTest {
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    // Test to check getTopRegionDescending with negative n
     @Test
     public void getTopRegionDescending_NegativeNTest() {
         try {
@@ -43,6 +48,8 @@ class CountryTest {
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    // Test to check getTopRegionDescending with null connection
     @Test
     public void getTopRegionDescending_NullConTest() {
         try {
@@ -51,6 +58,8 @@ class CountryTest {
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    //Test to check getTopNPopulatedCountries on normal data
     @Test
     public void getTopNPopulatedCountries_NotNullTest() {
         try {
@@ -59,6 +68,8 @@ class CountryTest {
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    //Test to check getTopNPopulatedCountries on negative n
     @Test
     public void getTopNPopulatedCountries_NegativeNTest() {
         try {
@@ -67,6 +78,8 @@ class CountryTest {
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    //Test to check getTopNPopulatedCountries on null connection
     @Test
     public void getTopNPopulatedCountries_NullConTest() {
         try {
@@ -75,6 +88,8 @@ class CountryTest {
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    //Test to check getCountryDescending on connection
     @Test
     public void getCountryDescending_NotNullTest() {
         try {
@@ -83,6 +98,8 @@ class CountryTest {
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    //Test to check getCountryDescending on null connection
     @Test
     public void getCountryDescending_NullConTest() {
         try {
@@ -91,6 +108,8 @@ class CountryTest {
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    //Test to check GetContinentDescending on normal data
     @Test
     public void getContinentDescending_NotNullTest() {
         try {
@@ -99,6 +118,8 @@ class CountryTest {
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    //Test to check GetContinentDescending on null con
     @Test
     public void getContinentDescending_NullConTest() {
         try {
@@ -107,6 +128,8 @@ class CountryTest {
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    //Test to check GetContinentDescending on null continent
     @Test
     public void getContinentDescending_NullContinentTest() {
         try {
@@ -116,6 +139,7 @@ class CountryTest {
         }
     }
 
+    //Test to check topNPopulatedCountriesContinent on normal data
     @Test
     public void topNPopulatedCountriesContinent_NotNullTest() {
         try {
@@ -125,6 +149,7 @@ class CountryTest {
         }
     }
 
+    //Test to check topNPopulatedCountriesContinent on null continent
     @Test
     public void topNPopulatedCountriesContinent_NullContinentTest() {
         try {
@@ -134,6 +159,7 @@ class CountryTest {
         }
     }
 
+    //Test to check topNPopulatedCountriesContinent on null connection
     @Test
     public void topNPopulatedCountriesContinent_NullConTest() {
         try {
@@ -143,6 +169,7 @@ class CountryTest {
         }
     }
 
+    //Test to check countryRegionDescending on normal data
     @Test
     public void countryRegionDescending_NotNullTest() {
         try {
@@ -152,6 +179,7 @@ class CountryTest {
         }
     }
 
+    //Test to check countryRegionDescending on null region
     @Test
     public void countryRegionDescending_NullRegionTest() {
         try {
@@ -161,6 +189,7 @@ class CountryTest {
         }
     }
 
+    //Test to check countryRegionDescending on null connection
     @Test
     public void countryRegionDescending_NullConTest() {
         try {
@@ -169,6 +198,8 @@ class CountryTest {
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    //Test to check DisplayCountries on null ResultSet
     @Test
     public void DisplayCountries_NullTest()
     {
@@ -178,5 +209,4 @@ class CountryTest {
             fail("Exception thrown: " + e.getMessage());
         }
     }
-    // Add more tests for Country class as needed
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.napier.sem.CapitalTest" time="0.028" tests="20" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.napier.sem.CapitalTest" time="0.027" tests="20" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="19"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-19.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/meganmcleod/IdeaProjects/SEM-Group-Project/target/surefire/surefirebooter12983207737123493750.jar /Users/meganmcleod/IdeaProjects/SEM-Group-Project/target/surefire 2024-03-13T21-43-22_485-jvmRun1 surefire6833653707802133527tmp surefire_08784184954526316886tmp"/>
+    <property name="sun.java.command" value="/Users/meganmcleod/IdeaProjects/SEM-Group-Project/target/surefire/surefirebooter5545568928723441148.jar /Users/meganmcleod/IdeaProjects/SEM-Group-Project/target/surefire 2024-03-13T22-11-54_137-jvmRun1 surefire5551391707250613177tmp surefire_017184807555624555816tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/meganmcleod/IdeaProjects/SEM-Group-Project/target/test-classes:/Users/meganmcleod/IdeaProjects/SEM-Group-Project/target/classes:/Users/meganmcleod/.m2/repository/mysql/mysql-connector-java/8.0.18/mysql-connector-java-8.0.18.jar:/Users/meganmcleod/.m2/repository/com/google/protobuf/protobuf-java/3.6.1/protobuf-java-3.6.1.jar:/Users/meganmcleod/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.1.0/junit-jupiter-api-5.1.0.jar:/Users/meganmcleod/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/Users/meganmcleod/.m2/repository/org/opentest4j/opentest4j/1.0.0/opentest4j-1.0.0.jar:/Users/meganmcleod/.m2/repository/org/junit/platform/junit-platform-commons/1.1.0/junit-platform-commons-1.1.0.jar:"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/meganmcleod/IdeaProjects/SEM-Group-Project/target/surefire/surefirebooter12983207737123493750.jar"/>
+    <property name="surefire.real.class.path" value="/Users/meganmcleod/IdeaProjects/SEM-Group-Project/target/surefire/surefirebooter5545568928723441148.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="19.0.1+10-21"/>
@@ -67,11 +67,11 @@ Connection is null.
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getContinentCapitalsDescending_NotNullTest" classname="com.napier.sem.CapitalTest" time="0.001">
+  <testcase name="getContinentCapitalsDescending_NotNullTest" classname="com.napier.sem.CapitalTest" time="0">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getNRegionCapitals_NullConTest" classname="com.napier.sem.CapitalTest" time="0.001">
+  <testcase name="getNRegionCapitals_NullConTest" classname="com.napier.sem.CapitalTest" time="0">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
@@ -79,7 +79,7 @@ Connection is null.
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="topNPopulatedCapitals_NullConTest" classname="com.napier.sem.CapitalTest" time="0.001">
+  <testcase name="topNPopulatedCapitals_NullConTest" classname="com.napier.sem.CapitalTest" time="0">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
@@ -91,7 +91,7 @@ Connection is null.
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="topNPopulatedCapitalsByContinent_NullConTest" classname="com.napier.sem.CapitalTest" time="0">
+  <testcase name="topNPopulatedCapitalsByContinent_NullConTest" classname="com.napier.sem.CapitalTest" time="0.001">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
@@ -99,15 +99,15 @@ Connection is null.
     <system-out><![CDATA[Region name is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getRegionCapitalsDescending_NotNullTest" classname="com.napier.sem.CapitalTest" time="0.001">
+  <testcase name="getRegionCapitalsDescending_NotNullTest" classname="com.napier.sem.CapitalTest" time="0">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="topNPopulatedCapitalsByContinent_NotNullTest" classname="com.napier.sem.CapitalTest" time="0">
+  <testcase name="topNPopulatedCapitalsByContinent_NotNullTest" classname="com.napier.sem.CapitalTest" time="0.001">
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getContinentCapitalsDescending_NullContinentTest" classname="com.napier.sem.CapitalTest" time="0">
+  <testcase name="getContinentCapitalsDescending_NullContinentTest" classname="com.napier.sem.CapitalTest" time="0.001">
     <system-out><![CDATA[Continent name is null.
 ]]></system-out>
   </testcase>
@@ -115,7 +115,7 @@ Connection is null.
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="DisplayCaps_NullTest" classname="com.napier.sem.CapitalTest" time="0.001">
+  <testcase name="DisplayCaps_NullTest" classname="com.napier.sem.CapitalTest" time="0">
     <system-out><![CDATA[ResultSet is null.
 ]]></system-out>
   </testcase>
@@ -127,7 +127,7 @@ Connection is null.
     <system-out><![CDATA[Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="getRegionCapitalsDescending_NullContinentTest" classname="com.napier.sem.CapitalTest" time="0">
+  <testcase name="getRegionCapitalsDescending_NullContinentTest" classname="com.napier.sem.CapitalTest" time="0.001">
     <system-out><![CDATA[Continent name is null.
 ]]></system-out>
   </testcase>
@@ -136,7 +136,7 @@ Connection is null.
 Connection is null.
 ]]></system-out>
   </testcase>
-  <testcase name="topNPopulatedCapitals_NegativeNTest" classname="com.napier.sem.CapitalTest" time="0.001">
+  <testcase name="topNPopulatedCapitals_NegativeNTest" classname="com.napier.sem.CapitalTest" time="0">
     <system-out><![CDATA[N Cannot be negative
 Connection is null.
 ]]></system-out>
