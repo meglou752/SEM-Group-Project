@@ -20,6 +20,15 @@ public class Population {
      */
     public ResultSet getDistrictPopulation(Connection con, String District) {
         try {
+            if (District == null)
+            {
+                System.out.println("District name is null.");
+                return null;
+            }
+            if (con == null)
+            {
+                System.out.println("Connection is null.");
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -52,6 +61,10 @@ public class Population {
      */
     public ResultSet getWorldPopulation(Connection con) {
         try {
+            if (con == null)
+            {
+                System.out.println("Connection is null.");
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -82,6 +95,15 @@ public class Population {
      */
     public ResultSet getRegionPopulations(Connection con, String Region) {
         try {
+            if (Region == null)
+            {
+                System.out.println("District name is null.");
+                return null;
+            }
+            if (con == null)
+            {
+                System.out.println("Connection is null.");
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -113,6 +135,10 @@ public class Population {
      */
     public ResultSet getAllRegionPopulations(Connection con) {
         try {
+            if (con == null)
+            {
+                System.out.println("Connection is null.");
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -144,6 +170,15 @@ public class Population {
      */
     ResultSet getCountryPopulation(Connection con, String Country) {
         try {
+            if (Country == null)
+            {
+                System.out.println("Country name is null.");
+                return null;
+            }
+            if (con == null)
+            {
+                System.out.println("Connection is null.");
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -176,6 +211,15 @@ public class Population {
 
     ResultSet getCityPopulation(Connection con, String City) {
         try {
+            if (City == null)
+            {
+                System.out.println("District name is null.");
+                return null;
+            }
+            if (con == null)
+            {
+                System.out.println("Connection is null.");
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -207,6 +251,10 @@ public class Population {
 
     ResultSet getCityPopulationAll(Connection con) {
         try {
+            if (con == null)
+            {
+                System.out.println("Connection is null.");
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -238,6 +286,10 @@ public class Population {
      */
     public ResultSet getContinentCityPopulations(Connection con) {
         try {
+            if (con == null)
+            {
+                System.out.println("Connection is null.");
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -271,6 +323,15 @@ public class Population {
      */
     public ResultSet getContinentPopulations(Connection con, String continentName) {
         try {
+            if (continentName == null)
+            {
+                System.out.println("Continent name is null.");
+                return null;
+            }
+            if (con == null)
+            {
+                System.out.println("Connection is null.");
+            }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
@@ -304,6 +365,10 @@ public class Population {
      */
     public void displayPopulations(ResultSet resultSet) {
         try {
+            if (resultSet == null)
+            {
+                System.out.println("ResultSet is null.");
+            }
             // Check if the ResultSet is null
             if (resultSet != null) {
                 // Iterate through the ResultSet and print population details
