@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-19.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/meganmcleod/IdeaProjects/SEM-Group-Project/target/surefire/surefirebooter17759239734066883069.jar /Users/meganmcleod/IdeaProjects/SEM-Group-Project/target/surefire 2024-03-13T18-54-42_816-jvmRun1 surefire11084918839098650663tmp surefire_0240165704464133260tmp"/>
+    <property name="sun.java.command" value="/Users/meganmcleod/IdeaProjects/SEM-Group-Project/target/surefire/surefirebooter16010014004253398402.jar /Users/meganmcleod/IdeaProjects/SEM-Group-Project/target/surefire 2024-03-13T18-58-12_382-jvmRun1 surefire1899636388437620224tmp surefire_01833905492497512944tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/meganmcleod/IdeaProjects/SEM-Group-Project/target/test-classes:/Users/meganmcleod/IdeaProjects/SEM-Group-Project/target/classes:/Users/meganmcleod/.m2/repository/mysql/mysql-connector-java/8.0.18/mysql-connector-java-8.0.18.jar:/Users/meganmcleod/.m2/repository/com/google/protobuf/protobuf-java/3.6.1/protobuf-java-3.6.1.jar:/Users/meganmcleod/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.1.0/junit-jupiter-api-5.1.0.jar:/Users/meganmcleod/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/Users/meganmcleod/.m2/repository/org/opentest4j/opentest4j/1.0.0/opentest4j-1.0.0.jar:/Users/meganmcleod/.m2/repository/org/junit/platform/junit-platform-commons/1.1.0/junit-platform-commons-1.1.0.jar:"/>
@@ -29,7 +29,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/meganmcleod/IdeaProjects/SEM-Group-Project/target/surefire/surefirebooter17759239734066883069.jar"/>
+    <property name="surefire.real.class.path" value="/Users/meganmcleod/IdeaProjects/SEM-Group-Project/target/surefire/surefirebooter16010014004253398402.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="19.0.1+10-21"/>
