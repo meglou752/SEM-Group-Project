@@ -18,7 +18,7 @@ class PopulationTest
         p = new Population();
     }
     @Test
-    void getDistrictPopulation_nullConnectionTest()
+    void getDistrictPopulation_NullConTest()
     {
         try {
             ResultSet resultSet = p.getDistrictPopulation(null, "Constantine");
@@ -28,7 +28,7 @@ class PopulationTest
     }
 
     @Test
-    void getDistrictPopulation_nullDistrictTest()
+    void getDistrictPopulation_NullTest()
     {
         try {
             ResultSet resultSet = p.getDistrictPopulation(a.con, null);
@@ -38,7 +38,7 @@ class PopulationTest
     }
 
     @Test
-    void getDistrictPopulation_normalDataTest()
+    void getDistrictPopulation_NotNullTest()
     {
         try {
             ResultSet resultSet = p.getDistrictPopulation(a.con, "Constantine");
@@ -48,7 +48,7 @@ class PopulationTest
     }
 
     @Test
-    void getWorldPopulation_nullConnectionTest()
+    void getWorldPopulation_NullConTest()
     {
         try {
             ResultSet resultSet = p.getWorldPopulation(null);
@@ -58,7 +58,7 @@ class PopulationTest
     }
 
     @Test
-    void getWorldPopulation_normalConnectionTest()
+    void getWorldPopulation_NotNullTest()
     {
         try {
             ResultSet resultSet = p.getWorldPopulation(a.con);
@@ -68,7 +68,7 @@ class PopulationTest
     }
 
     @Test
-    void getRegionPopulations_nullConnectionTest()
+    void getRegionPopulations_NullConTest()
     {
         try {
             ResultSet resultSet = p.getRegionPopulations(null, "Western Europe");
@@ -78,7 +78,7 @@ class PopulationTest
     }
 
     @Test
-    void getRegionPopulations_nullRegionTest()
+    void getRegionPopulations_NotNullTest()
     {
         try {
             ResultSet resultSet = p.getRegionPopulations(a.con, null);
@@ -98,7 +98,7 @@ class PopulationTest
     }
 
     @Test
-    void getAllRegionPopulations_nullConnectionTest()
+    void getAllRegionPopulations_NullConTest()
     {
         try {
             ResultSet resultSet = p.getAllRegionPopulations(null);
@@ -108,7 +108,7 @@ class PopulationTest
     }
 
     @Test
-    void getAllRegionPopulations_normalConnectionTest()
+    void getAllRegionPopulations_NotNullTest()
     {
         try {
             ResultSet resultSet = p.getAllRegionPopulations(a.con);
@@ -118,7 +118,7 @@ class PopulationTest
     }
 
     @Test
-    void getCountryPopulation_nullConnectionTest()
+    void getCountryPopulation_NullConTest()
     {
         try {
             ResultSet resultSet = p.getCountryPopulation(null, "France");
@@ -128,7 +128,7 @@ class PopulationTest
     }
 
     @Test
-    void getCountryPopulation_nullCountryTest()
+    void getCountryPopulation_NullTest()
     {
         try {
             ResultSet resultSet = p.getCountryPopulation(a.con, null);
@@ -138,7 +138,7 @@ class PopulationTest
     }
 
     @Test
-    void getCountryPopulation_normalDataTest()
+    void getCountryPopulation_NotNullTest()
     {
         try {
             ResultSet resultSet = p.getCountryPopulation(a.con, "France");
@@ -148,7 +148,7 @@ class PopulationTest
     }
 
     @Test
-    void getCityPopulation_nullConnectionTest()
+    void getCityPopulation_NullConTest()
     {
         try {
             ResultSet resultSet = p.getCityPopulation(null, "Edinburgh");
@@ -158,7 +158,7 @@ class PopulationTest
     }
 
     @Test
-    void getCityPopulation_nullCityTest()
+    void getCityPopulation_NullTest()
     {
         try {
             ResultSet resultSet = p.getCountryPopulation(a.con, null);
@@ -168,7 +168,7 @@ class PopulationTest
     }
 
     @Test
-    void getCityPopulation_normalDataTest()
+    void getCityPopulation_NotNullTest()
     {
         try {
             ResultSet resultSet = p.getCountryPopulation(a.con, "France");
@@ -178,7 +178,7 @@ class PopulationTest
     }
 
     @Test
-    void getCityPopulationAll_nullConnectionTest()
+    void getCityPopulationAll_NullConTest()
     {
         try {
             ResultSet resultSet = p.getCityPopulationAll(null);
@@ -188,7 +188,7 @@ class PopulationTest
     }
 
     @Test
-    void getCityPopulationAll_normalConnectionTest()
+    void getCityPopulationAll_NotNullTest()
     {
         try {
             ResultSet resultSet = p.getCityPopulationAll(a.con);
@@ -198,7 +198,7 @@ class PopulationTest
     }
 
     @Test
-    void getContinentCityPopulations_nullConnectionTest()
+    void getContinentCityPopulations_NullConTest()
     {
         try {
             ResultSet resultSet = p.getContinentCityPopulations(null);
@@ -208,7 +208,7 @@ class PopulationTest
     }
 
     @Test
-    void getContinentCityPopulations_normalConnectionTest()
+    void getContinentCityPopulations_NotNullTest()
     {
         try {
             ResultSet resultSet = p.getContinentCityPopulations(a.con);
@@ -218,7 +218,7 @@ class PopulationTest
     }
 
     @Test
-    void getContinentPopulations_nullConnectionTest()
+    void getContinentPopulations_NullConTest()
     {
         try {
             ResultSet resultSet = p.getContinentPopulations(null, "Africa");
@@ -228,7 +228,7 @@ class PopulationTest
     }
 
     @Test
-    void getContinentPopulations_nullContinentTest()
+    void getContinentPopulations_NullTest()
     {
         try {
             ResultSet resultSet = p.getContinentPopulations(a.con, null);
@@ -238,17 +238,17 @@ class PopulationTest
     }
 
     @Test
-    void getContinentPopulations_normalDataTest()
+    void getContinentPopulations_NotNullTest()
     {
         try {
-            ResultSet resultSet = p.getContinentPopulations(null, "Africa");
+            ResultSet resultSet = p.getContinentPopulations(a.con, "Africa");
         } catch (Exception e) {
             fail("Exception thrown: " + e.getMessage());
         }
     }
 
     @Test
-    void displayPopulations_nullResultSetTest()
+    void displayPopulations_NullTest()
     {
         try {
             p.displayPopulations(null);
