@@ -15,10 +15,8 @@ jobs:
       with:
         java-version: '18'
         distribution: 'adopt'
-    - name: Build with Maven
-      run: mvn package
     - name: Run unit tests
-      run: mvn -Dtest=test/java/com.napier.sem.CountryTest test
+      run: mvn -Dtest=com.napier.sem.CountryTest test
     - name: Package and Run docker compose
       run: |
         mvn package -DskipTests
