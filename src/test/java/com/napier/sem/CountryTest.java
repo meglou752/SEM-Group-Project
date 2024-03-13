@@ -30,7 +30,7 @@ class CountryTest {
     @Test
     public void getTopRegionDescending_NullTest() {
         try {
-            ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", 5);
+            ResultSet resultSet = c.getTopRegionDescending(a.con, null, 5);
         } catch (Exception e) {
             fail("Exception thrown: " + e.getMessage());
         }
