@@ -11,17 +11,17 @@ public class Population {
     public long population;
     public long urbanPopulation;
     public long ruralPopulation;
+    App a = new App();
 
     /**
      * Get the Population of Specified District
-     * @param con the database connection
      * @param District the District to search for
      * @return ResultSet
      */
-    public ResultSet getDistrictPopulation(Connection con, String District) {
+    public ResultSet getDistrictPopulation(String District) {
         try {
             // Create an SQL statement
-            Statement stmt = con.createStatement();
+            Statement stmt = a.con.createStatement();
             // Create string for SQL statement
             String strSelect =
                     "SELECT \n" +
@@ -141,7 +141,7 @@ public class Population {
     /**
      * Get population of a city
      * @param con the database connection
-     * @param city the city to produce population report on
+     * @param City the city to produce population report on
      */
 
     ResultSet getCityPopulation(Connection con, String City) {

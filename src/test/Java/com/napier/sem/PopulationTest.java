@@ -21,11 +21,16 @@ class PopulationTest {
         p = new Population();
     }
 
-    void testGetRegionPopulations_NormalData()
-    {
-        p.name = "Western Europe";
-        p.population = 100000;
-        p.urbanPopulation = 30000;
-        p.ruralPopulation = 70000;
+    @Test
+    void testGetRegionPopulations_NormalData() {
+        try {
+            p.name = "Constantine";
+            p.population = 100000;
+            p.urbanPopulation = 30000;
+            p.ruralPopulation = 70000;
+            ResultSet resultSet = p.getDistrictPopulation("Constantine");
+        } catch (Exception e) {
+            fail("Exception thrown: " + e.getMessage());
+        }
     }
 }
