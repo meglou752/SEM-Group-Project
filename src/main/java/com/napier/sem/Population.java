@@ -133,7 +133,7 @@ public class Population {
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
-            System.out.println("Failed to get capital details");
+            System.out.println("Failed to get population details");
             return null;
         }
     }
@@ -165,7 +165,7 @@ public class Population {
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
-            System.out.println("Failed to get capital details");
+            System.out.println("Failed to get population details");
             return null;
         }
     }
@@ -195,7 +195,41 @@ public class Population {
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
         } catch (Exception e) {
-            System.out.println("Failed to get capital details");
+            System.out.println("Failed to get population details");
+            return null;
+        }
+    }
+
+
+
+    /**
+     * Get population of a region
+     * @param con the database connection
+     * @param continentName the continent to produce population report on
+     */
+    public ResultSet getContinentPopulations(Connection con, String continentName) {
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT \n" +
+                            "'" + continentName + "' as name, \n" +
+                            "    SUM(country.population) AS population, \n" +
+                            "    SUM(city.population) AS UrbanPop, \n" +
+                            "    ROUND(SUM(city.population) / SUM(country.population) * 100, 1) AS UrbanPopPercentage, \n" +
+                            "    SUM(country.population - city.population) AS RuralPop, \n" +
+                            "    ROUND(SUM((country.population - city.population)) / SUM(country.population) * 100, 1) AS RuralPopPercentage \n" +
+                            "FROM country\n" +
+                            "INNER JOIN city ON city.countryCode = country.code\n" +
+                            "WHERE country.continent = '" + continentName + "'\n" +
+                            "GROUP BY name";
+
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (Exception e) {
+            System.out.println("Failed to get population details");
             return null;
         }
     }
