@@ -21,6 +21,7 @@ class CapitalTest
         e = new Capital();
     }
 
+    // Test to check getNPopulatedCapitals with normal data
     @Test
     public void topNPopulatedCapitals_NotNullTest() {
         try {
@@ -30,6 +31,7 @@ class CapitalTest
         }
     }
 
+    // Test to check getNPopulatedCapitals with negative N value
     @Test
     public void topNPopulatedCapitals_NegativeNTest() {
         try {
@@ -38,6 +40,8 @@ class CapitalTest
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    // Test to check getNPopulatedCapitals with null connection
     @Test
     public void topNPopulatedCapitals_NullConTest() {
         try {
@@ -49,6 +53,7 @@ class CapitalTest
 
 
 
+    // Test to check getNRegionCapitals with normal data
     @Test
     public void getNRegionCapitals_NotNullTest() {
         try {
@@ -58,6 +63,7 @@ class CapitalTest
         }
     }
 
+    // Test to check getNRegionCapitals with negative N value
     @Test
     public void getNRegionCapitals_NegativeNTest() {
         try {
@@ -67,6 +73,7 @@ class CapitalTest
         }
     }
 
+    // Test to check getNRegionCapitals with region null
     @Test
     public void getNRegionCapitals_NullRegionTest() {
         try {
@@ -76,6 +83,7 @@ class CapitalTest
         }
     }
 
+    // Test to check getNRegionCapitals with connection null
     @Test
     public void getNRegionCapitals_NullConTest() {
         try {
@@ -87,6 +95,7 @@ class CapitalTest
 
 
 
+    // Test to check getContinentCapitalsDescending with normal data
     @Test
     public void getContinentCapitalsDescending_NotNullTest() {
         try {
@@ -95,6 +104,8 @@ class CapitalTest
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    // Test to check getContinentCapitalsDescending with null connection
     @Test
     public void getContinentCapitalsDescending_NullConTest() {
         try {
@@ -103,6 +114,8 @@ class CapitalTest
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    // Test to check getContinentCapitalsDescending with null continent
     @Test
     public void getContinentCapitalsDescending_NullContinentTest() {
         try {
@@ -114,6 +127,7 @@ class CapitalTest
 
 
 
+    // Test to check topNPopulatedCapitalsByContinent with normal data
     @Test
     public void topNPopulatedCapitalsByContinent_NotNullTest() {
         try {
@@ -123,6 +137,7 @@ class CapitalTest
         }
     }
 
+    // Test to check topNPopulatedCapitalsByContinent with negative N value
     @Test
     public void topNPopulatedCapitalsByContinent_NegativeNTest() {
         try {
@@ -132,6 +147,7 @@ class CapitalTest
         }
     }
 
+    // Test to check topNPopulatedCapitalsByContinent with null continent
     @Test
     public void topNPopulatedCapitalsByContinent_NullRegionTest() {
         try {
@@ -141,6 +157,7 @@ class CapitalTest
         }
     }
 
+    // Test to check topNPopulatedCapitalsByContinent with null connection
     @Test
     public void topNPopulatedCapitalsByContinent_NullConTest() {
         try {
@@ -151,7 +168,7 @@ class CapitalTest
     }
 
 
-
+    // Test to check getCapitalsPopulationDesc with normal data
     @Test
     public void getCapitalsPopulationDesc_NotNullTest() {
         try {
@@ -160,6 +177,8 @@ class CapitalTest
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    // Test to check getCapitalsPopulationDesc with connection null
     @Test
     public void getCapitalsPopulationDesc_NullConTest() {
         try {
@@ -170,7 +189,7 @@ class CapitalTest
     }
 
 
-
+    // Test to check getRegionCapitalsDescending with normal data
     @Test
     public void getRegionCapitalsDescending_NotNullTest() {
         try {
@@ -179,6 +198,8 @@ class CapitalTest
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    // Test to check getRegionCapitalsDescending with null connection
     @Test
     public void getRegionCapitalsDescending_NullConTest() {
         try {
@@ -187,6 +208,8 @@ class CapitalTest
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    // Test to check getRegionCapitalsDescending with null region
     @Test
     public void getRegionCapitalsDescending_NullContinentTest() {
         try {
@@ -197,6 +220,7 @@ class CapitalTest
     }
 
 
+    //Test method to check displayCapitals with null resultset
     @Test
     public void DisplayCaps_NullTest()
     {
@@ -205,6 +229,7 @@ class CapitalTest
         } catch (Exception e) {
             fail("Exception thrown: " + e.getMessage());
         }
+
     }
 
 }
