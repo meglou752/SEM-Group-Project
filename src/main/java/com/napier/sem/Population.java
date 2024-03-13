@@ -203,18 +203,17 @@ public class Population {
 
 
     /**
-     * Get population of a region
+     * Get population of continents
      * @param con the database connection
-     * @param continentName the continent to produce population report on
      */
-    public ResultSet getContinentPopulations(Connection con, String continentName) {
+    public ResultSet getContinentCityPopulations(Connection con) {
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
             String strSelect =
                     "SELECT \n" +
-                            "'" + continentName + "' as name, \n" +
+                            " country.continent AS name, \n" +
                             "    SUM(country.population) AS population, \n" +
                             "    SUM(city.population) AS UrbanPop, \n" +
                             "    ROUND(SUM(city.population) / SUM(country.population) * 100, 1) AS UrbanPopPercentage, \n" +
@@ -222,7 +221,6 @@ public class Population {
                             "    ROUND(SUM((country.population - city.population)) / SUM(country.population) * 100, 1) AS RuralPopPercentage \n" +
                             "FROM country\n" +
                             "INNER JOIN city ON city.countryCode = country.code\n" +
-                            "WHERE country.continent = '" + continentName + "'\n" +
                             "GROUP BY name";
 
 
