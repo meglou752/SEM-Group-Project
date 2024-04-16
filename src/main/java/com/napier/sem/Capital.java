@@ -172,6 +172,12 @@ public class Capital {
         }
     }
 
+    /**
+     * Capital cities in descending order of population
+     * @param con the database connection
+     * @return ResultSet
+     */
+
     public ResultSet getCapitalsPopulationDesc(Connection con) {
         try {
             if (con == null) {

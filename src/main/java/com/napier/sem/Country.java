@@ -194,6 +194,12 @@ public class Country {
         }
     }
 
+    /**
+     * Get region country in a region with decending order of population
+     * @param con the connection to the database
+     * @param region the region of which the function searches through
+     * @return the resultset containing the top N countries in the selected continent
+     * */
     public ResultSet countryRegionDescending(Connection con, String region) {
         try {
             if (region == null) {
