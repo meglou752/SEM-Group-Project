@@ -1,0 +1,66 @@
+name: Bug Report
+description: Create a report to help us improve
+title: "[Bug]: "
+labels:
+ - "bug"
+ - "triage"
+
+body:
+ - type: markdown
+   attributes:
+    value: |
+     A clear and concise description of what the bug is!
+
+ - type: input
+   id: contact
+   attributes:
+    label: Contact Details
+    description: How can we get in touch with you if we need more info?
+    placeholder: ex. email@example.com
+   validations:
+    required: false
+
+ - type: textarea
+   id: what-happened
+   attributes:
+    label: What happened?
+    description: Give a clear and concise description of what happened
+    placeholder: Tell us what you see!
+    value: "A bug happened!"
+   validations:
+    required: true
+
+ - type: textarea
+   id: expected-result
+   attributes:
+    label: expected result?
+    description: A clear and concise description of what you expected to happen.
+    placeholder: what did you expect to happen?
+    value: "I expected this to happen!"
+   validations:
+    required: true
+
+ - type: textarea
+   id: logs
+   attributes:
+    label: error message
+    description: Copy and paste relevant log output
+    render: shell
+
+ - type: textarea
+   id: additional-context
+   attributes:
+    label: Additional context
+    description: Add any other context about the problem here
+    value: "this is my additional context"
+   validations:
+    required: false
+
+ - type: checkboxes
+   id: terms
+   attributes:
+    label: Code of Conduct
+    description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/meglou752/SEM-Group-Project/raw/master/Code%20of%20Conduct.docx)
+    options:
+     - label: I agree to follow this project's Code of Conduct
+       required: true
