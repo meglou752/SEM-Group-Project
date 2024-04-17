@@ -23,7 +23,7 @@ public class App {
 
         if(args.length < 1)
         {
-            a.connect("localhost:33060", 30000);
+            a.connect("localhost:33060", 0);
         }
         else
         {
