@@ -40,7 +40,6 @@ public class AppIntegrationTest
 
         City city = new City();
         ResultSet resultSet = city.topNPopulatedCitiesDistrict(con, districtName, N);
-        city.displayCities(resultSet);
         assertNotNull(resultSet, "ResultSet should not be null");
 
         // Assuming resultSet contains only one row with the population as the first column
@@ -56,6 +55,8 @@ public class AppIntegrationTest
         }
 
         System.out.println("TOPNPOPULATEDCITIESDISTRICT TEST::: \n");
+        city.displayCities(resultSet);
+
         // Assuming displayCities method prints the ResultSet content
     }
 
