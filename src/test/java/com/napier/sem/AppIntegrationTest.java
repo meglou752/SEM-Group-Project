@@ -21,18 +21,17 @@ public class AppIntegrationTest
     {
         con = establishConnection();
     }
-/*
-    @Test
-    void test_topNPopulatedCapitals()
-    {
-        Capital capital = new Capital();
-        ResultSet resultset = capital.topNPopulatedCapitals((app.connect("localhost:33060", 30000)), 5);
-        capital.displayCapitals(resultset);
-        assertNotNull(resultset, "ResultSet should not be null");
-        assertNotNull(capital);
 
+    // Establishes a connection to the MySQL database
+    static Connection establishConnection() {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            return DriverManager.getConnection("jdbc:mysql://localhost:33060/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("Failed to establish database connection: " + e.getMessage());
+            return null;
+        }
     }
-*/
     @Test
     void test_topNPopulatedCitiesDistrict() {
         // Assuming 'Noord-Brabant' is a valid district in the database
@@ -48,14 +47,20 @@ public class AppIntegrationTest
         city.displayCities(resultSet);
     }
 
-    // Establishes a connection to the MySQL database
-    static Connection establishConnection() {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            return DriverManager.getConnection("jdbc:mysql://localhost:33060/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
-        } catch (ClassNotFoundException | SQLException e) {
-            System.out.println("Failed to establish database connection: " + e.getMessage());
-            return null;
-        }
+    //topNPopulatedCitiesContinent
+    @Test
+    void test_topNPopulatedCitiesContinent() {
+        // Assuming 'Noord-Brabant' is a valid district in the database
+        String districtName = "Africa";
+        int N = 5; // Number of top populated cities to retrieve
+
+        City city = new City();
+        ResultSet resultSet = city.topNPopulatedCitiesContinent(con, districtName, N);
+
+        assertNotNull(resultSet, "ResultSet should not be null");
+
+        // Assuming displayCities method prints the ResultSet content
+        city.displayCities(resultSet);
     }
+
 }
