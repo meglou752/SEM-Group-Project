@@ -47,8 +47,6 @@ public class AppIntegrationTest
             if (resultSet.next()) {
                 String cityName = resultSet.getString(1);
                 assertEquals("Eindhoven", cityName, "City name should match expected value");
-                city.displayCities(resultSet);
-
             } else {
                 fail("ResultSet is empty");
             }
