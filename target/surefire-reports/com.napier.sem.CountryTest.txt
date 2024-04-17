@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.napier.sem.CountryTest
 -------------------------------------------------------------------------------
-Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in com.napier.sem.CountryTest
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 s - in com.napier.sem.CountryTest
