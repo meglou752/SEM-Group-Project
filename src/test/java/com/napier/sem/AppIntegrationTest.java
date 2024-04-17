@@ -85,4 +85,11 @@ public class AppIntegrationTest
         assertEquals(6, 6);
     }
 
+
+    @Test
+    void test_getDistrictPopulation() {
+        Population population = new Population();
+        ResultSet resultSet = population.getDistrictPopulation(con, "Constantine");
+        assertEquals("Constantine", "Constantine");
+    }
 }
