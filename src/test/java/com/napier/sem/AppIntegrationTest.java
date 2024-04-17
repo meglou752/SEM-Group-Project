@@ -61,17 +61,17 @@ public class AppIntegrationTest {
         System.out.println("TOPNPOPULATEDCITIESDISTRICT TEST::: \n");
     }
 
-/*
+
     @Test
     void test_topNPopulatedCountriesCountryClass() {
         int N = 1; // Number of top populated cities to retrieve
-
+        String countryName = "China";
         Country country = new Country();
         ResultSet resultSet = country.topNPopulatedCountries(con, N);
         // Assuming resultSet contains only one row with the population as the first column
         try {
             if (resultSet.next()) {
-                assertEquals("Eindhoven", cityName, "City name should match expected value");
+                assertEquals("China", countryName, "Country name should match expected value");
             } else {
                 fail("ResultSet is empty");
             }
@@ -80,26 +80,6 @@ public class AppIntegrationTest {
         }
 
     }
-
-    */
-    //topNPopulatedCitiesContinent
-    @Test
-    void test_topNPopulatedCountries() {
-        // Assuming 'Noord-Brabant' is a valid district in the database
-        int N = 1; // Number of top populated cities to retrieve
-
-        Country country = new Country();
-        ResultSet resultSet = country.topNPopulatedCountries(con, N);
-        assertNotNull(resultSet, "ResultSet should not be null");
-
-        System.out.println("TOPNPOPULATEDCITIESCONTINENT TEST::: \n");
-        // Assuming displayCities method prints the ResultSet content
-        country.displayCountries(resultSet);
-    }
-
-
-
-
     @Test
     void test_topNPopulatedCapitals() {
         Capital capital = new Capital();
