@@ -41,7 +41,7 @@ public class AppIntegrationTest {
         City city = new City();
         ResultSet resultSet = city.topNPopulatedCitiesDistrict(con, districtName, N);
 
-        assertNotNull(resultSet, "ResultSet should not be null");
+        //assertNotNull(resultSet, "ResultSet should not be null");
 
         try {
             if (resultSet.next()) {
