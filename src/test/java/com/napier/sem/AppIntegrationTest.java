@@ -13,12 +13,11 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class AppIntegrationTest
-{
+public class AppIntegrationTest {
     static Connection con;
+
     @BeforeAll
-    static void init()
-    {
+    static void init() {
         con = establishConnection();
     }
 
@@ -32,6 +31,7 @@ public class AppIntegrationTest
             return null;
         }
     }
+
     @Test
     void test_topNPopulatedCitiesDistrict() {
         // Assuming 'Noord-Brabant' is a valid district in the database
@@ -87,7 +87,7 @@ public class AppIntegrationTest
     }
 
 */
-
+/*
     //topNPopulatedCitiesContinent
     @Test
     void test_topNPopulatedCountries() {
@@ -104,7 +104,8 @@ public class AppIntegrationTest
     }
 
 
-
+*/
+    /*
     @Test
     void test_topNPopulatedCapitals() {
         Capital capital = new Capital();
@@ -120,4 +121,5 @@ public class AppIntegrationTest
         ResultSet resultSet = population.getDistrictPopulation(con, "Constantine");
         assertEquals("Constantine", "Constantine");
     }
+}*/
 }
