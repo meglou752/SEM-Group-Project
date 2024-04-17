@@ -40,9 +40,6 @@ public class AppIntegrationTest {
 
         City city = new City();
         ResultSet resultSet = city.topNPopulatedCitiesDistrict(con, districtName, N);
-
-        //assertNotNull(resultSet, "ResultSet should not be null");
-
         try {
             if (resultSet.next()) {
                 String cityName = resultSet.getString(1);
@@ -71,8 +68,6 @@ public class AppIntegrationTest {
 
         Country country = new Country();
         ResultSet resultSet = country.topNPopulatedCountries(con, N);
-        assertNotNull(resultSet, "ResultSet should not be null");
-
         // Assuming resultSet contains only one row with the population as the first column
         try {
             if (resultSet.next()) {
@@ -86,8 +81,7 @@ public class AppIntegrationTest {
 
     }
 
-*/
-/*
+    */
     //topNPopulatedCitiesContinent
     @Test
     void test_topNPopulatedCountries() {
@@ -104,8 +98,8 @@ public class AppIntegrationTest {
     }
 
 
-*/
-    /*
+
+
     @Test
     void test_topNPopulatedCapitals() {
         Capital capital = new Capital();
@@ -121,5 +115,4 @@ public class AppIntegrationTest {
         ResultSet resultSet = population.getDistrictPopulation(con, "Constantine");
         assertEquals("Constantine", "Constantine");
     }
-}*/
 }
