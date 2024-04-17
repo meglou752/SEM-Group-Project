@@ -81,3 +81,15 @@ jobs:
         with:
           name: release-artifact
           path: ./target/seMethods.jar
+      # Create release note
+      - name: Create Release Note
+        run: echo "Release note for version ${{ steps.create_release.outputs.release_id }}" > release-note.txt
+
+      # Upload release note as asset
+      - name: Upload Release Note
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: https://uploads.github.com/repos/${{ meglou752/SEM-Group-Project }}/releases/${{ steps.create_release.outputs.release_id }}/assets?name=release-note.txt
+          asset_path: ./release-note.txt
+          asset_name: release-note.txt
+          asset_content_type: text/plain
