@@ -46,7 +46,7 @@ public class AppIntegrationTest
         // Assuming resultSet contains only one row with the population as the first column
         try {
             if (resultSet.next()) {
-                int population = resultSet.getInt(2); // Assuming population is stored in the first column
+                int population = resultSet.getInt(3);
                 assertEquals(201843, population, "Population should match expected value");
             } else {
                 fail("ResultSet is empty");
