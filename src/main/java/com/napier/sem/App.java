@@ -79,8 +79,10 @@ public class App {
 
     /**
      * Connect to the MySQL database.
+     *
+     * @return
      */
-    public void connect(String location, int delay) {
+    public Connection connect(String location, int delay) {
         try {
             // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -108,6 +110,7 @@ public class App {
                 System.out.println("Thread interrupted? Should not happen.");
             }
         }
+        return null;
     }
 
     /**
