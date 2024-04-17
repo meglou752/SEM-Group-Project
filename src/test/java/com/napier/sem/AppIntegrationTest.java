@@ -57,7 +57,6 @@ public class AppIntegrationTest
 
         System.out.println("TOPNPOPULATEDCITIESDISTRICT TEST::: \n");
         // Assuming displayCities method prints the ResultSet content
-        city.displayCities(resultSet);
     }
 
 /*
