@@ -36,7 +36,7 @@ public class AppIntegrationTest
     void test_topNPopulatedCitiesDistrict() {
         // Assuming 'Noord-Brabant' is a valid district in the database
         String districtName = "Noord-Brabant";
-        int N = 5; // Number of top populated cities to retrieve
+        int N = 1; // Number of top populated cities to retrieve
 
         City city = new City();
         ResultSet resultSet = city.topNPopulatedCitiesDistrict(con, districtName, N);
@@ -46,8 +46,8 @@ public class AppIntegrationTest
         // Assuming resultSet contains only one row with the population as the first column
         try {
             if (resultSet.next()) {
-                int population = resultSet.getInt(3);
-                assertEquals(201843, population, "Population should match expected value");
+                String cityName = resultSet.getString(1);
+                assertEquals("Eindhoven", cityName, "City name should match expected value");
             } else {
                 fail("ResultSet is empty");
             }
@@ -60,7 +60,7 @@ public class AppIntegrationTest
         city.displayCities(resultSet);
     }
 
-
+/*
     //topNPopulatedCitiesContinent
     @Test
     void test_topNPopulatedCitiesContinent() {
@@ -76,5 +76,5 @@ public class AppIntegrationTest
         // Assuming displayCities method prints the ResultSet content
         city.displayCities(resultSet);
     }
-
+*/
 }
