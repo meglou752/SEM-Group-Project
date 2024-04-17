@@ -42,11 +42,24 @@ public class AppIntegrationTest
         ResultSet resultSet = city.topNPopulatedCitiesDistrict(con, districtName, N);
 
         assertNotNull(resultSet, "ResultSet should not be null");
-        assertEquals(city.population, 201843);
+
+        // Assuming resultSet contains only one row with the population as the first column
+        try {
+            if (resultSet.next()) {
+                int population = resultSet.getInt(1); // Assuming population is stored in the first column
+                assertEquals(201843, population, "Population should match expected value");
+            } else {
+                fail("ResultSet is empty");
+            }
+        } catch (SQLException e) {
+            fail("Error while retrieving data from ResultSet: " + e.getMessage());
+        }
+
         System.out.println("TOPNPOPULATEDCITIESDISTRICT TEST::: \n");
         // Assuming displayCities method prints the ResultSet content
         city.displayCities(resultSet);
     }
+
 
     //topNPopulatedCitiesContinent
     @Test
@@ -57,7 +70,6 @@ public class AppIntegrationTest
 
         City city = new City();
         ResultSet resultSet = city.topNPopulatedCitiesContinent(con, districtName, N);
-
         assertNotNull(resultSet, "ResultSet should not be null");
 
         System.out.println("TOPNPOPULATEDCITIESCONTINENT TEST::: \n");
