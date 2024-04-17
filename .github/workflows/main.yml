@@ -72,8 +72,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v1.0.0  # Specify the tag name for the release
-          release_name: Release v1.0.0  # Specify the name of the release
+          tag_name: v2.0.0  # Specify the tag name for the release
+          release_name: Release v2.0.0  # Specify the name of the release
           body: |  # Specify the body of the release (optional)
             This is the release notes for version 1.0.0.
           draft: false  # Set to true to create a draft release, false to publish immediately
