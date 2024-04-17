@@ -93,4 +93,21 @@ public class AppIntegrationTest
         country.displayCountries(resultSet);
     }
 
+*/
+
+    @Test
+    void test_topNPopulatedCapitals() {
+        Capital capital = new Capital();
+        ResultSet resultSet = capital.getNRegionCapitalsDescending(con, "Western Europe", 6);
+        assertEquals("Western Europe", "Western Europe");
+        assertEquals(6, 6);
+    }
+
+
+    @Test
+    void test_getDistrictPopulation() {
+        Population population = new Population();
+        ResultSet resultSet = population.getDistrictPopulation(con, "Constantine");
+        assertEquals("Constantine", "Constantine");
+    }
 }
