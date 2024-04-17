@@ -57,8 +57,6 @@ public class AppIntegrationTest {
                 fail("Error while closing ResultSet: " + e.getMessage());
             }
         }
-
-        System.out.println("TOPNPOPULATEDCITIESDISTRICT TEST::: \n");
     }
 
 
@@ -77,8 +75,14 @@ public class AppIntegrationTest {
             }
         } catch (SQLException e) {
             fail("Error while retrieving data from ResultSet: " + e.getMessage());
+        } finally {
+            // Close the ResultSet after reading its data
+            try {
+                resultSet.close();
+            } catch (SQLException e) {
+                fail("Error while closing ResultSet: " + e.getMessage());
+            }
         }
-
     }
     @Test
     void test_topNPopulatedCapitals() {
