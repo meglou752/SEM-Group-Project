@@ -33,7 +33,7 @@ public class AppIntegrationTest
         }
     }
     @Test
-    void test_topNPopulatedCitiesDistrict() {
+    void test_topNPopulatedCitiesDistrictCityClass() {
         // Assuming 'Noord-Brabant' is a valid district in the database
         String districtName = "Noord-Brabant";
         int N = 1; // Number of top populated cities to retrieve
@@ -53,27 +53,44 @@ public class AppIntegrationTest
         } catch (SQLException e) {
             fail("Error while retrieving data from ResultSet: " + e.getMessage());
         }
+    }
+/*
+    @Test
+    void test_topNPopulatedCountriesCountryClass() {
+        int N = 1; // Number of top populated cities to retrieve
 
-        System.out.println("TOPNPOPULATEDCITIESDISTRICT TEST::: \n");
+        Country country = new Country();
+        ResultSet resultSet = country.topNPopulatedCountries(con, N);
+        assertNotNull(resultSet, "ResultSet should not be null");
 
-        // Assuming displayCities method prints the ResultSet content
+        // Assuming resultSet contains only one row with the population as the first column
+        try {
+            if (resultSet.next()) {
+                assertEquals("Eindhoven", cityName, "City name should match expected value");
+            } else {
+                fail("ResultSet is empty");
+            }
+        } catch (SQLException e) {
+            fail("Error while retrieving data from ResultSet: " + e.getMessage());
+        }
+
     }
 
-/*
+*/
+
     //topNPopulatedCitiesContinent
     @Test
-    void test_topNPopulatedCitiesContinent() {
+    void test_topNPopulatedCountries() {
         // Assuming 'Noord-Brabant' is a valid district in the database
-        String districtName = "Africa";
-        int N = 5; // Number of top populated cities to retrieve
+        int N = 1; // Number of top populated cities to retrieve
 
-        City city = new City();
-        ResultSet resultSet = city.topNPopulatedCitiesContinent(con, districtName, N);
+        Country country = new Country();
+        ResultSet resultSet = country.topNPopulatedCountries(con, N);
         assertNotNull(resultSet, "ResultSet should not be null");
 
         System.out.println("TOPNPOPULATEDCITIESCONTINENT TEST::: \n");
         // Assuming displayCities method prints the ResultSet content
-        city.displayCities(resultSet);
+        country.displayCountries(resultSet);
     }
-*/
+
 }
