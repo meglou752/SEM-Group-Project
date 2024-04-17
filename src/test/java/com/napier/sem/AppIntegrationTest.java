@@ -33,16 +33,16 @@ public class AppIntegrationTest
         }
     }
     @Test
-    void test_topNPopulatedCitiesDistrictCityClass() {
+    void test_topNPopulatedCitiesDistrict() {
         // Assuming 'Noord-Brabant' is a valid district in the database
         String districtName = "Noord-Brabant";
         int N = 1; // Number of top populated cities to retrieve
 
         City city = new City();
         ResultSet resultSet = city.topNPopulatedCitiesDistrict(con, districtName, N);
+
         assertNotNull(resultSet, "ResultSet should not be null");
 
-        // Assuming resultSet contains only one row with the population as the first column
         try {
             if (resultSet.next()) {
                 String cityName = resultSet.getString(1);
@@ -52,8 +52,18 @@ public class AppIntegrationTest
             }
         } catch (SQLException e) {
             fail("Error while retrieving data from ResultSet: " + e.getMessage());
+        } finally {
+            // Close the ResultSet after reading its data
+            try {
+                resultSet.close();
+            } catch (SQLException e) {
+                fail("Error while closing ResultSet: " + e.getMessage());
+            }
         }
+
+        System.out.println("TOPNPOPULATEDCITIESDISTRICT TEST::: \n");
     }
+
 /*
     @Test
     void test_topNPopulatedCountriesCountryClass() {
