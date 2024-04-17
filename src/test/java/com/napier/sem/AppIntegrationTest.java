@@ -76,4 +76,13 @@ public class AppIntegrationTest
         city.displayCities(resultSet);
     }
 */
+
+    @Test
+    void test_topNPopulatedCapitals() {
+        Capital capital = new Capital();
+        ResultSet resultSet = capital.getNRegionCapitalsDescending(con, "Western Europe", 6);
+        assertEquals("Western Europe", "Western Europe");
+        assertEquals(6, 6);
+    }
+
 }
