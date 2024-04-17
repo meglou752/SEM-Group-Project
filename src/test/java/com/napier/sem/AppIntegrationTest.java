@@ -36,13 +36,14 @@ public class AppIntegrationTest
     void test_topNPopulatedCitiesDistrict() {
         // Assuming 'Noord-Brabant' is a valid district in the database
         String districtName = "Noord-Brabant";
-        int N = 5; // Number of top populated cities to retrieve
+        int N = 1; // Number of top populated cities to retrieve
 
         City city = new City();
         ResultSet resultSet = city.topNPopulatedCitiesDistrict(con, districtName, N);
 
         assertNotNull(resultSet, "ResultSet should not be null");
-
+        assertEquals(city.population, 201843);
+        System.out.println("TOPNPOPULATEDCITIESDISTRICT TEST::: \n");
         // Assuming displayCities method prints the ResultSet content
         city.displayCities(resultSet);
     }
@@ -59,6 +60,7 @@ public class AppIntegrationTest
 
         assertNotNull(resultSet, "ResultSet should not be null");
 
+        System.out.println("TOPNPOPULATEDCITIESCONTINENT TEST::: \n");
         // Assuming displayCities method prints the ResultSet content
         city.displayCities(resultSet);
     }
