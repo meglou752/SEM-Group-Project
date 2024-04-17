@@ -93,7 +93,7 @@ public class AppIntegrationTest
         country.displayCountries(resultSet);
     }
 
-*/
+
 
     @Test
     void test_topNPopulatedCapitals() {
