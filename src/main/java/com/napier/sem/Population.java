@@ -381,7 +381,7 @@ public class Population {
                             "    SUM(country.population - city.population) AS RuralPop, \n" +
                             "    ROUND(SUM((country.population - city.population)) / SUM(country.population) * 100, 1) AS RuralPopPercentage \n" +
                             "FROM countrylanguage\n" +
-                            "INNER JOIN city ON city.countryCode = country.code\n" +
+                            "INNER JOIN city ON city.countryCode = country.Code\n" +
                             "INNER JOIN country ON country.Code = countrylanguage.countryCode\n" +
                             "WHERE countrylanguage.language IN ('Chinese', 'English', 'Hindi', 'Spanish', 'Arabic')\n" +
                             "GROUP BY countrylanguage.language\n" +
