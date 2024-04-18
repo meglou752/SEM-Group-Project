@@ -362,7 +362,7 @@ public class Population {
      * @param con Connection to database
      * @return ResultSet containing query results
      */
-    /*
+
     public ResultSet getPopulationByLanguageDesc(Connection con) {
         try {
             if (con == null) {
@@ -382,7 +382,7 @@ public class Population {
                             "    ROUND(SUM((country.population - city.population)) / SUM(country.population) * 100, 1) AS RuralPopPercentage \n" +
                             "FROM countrylanguage\n" +
                             "INNER JOIN city ON city.countryCode = country.code\n" +
-                            "INNER JOIN country ON country.countryCode = countrylanguage.countryCode\n" +
+                            "INNER JOIN country ON country.Code = countrylanguage.countryCode\n" +
                             "WHERE countrylanguage.language IN ('Chinese', 'English', 'Hindi', 'Spanish', 'Arabic')\n" +
                             "GROUP BY countrylanguage.language\n" +
                             "ORDER BY population DESC;";
@@ -394,7 +394,7 @@ public class Population {
             return null;
         }
     }
-*/
+
     /**
      * Display the contents of ResultSet for the Population
      * @param resultSet containing population details from other method calls
