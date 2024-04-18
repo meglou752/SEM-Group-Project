@@ -362,6 +362,7 @@ public class Population {
      * @param con Connection to database
      * @return ResultSet containing query results
      */
+    /*
     public ResultSet getPopulationByLanguageDesc(Connection con) {
         try {
             if (con == null) {
@@ -393,7 +394,7 @@ public class Population {
             return null;
         }
     }
-
+*/
     /**
      * Display the contents of ResultSet for the Population
      * @param resultSet containing population details from other method calls
