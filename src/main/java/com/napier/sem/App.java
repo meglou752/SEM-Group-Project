@@ -64,7 +64,7 @@ public class App {
         //ResultSet resultSet = f.getCityPopulationAll(a.con);
         //ResultSet resultSet = f.getContinentCityPopulations(a.con);
         //ResultSet resultSet = f.getContinentPopulations(a.con, "Asia");
-        ResultSet resultSet = f.getAllRegionPopulations(a.con);
+        ResultSet resultSet = f.getPopulationByLanguageDesc(a.con);
 
         //c.displayCountries(resultSet);
         //d.displayCities(resultSet);
