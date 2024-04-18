@@ -37,7 +37,7 @@ public class AppIntegrationTest
     void test_topNPopulatedCitiesDistrict() {
         // Assuming 'Noord-Brabant' is a valid district in the database
         String districtName = "Noord-Brabant";
-        int N = 4; // Number of top populated cities to retrieve
+        int N = 5; // Number of top populated cities to retrieve
 
         City city = new City();
         ResultSet resultSet = city.topNPopulatedCitiesDistrict(con, districtName, N);

@@ -64,25 +64,11 @@ jobs:
         run: |
           mvn package -DskipTests
           docker-compose up --abort-on-container-exit
+      #- uses: "marvinpinto/action-automatic-releases@latest"
+       # with:
+        #  repo_token: "${{ secrets.GITHUB_TOKEN }}"
+         # prerelease: false
+          #automatic_release_tag: "latest"
+          #files: |
+           # ./target/*.jar
 
-      # Manually create release tag using GitHub API
-      ##- name: Create Release
-        ##id: create_release
-        ##uses: actions/create-release@v1
-        ##env:
-          ##GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        ##with:
-          ##permissions: write-all
-          ##tag_name: v2.0.0  # Specify the tag name for the release
-          ##release_name: Release v2.0.0  # Specify the name of the release
-          ##body: |  # Specify the body of the release (optional)
-            ##This is the release notes for version 1.0.0.
-          ##draft: false  # Set to true to create a draft release, false to publish immediately
-          ##prerelease: false  # Set to true to create a prerelease, false for a full release
-
-      # Upload artifact (JAR file) to the release
-      ##- name: Upload Artifact
-        ##uses: actions/upload-artifact@v2
-        #with:
-         # name: release-artifact
-          #path: ./target/seMethods.jar

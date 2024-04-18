@@ -283,4 +283,24 @@ class PopulationTest
             fail("Exception thrown: " + e.getMessage());
         }
     }
+
+    @Test
+    void getPopulationByLanguageDesc_NullTest()
+    {
+        try {
+            ResultSet resultSet = p.getPopulationByLanguageDesc(a.con);
+        } catch (Exception e) {
+            fail("Exception thrown: " + e.getMessage());
+        }
+    }
+
+    @Test
+    void getPopulationByLanguageDesc_NullConTest()
+    {
+        try {
+            ResultSet resultSet = p.getPopulationByLanguageDesc(null);
+        } catch (Exception e) {
+            fail("Exception thrown: " + e.getMessage());
+        }
+    }
 }

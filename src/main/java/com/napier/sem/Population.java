@@ -357,6 +357,44 @@ public class Population {
         }
     }
 
+    /**
+     * Get the population of certain languages, organized largest to smallest
+     * @param con Connection to database
+     * @return ResultSet containing query results
+     */
+
+    public ResultSet getPopulationByLanguageDesc(Connection con) {
+        try {
+            if (con == null) {
+                System.out.println("Connection is null.");
+                return null;
+            }
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT \n" +
+                            "   countrylanguage.Language AS name, \n" +
+                            "   SUM(country.population) AS population, \n" +
+                            "    SUM(city.population) AS UrbanPop, \n" +
+                            "    ROUND(SUM(city.population) / SUM(country.population) * 100, 1) AS UrbanPopPercentage, \n" +
+                            "    SUM(country.population - city.population) AS RuralPop, \n" +
+                            "    ROUND(SUM((country.population - city.population)) / SUM(country.population) * 100, 1) AS RuralPopPercentage \n" +
+                            "FROM countrylanguage\n" +
+                            "INNER JOIN country ON country.Code = countrylanguage.countryCode\n" +
+                            "INNER JOIN city ON city.countryCode = country.Code\n" +
+                            "WHERE countrylanguage.language IN ('Chinese', 'English', 'Hindi', 'Spanish', 'Arabic')\n" +
+                            "GROUP BY countrylanguage.language\n" +
+                            "ORDER BY population DESC;";
+
+            // Execute SQL statement and return ResultSet
+            return stmt.executeQuery(strSelect);
+        } catch (SQLException e) {
+            System.out.println("Failed to get population details: " + e.getMessage());
+            return null;
+        }
+    }
+
 
 
     /**
