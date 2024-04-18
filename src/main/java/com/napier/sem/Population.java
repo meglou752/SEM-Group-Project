@@ -374,7 +374,7 @@ public class Population {
             // Create string for SQL statement
             String strSelect =
                     "SELECT \n" +
-                            "   countrylanguage.Language AS Language, \n" +
+                            "   countrylanguage.Language AS name, \n" +
                             "   SUM(country.population) AS population, \n" +
                             "    SUM(city.population) AS UrbanPop, \n" +
                             "    ROUND(SUM(city.population) / SUM(country.population) * 100, 1) AS UrbanPopPercentage, \n" +
