@@ -358,39 +358,33 @@ public class Population {
     }
 
     /**
-     * Get the population of certain languages, organised largest to smallest
+     * Get the population of certain languages, organized largest to smallest
      * @param con Connection to database
      * @return ResultSet containing query results
      */
-    public ResultSet getPopulationByLanguageDesc(Connection con)
-    {
+    public ResultSet getPopulationByLanguageDesc(Connection con) {
         try {
-            if (con == null)
-            {
+            if (con == null) {
                 System.out.println("Connection is null.");
+                return null;
             }
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
             String strSelect =
                     "SELECT \n" +
-                            "   Language.countryLanguage AS Language \n" +
-                            "    SUM(country.population) AS population, \n" +
-                            "    SUM(city.population) AS UrbanPop, \n" +
-                            "    ROUND(SUM(city.population) / SUM(country.population) * 100, 1) AS UrbanPopPercentage, \n" +
-                            "    SUM(country.population - city.population) AS RuralPop, \n" +
-                            "    ROUND(SUM((country.population - city.population)) / SUM(country.population) * 100, 1) AS RuralPopPercentage \n" +
-                            "FROM country\n" +
-                            "INNER JOIN city ON city.countryCode = country.code\n" +
-                            "INNER JOIN country ON country.countryCode = countryLanguage.countryCode\n" +
+                            "   countryLanguage AS Language, \n" +
+                            "   SUM(country.population) AS population\n" +
+                            "FROM countrylanguage\n" +
+                            "INNER JOIN country ON country.code = countrylanguage.countrycode\n" +
                             "WHERE countrylanguage.language IN ('Chinese', 'English', 'Hindi', 'Spanish', 'Arabic')\n" +
-                            "GROUP BY name\n" +
+                            "GROUP BY countrylanguage.language\n" +
                             "ORDER BY population DESC;";
 
             // Execute SQL statement and return ResultSet
             return stmt.executeQuery(strSelect);
-        } catch (Exception e) {
-            System.out.println("Failed to get population details");
+        } catch (SQLException e) {
+            System.out.println("Failed to get population details: " + e.getMessage());
             return null;
         }
     }
