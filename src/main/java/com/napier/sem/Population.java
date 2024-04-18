@@ -373,7 +373,7 @@ public class Population {
             // Create string for SQL statement
             String strSelect =
                     "SELECT \n" +
-                            "   countryLanguage.Language AS Language, \n" +
+                            "   countrylanguage.Language AS Language, \n" +
                             "   SUM(country.population) AS population, \n" +
                             "    SUM(city.population) AS UrbanPop, \n" +
                             "    ROUND(SUM(city.population) / SUM(country.population) * 100, 1) AS UrbanPopPercentage, \n" +
@@ -381,7 +381,7 @@ public class Population {
                             "    ROUND(SUM((country.population - city.population)) / SUM(country.population) * 100, 1) AS RuralPopPercentage \n" +
                             "FROM countrylanguage\n" +
                             "INNER JOIN city ON city.countryCode = country.code\n" +
-                            "INNER JOIN country ON country.countryCode = countryLanguage.countryCode\n" +
+                            "INNER JOIN country ON country.countryCode = countrylanguage.countryCode\n" +
                             "WHERE countrylanguage.language IN ('Chinese', 'English', 'Hindi', 'Spanish', 'Arabic')\n" +
                             "GROUP BY countrylanguage.language\n" +
                             "ORDER BY population DESC;";
