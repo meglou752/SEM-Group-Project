@@ -48,7 +48,7 @@ jobs:
           docker stop world
           docker rm world
           docker image rm database
-      - name: CodeCov
+      - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # now required for public

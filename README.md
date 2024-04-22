@@ -8,6 +8,8 @@
 #### License & Releases
 * [![LICENSE](https://img.shields.io/github/license/meglou752/SEM-Group-Project.svg?style=flat-square)](https://github.com/meglou752/SEM-Group-Project/blob/master/LICENSE)
 * [![Releases](https://img.shields.io/github/release/meglou752/SEM-Group-Project/all.svg?style=flat-square)](https://github.com/meglou752/SEM-Group-Project/releases)
+#### Code Coverage
+* [![codecov](https://codecov.io/gh/meglou752/SEM-Group-Project/graph/badge.svg?token=7WDGHOGYRV)](https://codecov.io/gh/meglou752/SEM-Group-Project)
 
 32 requirements of 32 have been implemented, which is 100%.
 
