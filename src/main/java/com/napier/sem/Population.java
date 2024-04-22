@@ -249,7 +249,7 @@ public class Population {
      * @param con the database connection
      */
 
-    ResultSet getCityPopulationAll(Connection con) {
+    ResultSet getCityPopulationCountry(Connection con) {
         try {
             if (con == null)
             {
