@@ -54,7 +54,7 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }} # now required for public
           directory: ./target/site/jacoco
           flags: Integration Tests # optional
-          verbose: true # optional (default = false)
+          verbose: true # optional (default == false)
           slug: meglou752/SEM-Group-Project
   build:
     name: Build Run in Docker and Deploy Release
