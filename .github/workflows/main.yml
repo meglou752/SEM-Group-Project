@@ -21,11 +21,11 @@ jobs:
           distribution: 'adopt'
       - name: Unit Tests
         run: |
-            mvn -Dtest=com.napier.sem.AppTest test
-            mvn -Dtest=com.napier.sem.CapitalTest test
-            mvn -Dtest=com.napier.sem.CityTest test
-            mvn -Dtest=com.napier.sem.CountryTest test
-            mvn -Dtest=com.napier.sem.PopulationTest test
+            mvn -Dtest=src.test.com.napier.sem.AppTest test
+            mvn -Dtest=src.test.com.napier.sem.CapitalTest test
+            mvn -Dtest=src.test.com.napier.sem.CityTest test
+            mvn -Dtest=src.test.com.napier.sem.CountryTest test
+            mvn -Dtest=src.test.com.napier.sem.PopulationTest test
 
   IntegrationTests:
     name: Integration Tests
