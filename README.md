@@ -15,6 +15,7 @@
 
 32 requirements of 32 have been implemented, which is 100%.
 
+NOTE: Some screenshots are snippets of large result sets.
 | ID | Name                                                                                                                                     | Met |Screenshot
 |----|------------------------------------------------------------------------------------------------------------------------------------------|-----|--------
 | 1  | Produce a report on all the countries in<br/> the world organised by largest to smallest.                                                | Yes | ![image](https://github.com/meglou752/SEM-Group-Project/blob/master/evidence_images/usecase1.png)
