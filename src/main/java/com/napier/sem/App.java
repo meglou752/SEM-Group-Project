@@ -23,11 +23,11 @@ public class App {
 
         if(args.length < 1)
         {
-            a.connect("localhost:33060", 0);
+            a.connect("localhost:33060", 10000);
         }
         else
         {
-            a.connect("db:3306", 30000);
+            a.connect(args[0], Integer.parseInt(args[1]));
         }
         //ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", 5);
         // ResultSet resultSet = c.topNPopulatedCountries(a.con, 5);
@@ -64,7 +64,7 @@ public class App {
         //ResultSet resultSet = f.getCityPopulationAll(a.con);
         //ResultSet resultSet = f.getContinentCityPopulations(a.con);
         //ResultSet resultSet = f.getContinentPopulations(a.con, "Asia");
-        ResultSet resultSet = f.getPopulationByLanguageDesc(a.con);
+        ResultSet resultSet = f.getCityPopulationCountry(a.con);
 
         //c.displayCountries(resultSet);
         //d.displayCities(resultSet);

@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - develop
 
 jobs:
   UnitTests:
@@ -39,7 +40,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      - name: Integration Tests
+      - name: Integration Tests and CodeCov
         run: |
           docker build -t database ./db 
           docker run --name world -dp 33060:3306 database
@@ -47,6 +48,14 @@ jobs:
           docker stop world
           docker rm world
           docker image rm database
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # now required for public
+          directory: ./target/site/jacoco
+          flags: Integration Tests # optional
+          verbose: true # optional (default == false)
+          slug: meglou752/SEM-Group-Project
   build:
     name: Build Run in Docker and Deploy Release
     runs-on: ubuntu-20.04
