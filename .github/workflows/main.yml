@@ -54,6 +54,7 @@ jobs:
           directory: ./target/site/jacoco
           flags: Integration Tests # optional
           verbose: true # optional (default = false)
+          slug: meglou752/SEM-Group-Project
   build:
     name: Build Run in Docker and Deploy Release
     runs-on: ubuntu-20.04
