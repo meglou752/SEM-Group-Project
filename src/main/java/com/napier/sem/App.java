@@ -59,12 +59,13 @@ public class App {
         //ResultSet resultSet = f.getWorldPopulation(a.con);
         // ResultSet resultSet = f.getDistrictPopulation(a.con,  "Constantine");
         //ResultSet resultSet = f.getRegionPopulations(a.con, "Western Europe");
-       // ResultSet resultSet = f.getCountryPopulation(a.con, "Germany");
+        //ResultSet resultSet = f.getCountryPopulation(a.con, "Germany");
         //ResultSet resultSet = f.getCityPopulation(a.con, "Edinburgh");
-        //ResultSet resultSet = f.getCityPopulationAll(a.con);
-        //ResultSet resultSet = f.getContinentCityPopulations(a.con);
+         ResultSet resultSet = f.getCityPopulationCountry(a.con);
+         //ResultSet resultSet = f.getContinentCityPopulations(a.con);
         //ResultSet resultSet = f.getContinentPopulations(a.con, "Asia");
-        ResultSet resultSet = f.getCityPopulationCountry(a.con);
+        // ResultSet resultSet = f.getPopulationByLanguageDesc(a.con);
+        // ResultSet resultSet = f.getAllRegionPopulations(a.con);
 
         //c.displayCountries(resultSet);
         //d.displayCities(resultSet);

@@ -21,11 +21,11 @@ jobs:
           distribution: 'adopt'
       - name: Unit Tests
         run: |
-            mvn -Dtest=src.test.java.com.napier.sem.AppTest test
-            mvn -Dtest=src.test.java.com.napier.sem.CapitalTest test
-            mvn -Dtest=src.test.java.com.napier.sem.CityTest test
-            mvn -Dtest=src.test.java.com.napier.sem.CountryTest test
-            mvn -Dtest=src.test.java.com.napier.sem.PopulationTest test
+            mvn -Dtest=com.napier.sem.AppTest test
+            mvn -Dtest=com.napier.sem.CapitalTest test
+            mvn -Dtest=com.napier.sem.CityTest test
+            mvn -Dtest=com.napier.sem.CountryTest test
+            mvn -Dtest=com.napier.sem.PopulationTest test
 
   IntegrationTests:
     name: Integration Tests
@@ -54,7 +54,7 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }} # now required for public
           directory: ./target/site/jacoco
           flags: Integration Tests # optional
-          verbose: true # optional (default == false)
+          verbose: true # optional (default = false)
           slug: meglou752/SEM-Group-Project
   build:
     name: Build Run in Docker and Deploy Release
