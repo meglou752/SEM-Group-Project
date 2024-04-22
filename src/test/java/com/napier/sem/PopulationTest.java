@@ -201,7 +201,7 @@ class PopulationTest
     void getCityPopulationAll_NullConTest()
     {
         try {
-            ResultSet resultSet = p.getCityPopulationAll(null);
+            ResultSet resultSet = p.getCityPopulationCountry(null);
         } catch (Exception e) {
             fail("Exception thrown: " + e.getMessage());
         }
@@ -212,7 +212,7 @@ class PopulationTest
     void getCityPopulationAll_NotNullTest()
     {
         try {
-            ResultSet resultSet = p.getCityPopulationAll(a.con);
+            ResultSet resultSet = p.getCityPopulationCountry(a.con);
         } catch (Exception e) {
             fail("Exception thrown: " + e.getMessage());
         }
