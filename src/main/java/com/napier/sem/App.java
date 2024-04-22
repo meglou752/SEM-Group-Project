@@ -30,8 +30,8 @@ public class App {
             a.connect(args[0], Integer.parseInt(args[1]));
         }
         //ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", 5);
-        // ResultSet resultSet = c.topNPopulatedCountries(a.con, 5);
-        // ResultSet resultSet = c.getCountryDescending(a.con);
+        ResultSet resultSet = c.topNPopulatedCountries(a.con, 5);
+        //ResultSet resultSet = c.getCountryDescending(a.con);
         // ResultSet resultSet = c.getContinentDescending(a.con, "Asia");
         //ResultSet resultSet = c.topNPopulatedCountriesContinent(a.con, "Asia", 4);
         //ResultSet resultSet = c.countryRegionDescending(a.con, "Southern and Central Asia");
@@ -61,16 +61,16 @@ public class App {
         //ResultSet resultSet = f.getRegionPopulations(a.con, "Western Europe");
         //ResultSet resultSet = f.getCountryPopulation(a.con, "Germany");
         //ResultSet resultSet = f.getCityPopulation(a.con, "Edinburgh");
-         ResultSet resultSet = f.getCityPopulationCountry(a.con);
+         //ResultSet resultSet = f.getCityPopulationCountry(a.con);
          //ResultSet resultSet = f.getContinentCityPopulations(a.con);
         //ResultSet resultSet = f.getContinentPopulations(a.con, "Asia");
         // ResultSet resultSet = f.getPopulationByLanguageDesc(a.con);
         // ResultSet resultSet = f.getAllRegionPopulations(a.con);
 
-        //c.displayCountries(resultSet);
+        c.displayCountries(resultSet);
         //d.displayCities(resultSet);
         //e.displayCapitals(resultSet);
-        f.displayPopulations(resultSet);
+        //f.displayPopulations(resultSet);
 
 
 
