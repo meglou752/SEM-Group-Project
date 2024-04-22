@@ -36,11 +36,12 @@ public class App {
         //ResultSet resultSet = c.topNPopulatedCountriesContinent(a.con, "Asia", 4);
         //ResultSet resultSet = c.countryRegionDescending(a.con, "Southern and Central Asia");
         // ResultSet resultSet = c.topNPopulatedCountriesContinent(a.con, "Asia", 4);
-        ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", 5);
+        //ResultSet resultSet = c.getTopRegionDescending(a.con, "Southern and Central Asia", 5);
+
         // ResultSet resultSet = d.topNPopulatedCitiesDistrict(a.con, "Noord-Brabant", 3);
         // ResultSet resultSet = d.topNPopulatedCities(a.con, 5);
         // ResultSet resultSet = d.getTopRegionCityDescending(a.con, "Western Europe", 6);
-        // ResultSet resultSet = d.getCitiesInContinentDesc(a.con, "Asia");
+         ResultSet resultSet = d.getCitiesInContinentDesc(a.con, "Asia");
         // ResultSet resultSet = d.getCountryCityDescending(a.con, "France");
         //ResultSet resultSet = d.topNPopulatedCitiesContinent(a.con, "Europe", 5);
        // ResultSet resultSet = d.getRegionCityDescending(a.con, "Western Europe");
@@ -67,8 +68,8 @@ public class App {
         // ResultSet resultSet = f.getPopulationByLanguageDesc(a.con);
         // ResultSet resultSet = f.getAllRegionPopulations(a.con);
 
-        c.displayCountries(resultSet);
-        //d.displayCities(resultSet);
+        //c.displayCountries(resultSet);
+        d.displayCities(resultSet);
         //e.displayCapitals(resultSet);
         //f.displayPopulations(resultSet);
 
