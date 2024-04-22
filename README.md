@@ -15,6 +15,7 @@
 
 32 requirements of 32 have been implemented, which is 100%.
 
+NOTE: Some screenshots are snippets of large result sets.
 | ID | Name                                                                                                                                     | Met |Screenshot
 |----|------------------------------------------------------------------------------------------------------------------------------------------|-----|--------
 | 1  | Produce a report on all the countries in<br/> the world organised by largest to smallest.                                                | Yes | ![image](https://github.com/meglou752/SEM-Group-Project/blob/master/evidence_images/usecase1.png)
@@ -57,7 +58,7 @@
 
 #### Week1
 - Assigned Scrum Master to Charlene
-- Assigned Project Owner to Megan
+- Assigned Product Owner to Megan
 - Created a Discord Server for communication
 - Integrated Github with Discord for documentation
 - Set up Issues templates and milestones for the backlog/progress tracking
