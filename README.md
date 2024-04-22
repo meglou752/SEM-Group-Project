@@ -9,6 +9,8 @@
 * [![LICENSE](https://img.shields.io/github/license/meglou752/SEM-Group-Project.svg?style=flat-square)](https://github.com/meglou752/SEM-Group-Project/blob/master/LICENSE)
 * [![Releases](https://img.shields.io/github/release/meglou752/SEM-Group-Project/all.svg?style=flat-square)](https://github.com/meglou752/SEM-Group-Project/releases)
 
+32 requirements of 32 have been implemented, which is 100%.
+
 ## Progress
 
 #### Week1
