@@ -15,7 +15,7 @@
 
 | ID | Name                                                                                                           | Met |Screenshot
 |----|----------------------------------------------------------------------------------------------------------------|-----|--------
-| 1  | Produce a report on all the countries in<br/> the world organised by largest to smallest.                      | Yes | ![image](https://raw.githubusercontent.com/meglou752/SEM-Group-Project/main/evidence_images/use_case_32.png)
+| 1  | Produce a report on all the countries in<br/> the world organised by largest to smallest.                      | Yes | ![image](https://github.com/meglou752/SEM-Group-Project/blob/master/evidence_images/usecase32.png)
 | 2  | Produce a report on all of the countries in<br/> a continent organised by largest population <br/>to smallest. | Yes |
 | 3  | Produce a report on all of the countries in <br/>a region organised by largest population to smallest.         | Yes |
 | 4  | Produce a report on the top 'N' populated <br/>countries in the world.                                         | Yes |
