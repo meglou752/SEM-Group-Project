@@ -4,7 +4,7 @@
 #### Master Branch
 * ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/meglou752/SEM-Group-Project/main.yml?branch=master)
 #### Developer Branch
-* ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/meglou752/SEM-Group-Project/main.yml?branch=develop)
+* ![GitHub Workflow Status (branch)](https://img.shields.io/github.com/workflow/status/meglou752/SEM-Group-Project/actions?branch=develop)
 
 #### License & Releases
 * [![LICENSE](https://img.shields.io/github/license/meglou752/SEM-Group-Project.svg?style=flat-square)](https://github.com/meglou752/SEM-Group-Project/blob/master/LICENSE)
